@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("/assets/fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("/assets/fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto Condensed Regular";
+  src: url("/assets/fonts/RobotoCondensed-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto Condensed Bold";
+  src: url("/assets/fonts/RobotoCondensed-Bold.ttf");
+}
+@font-face {
+  font-family: "Bernard MT";
+  src: url("/assets/fonts/BERNHC.ttf");
+}
+body {
+  font-family: "Bernard MT";
+  background-color: #f5f5f7;
+  color: #0a0c1b;
+}
+
+/*# sourceMappingURL=app.css.map */
