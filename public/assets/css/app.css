@@ -19,9 +19,29 @@
   src: url("/assets/fonts/BERNHC.ttf");
 }
 body {
-  font-family: "Bernard MT";
+  font-family: "Roboto Regular";
   background-color: #f5f5f7;
   color: #0a0c1b;
+}
+
+h1 {
+  font-family: "Bernard MT";
+}
+
+.header-image {
+  max-width: 40vw;
+  min-width: 300px;
+}
+.header-image h1 {
+  letter-spacing: 12px;
+  margin: 0;
+  transform: translateY(50%);
+  position: relative;
+  z-index: 1;
+}
+.header-image img {
+  width: 100%;
+  filter: grayscale(0.5);
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,12 +1,18 @@
 import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Technologies from "./components/Technologies/Technologies";
+
+// import { Provider } from "react-thunk";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hi</h1>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Home}></Route>
+        <Route path="/technologies" exact component={Technologies}></Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
