@@ -8,128 +8,110 @@ const PROFFESIONCY_LEVELS = {
   advanced: "advanced",
 };
 
+const imgsPath = "/assets/images/technologies/";
+
 const TECHNOLOGIES = [
   {
-    type: "front end",
-    skills: [
+    category: "front end",
+    technologies: [
       {
         title: "JavaScript",
-        fontIcon: "",
+        fontIcon: "js",
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
         title: "JQuery",
-        fontIcon: "",
+        iconUrl: imgsPath + "jquery.svg",
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
         title: "React",
-        fontIcon: "",
+        fontIcon: "react",
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
         title: "Redux",
-        fontIcon: "",
+        iconUrl: imgsPath + "redux.svg",
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
         title: "HTML5",
-        fontIcon: "",
+        fontIcon: "html5",
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
         title: "CSS3",
-        fontIcon: "",
+        fontIcon: "css3-alt",
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
         title: "SASS",
-        fontIcon: "",
+        fontIcon: "sass",
         level: PROFFESIONCY_LEVELS.med,
       },
       {
         title: "Bootstrap",
-        fontIcon: "",
+        fontIcon: "bootstrap",
         level: PROFFESIONCY_LEVELS.advanced,
       },
     ],
   },
   {
-    type: "front end",
-    skills: [
+    category: "back end",
+    technologies: [
       {
         title: "Laravel",
-        fontIcon: "",
+        fontIcon: "laravel",
         level: PROFFESIONCY_LEVELS.med,
       },
       {
         title: "PHP",
-        fontIcon: "",
+        fontIcon: "php",
         level: PROFFESIONCY_LEVELS.entry,
       },
       {
         title: "MySQL",
-        fontIcon: "",
+        iconUrl: imgsPath + "mysql.svg",
         level: PROFFESIONCY_LEVELS.entry,
       },
     ],
   },
   {
-    type: "cross browser",
-    skills: [
+    category: "cross browser",
+    technologies: [
       {
         title: "React Native",
-        fontIcon: "",
+        fontIcon: "react",
         level: PROFFESIONCY_LEVELS.entry,
       },
       {
         title: "Flutter",
-        fontIcon: "",
+        iconUrl: imgsPath + "flutter.svg",
         level: PROFFESIONCY_LEVELS.entry,
       },
     ],
   },
   {
-    type: "front end",
-    skills: [
-      {
-        title: "Laravel",
-        fontIcon: "",
-        level: PROFFESIONCY_LEVELS.med,
-      },
-      {
-        title: "PHP",
-        fontIcon: "",
-        level: PROFFESIONCY_LEVELS.entry,
-      },
-      {
-        title: "MySQL",
-        fontIcon: "",
-        level: PROFFESIONCY_LEVELS.entry,
-      },
-    ],
-  },
-  {
-    type: "design",
-    skills: [
+    category: "design",
+    technologies: [
       {
         title: "Adobe Xd",
-        fontIcon: "",
+        iconUrl: imgsPath + "xd.svg",
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
         title: "Protopie 8",
-        fontIcon: "",
+        iconUrl: imgsPath + "protopie.svg",
         level: PROFFESIONCY_LEVELS.med,
       },
       {
         title: "Photoshop",
-        fontIcon: "",
+        iconUrl: imgsPath + "ps.svg",
         level: PROFFESIONCY_LEVELS.entry,
       },
       {
         title: "Illustrator",
-        fontIcon: "",
+        iconUrl: imgsPath + "ai.svg",
         level: PROFFESIONCY_LEVELS.entry,
       },
     ],
@@ -142,10 +124,12 @@ function Technologies() {
       <div className="container">
         <HeaderImage
           heading="Technologies"
-          imgUrl="/assets/images/technologies/img.jpg"
+          imgUrl={imgsPath + "img.jpg"}
           alt="Turned on mackbook pro near brown ceramic mug"
           isHeader={true}
         />
+
+        <Content technologies={TECHNOLOGIES} />
       </div>
     </div>
   );
