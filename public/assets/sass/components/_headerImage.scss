@@ -1,11 +1,20 @@
 .header-image {
   max-width: 40vw;
-  min-width: 300px;
+  min-width: 250px;
+  margin: 0 auto;
 
   img {
     width: 100%;
     min-height: 80vh;
     object-fit: cover;
-    filter: grayscale(0.5);
+    filter: grayscale(0.6);
+  }
+}
+
+@media (min-width: 767px) {
+  .header-image {
+    .page-wrapper {
+      margin: 0;
+    }
   }
 }

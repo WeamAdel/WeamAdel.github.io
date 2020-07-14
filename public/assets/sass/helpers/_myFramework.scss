@@ -1,8 +1,41 @@
+//page heading
 .page-heading {
-  font-size: 60px;
+  font-size: 44px;
   margin: 0;
   transform: translateY(50%);
   position: relative;
-  z-index: 2;
+  z-index: 1;
   letter-spacing: 8px;
+  text-align: center;
+}
+
+@media (min-width: 767px) {
+  .page-heading {
+    font-size: 60px;
+    text-align: left;
+  }
+}
+
+//Container
+.my-container {
+  padding: 0 20px;
+}
+
+@media (min-width: 900px) {
+  .my-container {
+    padding: 0 60px;
+  }
+}
+
+//Legend Indicators
+span {
+  &.entry {
+    background-color: $red;
+  }
+  &.med {
+    background-color: $flatYellow;
+  }
+  &.advanced {
+    background-color: $flatGreen;
+  }
 }

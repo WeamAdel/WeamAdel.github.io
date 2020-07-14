@@ -2,13 +2,13 @@ import React from "react";
 import HeaderImage from "../shared/HeaderImage/HeaderImage";
 import Content from "./Content/Content";
 
-const PROFFESIONCY_LEVELS = {
-  entry: "entry",
-  med: "med",
-  advanced: "advanced",
-};
-
 const imgsPath = "/assets/images/technologies/";
+
+const PROFFESIONCY_LEVELS = {
+  advanced: "advanced",
+  med: "med",
+  entry: "entry",
+};
 
 const TECHNOLOGIES = [
   {
@@ -22,7 +22,7 @@ const TECHNOLOGIES = [
       {
         title: "JQuery",
         iconUrl: imgsPath + "jquery.svg",
-        level: PROFFESIONCY_LEVELS.advanced,
+        level: PROFFESIONCY_LEVELS.med,
       },
       {
         title: "React",
@@ -82,7 +82,7 @@ const TECHNOLOGIES = [
       {
         title: "React Native",
         iconUrl: imgsPath + "react.svg",
-        level: PROFFESIONCY_LEVELS.entry,
+        level: PROFFESIONCY_LEVELS.med,
       },
       {
         title: "Flutter",
@@ -100,7 +100,7 @@ const TECHNOLOGIES = [
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
-        title: "Protopie",
+        title: "ProtoPie",
         iconUrl: imgsPath + "protopie.svg",
         level: PROFFESIONCY_LEVELS.med,
       },
@@ -121,14 +121,17 @@ const TECHNOLOGIES = [
 function Technologies() {
   return (
     <div className="page technologies">
-      <div className="container">
+      <div className="my-container">
         <h1 className="page-heading">Technologies</h1>
         <div className="page-wrapper">
           <HeaderImage
             imgUrl={imgsPath + "img.jpg"}
             alt="Turned on mackbook pro near brown ceramic mug"
           />
-          <Content technologies={TECHNOLOGIES} />
+          <Content
+            technologies={TECHNOLOGIES}
+            legendBullets={Object.values(PROFFESIONCY_LEVELS)}
+          />
         </div>
       </div>
     </div>

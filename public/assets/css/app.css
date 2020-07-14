@@ -33,28 +33,80 @@ main.content {
 }
 
 .page-heading {
-  font-size: 60px;
+  font-size: 44px;
   margin: 0;
   transform: translateY(50%);
   position: relative;
-  z-index: 2;
+  z-index: 1;
   letter-spacing: 8px;
+  text-align: center;
+}
+
+@media (min-width: 767px) {
+  .page-heading {
+    font-size: 60px;
+    text-align: left;
+  }
+}
+.my-container {
+  padding: 0 20px;
+}
+
+@media (min-width: 900px) {
+  .my-container {
+    padding: 0 60px;
+  }
+}
+span.entry {
+  background-color: #9f1725;
+}
+span.med {
+  background-color: #fcf4b5;
+}
+span.advanced {
+  background-color: #c4ffbd;
 }
 
 .header-image {
   max-width: 40vw;
-  min-width: 300px;
+  min-width: 250px;
+  margin: 0 auto;
 }
 .header-image img {
   width: 100%;
   min-height: 80vh;
   object-fit: cover;
-  filter: grayscale(0.5);
+  filter: grayscale(0.6);
 }
 
-.technologies .page-wrapper {
+@media (min-width: 767px) {
+  .header-image .page-wrapper {
+    margin: 0;
+  }
+}
+.legend {
+  margin-bottom: 32px;
+}
+.legend .title {
+  text-transform: uppercase;
+  color: #fe9f9d;
+  font-size: 14px;
+  font-family: "Roboto Condensed Regular";
+  letter-spacing: 6px;
+  margin-bottom: 8px;
+  display: block;
+}
+.legend .bullets {
   display: flex;
 }
+.legend .bullets span {
+  width: 16px;
+  height: 16px;
+}
+.legend .bullets span:not(:last-of-type) {
+  margin-right: 16px;
+}
+
 .technologies .content {
   margin-left: 32px;
   width: 100%;
@@ -92,15 +144,6 @@ main.content {
   border-radius: 50%;
   transform: translate(50%, -50%);
 }
-.technologies .content .tech-category .techs-wrapper .technology .icon-wrapper .level.entry {
-  background-color: #9f1725;
-}
-.technologies .content .tech-category .techs-wrapper .technology .icon-wrapper .level.med {
-  background-color: #fcf4b5;
-}
-.technologies .content .tech-category .techs-wrapper .technology .icon-wrapper .level.advanced {
-  background-color: #c4ffbd;
-}
 .technologies .content .tech-category .techs-wrapper .technology .title {
   text-align: center;
   color: #707070;
@@ -109,6 +152,12 @@ main.content {
 }
 .technologies .content .tech-category:not(:last-of-type) {
   margin-bottom: 44px;
+}
+
+@media (min-width: 767px) {
+  .technologies .page-wrapper {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

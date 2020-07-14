@@ -1,7 +1,4 @@
 .technologies {
-  .page-wrapper {
-    display: flex;
-  }
   .content {
     margin-left: 32px;
     width: 100%;
@@ -38,15 +35,6 @@
               right: 0;
               border-radius: 50%;
               transform: translate(50%, -50%);
-              &.entry {
-                background-color: $red;
-              }
-              &.med {
-                background-color: $flatYellow;
-              }
-              &.advanced {
-                background-color: $flatGreen;
-              }
             }
           }
           .title {
@@ -61,6 +49,14 @@
       &:not(:last-of-type) {
         margin-bottom: 44px;
       }
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .technologies {
+    .page-wrapper {
+      display: flex;
     }
   }
 }
