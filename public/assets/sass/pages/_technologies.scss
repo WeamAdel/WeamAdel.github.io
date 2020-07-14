@@ -50,6 +50,19 @@
         margin-bottom: 44px;
       }
     }
+
+    .plugins {
+      background-color: $main;
+
+      * {
+        color: $lightMain;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
   }
 }
 

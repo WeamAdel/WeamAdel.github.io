@@ -153,6 +153,16 @@ span.advanced {
 .technologies .content .tech-category:not(:last-of-type) {
   margin-bottom: 44px;
 }
+.technologies .content .plugins {
+  background-color: #0a0c1b;
+}
+.technologies .content .plugins * {
+  color: #f5f5f7;
+}
+.technologies .content .plugins ul {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 @media (min-width: 767px) {
   .technologies .page-wrapper {
