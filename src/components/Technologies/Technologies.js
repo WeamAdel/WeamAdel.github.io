@@ -16,7 +16,7 @@ const TECHNOLOGIES = [
     technologies: [
       {
         title: "JavaScript",
-        fontIcon: "js",
+        iconUrl: imgsPath + "js.svg",
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
@@ -26,7 +26,7 @@ const TECHNOLOGIES = [
       },
       {
         title: "React",
-        fontIcon: "react",
+        iconUrl: imgsPath + "react.svg",
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
@@ -36,22 +36,22 @@ const TECHNOLOGIES = [
       },
       {
         title: "HTML5",
-        fontIcon: "html5",
+        iconUrl: imgsPath + "html.svg",
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
         title: "CSS3",
-        fontIcon: "css3-alt",
+        iconUrl: imgsPath + "css.svg",
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
         title: "SASS",
-        fontIcon: "sass",
+        iconUrl: imgsPath + "sass.svg",
         level: PROFFESIONCY_LEVELS.med,
       },
       {
         title: "Bootstrap",
-        fontIcon: "bootstrap",
+        iconUrl: imgsPath + "bootstrap.svg",
         level: PROFFESIONCY_LEVELS.advanced,
       },
     ],
@@ -61,12 +61,12 @@ const TECHNOLOGIES = [
     technologies: [
       {
         title: "Laravel",
-        fontIcon: "laravel",
+        iconUrl: imgsPath + "laravel.svg",
         level: PROFFESIONCY_LEVELS.med,
       },
       {
         title: "PHP",
-        fontIcon: "php",
+        iconUrl: imgsPath + "php.svg",
         level: PROFFESIONCY_LEVELS.entry,
       },
       {
@@ -81,7 +81,7 @@ const TECHNOLOGIES = [
     technologies: [
       {
         title: "React Native",
-        fontIcon: "react",
+        iconUrl: imgsPath + "react.svg",
         level: PROFFESIONCY_LEVELS.entry,
       },
       {
@@ -100,7 +100,7 @@ const TECHNOLOGIES = [
         level: PROFFESIONCY_LEVELS.advanced,
       },
       {
-        title: "Protopie 8",
+        title: "Protopie",
         iconUrl: imgsPath + "protopie.svg",
         level: PROFFESIONCY_LEVELS.med,
       },
@@ -122,14 +122,14 @@ function Technologies() {
   return (
     <div className="page technologies">
       <div className="container">
-        <HeaderImage
-          heading="Technologies"
-          imgUrl={imgsPath + "img.jpg"}
-          alt="Turned on mackbook pro near brown ceramic mug"
-          isHeader={true}
-        />
-
-        <Content technologies={TECHNOLOGIES} />
+        <h1 className="page-heading">Technologies</h1>
+        <div className="page-wrapper">
+          <HeaderImage
+            imgUrl={imgsPath + "img.jpg"}
+            alt="Turned on mackbook pro near brown ceramic mug"
+          />
+          <Content technologies={TECHNOLOGIES} />
+        </div>
       </div>
     </div>
   );

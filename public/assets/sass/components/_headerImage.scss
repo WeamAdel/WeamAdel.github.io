@@ -2,16 +2,10 @@
   max-width: 40vw;
   min-width: 300px;
 
-  h1 {
-    letter-spacing: 12px;
-    margin: 0;
-    transform: translateY(50%);
-    position: relative;
-    z-index: 1;
-  }
-
   img {
     width: 100%;
+    min-height: 80vh;
+    object-fit: cover;
     filter: grayscale(0.5);
   }
 }
