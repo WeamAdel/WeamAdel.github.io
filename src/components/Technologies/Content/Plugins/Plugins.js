@@ -28,6 +28,7 @@ function Plugins() {
   ));
   return (
     <section className="plugins">
+      <i className="external fa fa-external-link" />
       <h3 className="heading">Plugins</h3>
       <ul className="list-unstyled">{pluginsJSX}</ul>
     </section>

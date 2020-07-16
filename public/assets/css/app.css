@@ -1,3 +1,4 @@
+@import "~font-awesome/css/font-awesome.min.css";
 @font-face {
   font-family: "Roboto Regular";
   src: url("/assets/fonts/Roboto-Regular.ttf");
@@ -26,6 +27,17 @@ body {
 
 h1 {
   font-family: "Bernard MT";
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+button {
+  transition: transform 0.15s ease-in-out;
+}
+button:active {
+  transform: scale(0.9);
 }
 
 main.content {
@@ -107,10 +119,74 @@ span.advanced {
   margin-right: 16px;
 }
 
-.technologies .content {
-  margin-left: 32px;
-  width: 100%;
+.main-nav {
+  padding: 16px 0;
 }
+.main-nav * {
+  color: #f5f5f7;
+}
+.main-nav .logo {
+  background-color: #0a0c1b;
+  border-radius: 50%;
+  font-family: "Bernard MT";
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-nav .logo:hover {
+  color: #f5f5f7;
+}
+.main-nav .toggler {
+  border: none;
+  width: 32px;
+  height: 32px;
+  background-color: #0a0c1b;
+  position: relative;
+  z-index: 11;
+}
+.main-nav .menu {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #0a0c1b;
+  padding: 32px 0;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+.main-nav .menu .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-nav .menu .nav-links .nav-link .title {
+  color: #f5f5f7;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Roboto Condensed Regular";
+}
+.main-nav .menu .nav-links .nav-link a {
+  display: block;
+  width: 140px;
+  height: 100px;
+  padding: 16px;
+  text-align: center;
+  border-radius: 16px;
+}
+.main-nav .menu .nav-links .nav-link a.active {
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+}
+.main-nav .menu .nav-links .nav-link a img {
+  height: 100%;
+}
+.main-nav .menu .nav-links .nav-link:not(:last-of-type) {
+  margin-bottom: 32px;
+}
+
 .technologies .content .tech-category .heading {
   margin-bottom: 24px;
   font-size: 24px;
@@ -143,6 +219,7 @@ span.advanced {
   right: 0;
   border-radius: 50%;
   transform: translate(50%, -50%);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.07);
 }
 .technologies .content .tech-category .techs-wrapper .technology .title {
   text-align: center;
@@ -155,18 +232,54 @@ span.advanced {
 }
 .technologies .content .plugins {
   background-color: #0a0c1b;
+  border-radius: 0 5px 5px;
+  padding: 32px;
+  position: relative;
 }
 .technologies .content .plugins * {
   color: #f5f5f7;
 }
+.technologies .content .plugins .external {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f5f5f7;
+  background-color: #0a0c1b;
+  border-radius: 5px 5px 0 0;
+  transform: translateY(-100%);
+  padding: 8px;
+  font-size: 14px;
+}
+.technologies .content .plugins .heading {
+  font-size: 24px;
+  font-family: "Roboto Condensed Regular";
+  margin-bottom: 16px;
+}
 .technologies .content .plugins ul {
   display: flex;
   flex-wrap: wrap;
+  line-height: 1.8;
+}
+.technologies .content .plugins ul li {
+  transition: opacity 0.2s ease-in;
+}
+.technologies .content .plugins ul li:not(:last-of-type) {
+  margin-right: 16px;
+}
+.technologies .content .plugins ul li:hover {
+  opacity: 0.8;
+}
+.technologies .content .plugins ul li i {
+  margin-right: 4px;
+  font-size: 14px;
 }
 
 @media (min-width: 767px) {
   .technologies .page-wrapper {
     display: flex;
+  }
+  .technologies .page-wrapper .content {
+    margin-left: 32px;
   }
 }
 
