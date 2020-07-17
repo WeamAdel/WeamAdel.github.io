@@ -4,24 +4,27 @@ import Toggler from "./Toggler/Toggler";
 import Menu from "./Menu/Menu";
 
 function Navbar() {
-  let [open, setMenuStatus] = useState(false);
-
+  let [open, toggle] = useState(false);
+  console.log(open);
   const toggleMenu = function () {
     console.log(open);
-    setMenuStatus(!open);
+    toggle(!open);
   };
 
-  if (!window.onscroll) {
-    window.addEventListener("scroll", function () {
-      // let menu = document.getElementById("main-nav-menu");
-      // let menuHeight = menu.outerHeight();
-      // console.log("off", window.pageYOffset);
-      // console.log("menu", menuHeight);
-      if (open /* && window.pageYOffset >= menuHeight */) {
-        setMenuStatus(false);
-      }
-    });
-  }
+  // //if (!window.onscroll) {
+  // window.addEventListener("scroll", function () {
+  //   let menu = document.getElementById("main-nav-menu");
+  //   console.log(menu);
+  //   let menuHeight = menu ? menu.offsetHeight : 0;
+  //   if (open && window.pageYOffset >= menuHeight) {
+  //     toggle(false);
+  //   }
+  // });
+  // //}
+
+  // window.addEventListener("click", function (e) {
+  //   console.log(e.target);
+  // });
 
   return (
     <nav className="main-nav">
@@ -29,7 +32,7 @@ function Navbar() {
         <Logo />
         <Toggler toggleMenu={toggleMenu} />
       </div>
-      {open ? <Menu /> : null}
+      <Menu open={open} />
     </nav>
   );
 }

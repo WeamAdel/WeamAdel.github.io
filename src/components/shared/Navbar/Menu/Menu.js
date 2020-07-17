@@ -1,5 +1,5 @@
 import React from "react";
-import { URL_PREFIX } from "../../../../config/config";
+import { useSpring, animated } from "react-spring";
 import NavLink from "./NavLink/NavLink";
 const imgsPath = "/assets/images/nav/";
 
@@ -69,16 +69,22 @@ const NAV_LINKS = [
   },
 ];
 
-function Menu() {
+function Menu(props) {
+  let springProps = useSpring({ top: props.open ? 0 : -200 });
   let navLinksJSX = NAV_LINKS.map((link) => (
     <NavLink key={link.title} {...link} />
   ));
+
   return (
-    <div id="main-nav-menu" className="menu">
+    <animated.div
+      id="main-nav-menu"
+      className="menu"
+      style={{ top: springProps.top.interpolate((top) => `${top}%`) }}
+    >
       <div className="my-container">
         <ul className="nav-links">{navLinksJSX}</ul>
       </div>
-    </div>
+    </animated.div>
   );
 }
 

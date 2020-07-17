@@ -8,7 +8,7 @@ function NavLink(props) {
       <p className="title">{props.title}</p>
       <NavigationLink
         to={props.link}
-        exact={true}
+        exact
         style={{ backgroundColor: props.bgColor }}
       >
         <img src={props.iconUrl} alt={props.alt} />
