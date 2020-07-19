@@ -1,5 +1,7 @@
 import React from "react";
 import Layout from "./../shared/Layout/Layout";
+import InfoList from "./InfoList/InfoList";
+import Accounts from "./Accounts/Accounts";
 
 function Contact() {
   return (
@@ -15,6 +17,8 @@ function Contact() {
           I would love to hear from you or get your feedback
           <i className="fa fa-coffee ml-2" />
         </p>
+        <InfoList />
+        <Accounts />
       </section>
     </Layout>
   );

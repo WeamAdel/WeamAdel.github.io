@@ -47,6 +47,16 @@ header .content {
   z-index: 2;
 }
 
+.header-image {
+  max-width: 40vw;
+  min-width: 250px;
+}
+.header-image img {
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(0.6);
+}
+
 @media (min-width: 767px) {
   .page-wrapper.flex,
 .header-wrapper {
@@ -56,6 +66,10 @@ header .content {
 .header-wrapper .content {
     margin-left: 32px;
   }
+
+  .header-image .page-wrapper {
+    margin: 0;
+  }
 }
 .page-heading {
   font-size: 44px;
@@ -64,6 +78,8 @@ header .content {
   position: relative;
   z-index: 1;
   letter-spacing: 8px;
+  color: #0a0c1b;
+  text-transform: capitalize;
 }
 
 @media (min-width: 767px) {
@@ -90,21 +106,19 @@ span.advanced {
   background-color: #c4ffbd;
 }
 
-.header-image {
-  max-width: 40vw;
-  min-width: 250px;
+.contact .accounts li {
+  display: inline-block;
 }
-.header-image img {
-  width: 100%;
-  object-fit: cover;
-  filter: grayscale(0.6);
+.contact .accounts li a {
+  color: #0a0c1b;
+}
+.contact .accounts li:not(:last-of-type) {
+  margin-right: 8px;
+}
+.contact .accounts li[title="Linked In"] {
+  margin-right: 24px;
 }
 
-@media (min-width: 767px) {
-  .header-image .page-wrapper {
-    margin: 0;
-  }
-}
 .legend {
   margin-bottom: 32px;
 }
@@ -196,9 +210,23 @@ span.advanced {
   margin-bottom: 32px;
 }
 
+.contact .header-image img {
+  max-height: 350px;
+}
 .contact main .content p:first-of-type {
   font-family: "Roboto Condensed Regular";
   font-weight: 600;
+  margin-bottom: 32px;
+}
+.contact main .content .info-list {
+  line-height: 2.2;
+  font-size: 14px;
+}
+.contact main .content .info-list .icon {
+  display: inline-block;
+  width: 24px;
+  margin-right: 8px;
+  text-align: center;
 }
 
 .technologies .content .tech-category .heading {

@@ -1,9 +1,26 @@
 .contact {
+  .header-image {
+    img {
+      max-height: 350px;
+    }
+  }
   main {
     .content {
       p:first-of-type {
         font-family: $robotoCondensed;
         font-weight: 600;
+        margin-bottom: 32px;
+      }
+
+      .info-list {
+        line-height: 2.2;
+        font-size: 14px;
+        .icon {
+          display: inline-block;
+          width: 24px;
+          margin-right: 8px;
+          text-align: center;
+        }
       }
     }
   }
