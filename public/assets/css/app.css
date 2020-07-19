@@ -40,10 +40,23 @@ button:active {
   transform: scale(0.9);
 }
 
-main.content {
+main.content,
+header .content {
   padding: 60px 0;
+  position: relative;
+  z-index: 2;
 }
 
+@media (min-width: 767px) {
+  .page-wrapper.flex,
+.header-wrapper {
+    display: flex;
+  }
+  .page-wrapper.flex .content,
+.header-wrapper .content {
+    margin-left: 32px;
+  }
+}
 .page-heading {
   font-size: 44px;
   margin: 0;
@@ -51,13 +64,11 @@ main.content {
   position: relative;
   z-index: 1;
   letter-spacing: 8px;
-  text-align: center;
 }
 
 @media (min-width: 767px) {
   .page-heading {
     font-size: 60px;
-    text-align: left;
   }
 }
 .my-container {
@@ -85,7 +96,6 @@ span.advanced {
 }
 .header-image img {
   width: 100%;
-  min-height: 80vh;
   object-fit: cover;
   filter: grayscale(0.6);
 }
@@ -186,6 +196,11 @@ span.advanced {
   margin-bottom: 32px;
 }
 
+header .content p:first-of-type {
+  font-family: "Roboto Condensed Regular";
+  font-weight: 600;
+}
+
 .technologies .content .tech-category .heading {
   margin-bottom: 24px;
   font-size: 24px;
@@ -271,15 +286,6 @@ span.advanced {
 .technologies .content .plugins ul li i {
   margin-right: 4px;
   font-size: 14px;
-}
-
-@media (min-width: 767px) {
-  .technologies .page-wrapper {
-    display: flex;
-  }
-  .technologies .page-wrapper .content {
-    margin-left: 32px;
-  }
 }
 
 /*# sourceMappingURL=app.css.map */

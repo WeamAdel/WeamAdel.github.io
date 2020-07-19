@@ -1,11 +1,10 @@
 .header-image {
   max-width: 40vw;
   min-width: 250px;
-  //margin: 0 auto;
 
   img {
     width: 100%;
-    min-height: 80vh;
+    //min-height: 80vh;
     object-fit: cover;
     filter: grayscale(0.6);
   }

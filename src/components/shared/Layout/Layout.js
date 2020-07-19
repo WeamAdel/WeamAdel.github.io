@@ -2,41 +2,37 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from "./Header/Header";
 import Content from "./Content/Content";
+import ContactHeader from "./Header/Headers/ContactHeader/ContactHeader";
 
 function Layout(props) {
-  let wrapperClasses = ["page-wrapper"];
-  if (props.flex) wrapperClasses.push("flex");
-
-  let flexLayoutJSX = (
+  const headerProps = {
+    heading: props.heading,
+    imgUrl: props.imgUrl,
+    alt: props.alt,
+  };
+  const HEADERS = {
+    default: <Header {...headerProps} />,
+  };
+  const headerJSX = HEADERS[props.page] ? HEADERS[props.page] : HEADERS.default;
+  const pageContentsJSX = (
     <>
-      <div className="my-container">
-        <h1 className="page-heading">{props.heading}</h1>
-        <Header heading={props.heading} imgUrl={props.imgUrl} alt={props.alt} />
+      <div className="page-wrapper flex">
+        {headerJSX}
         <Content>{props.children}</Content>
       </div>
     </>
   );
-
-  let normalLayoutJSX = (
-    <>
-      <div className="my-container">
-        <h1 className="page-heading">{props.heading}</h1>
-        <Header heading={props.heading} imgUrl={props.imgUrl} alt={props.alt} />
-      </div>
-      <Content>{props.children}</Content>
-    </>
-  );
+  let flexLayoutJSX = <div className="my-container">{pageContentsJSX}</div>;
 
   return (
     <div className={["page", props.page].join(" ")}>
-      <div className={wrapperClasses.join(" ")}>
-        {props.flex ? flexLayoutJSX : normalLayoutJSX}
-      </div>
+      {props.flex ? flexLayoutJSX : pageContentsJSX}
     </div>
   );
 }
 
 Layout.propTypes = {
+  page: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
