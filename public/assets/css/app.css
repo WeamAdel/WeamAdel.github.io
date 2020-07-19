@@ -196,7 +196,7 @@ span.advanced {
   margin-bottom: 32px;
 }
 
-header .content p:first-of-type {
+.contact main .content p:first-of-type {
   font-family: "Roboto Condensed Regular";
   font-weight: 600;
 }

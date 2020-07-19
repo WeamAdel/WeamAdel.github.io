@@ -5,9 +5,8 @@ import Menu from "./Menu/Menu";
 
 function Navbar() {
   let [open, toggle] = useState(false);
-  console.log(open);
+
   const toggleMenu = function () {
-    console.log(open);
     toggle(!open);
   };
 
@@ -27,7 +26,7 @@ function Navbar() {
         <Logo />
         <Toggler toggleMenu={toggleMenu} />
       </div>
-      <Menu open={open} />
+      <Menu open={open} closeMenu={toggleMenu} />
     </nav>
   );
 }

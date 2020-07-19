@@ -71,7 +71,9 @@ const NAV_LINKS = [
 ];
 
 function Menu(props) {
-  let springProps = useSpring({ top: props.open ? 0 : -200 });
+  let springProps = useSpring({
+    transform: props.open ? 0 : -100,
+  });
   let navLinksJSX = NAV_LINKS.map((link) => (
     <NavLink key={link.title} {...link} />
   ));
@@ -80,10 +82,16 @@ function Menu(props) {
     <animated.div
       id="main-nav-menu"
       className="menu"
-      style={{ top: springProps.top.interpolate((top) => `${top}%`) }}
+      style={{
+        transform: springProps.transform.interpolate(
+          (num) => `translateY(${num}%)`
+        ),
+      }}
     >
       <div className="my-container">
-        <ul className="nav-links">{navLinksJSX}</ul>
+        <ul className="nav-links" onClick={props.closeMenu}>
+          {navLinksJSX}
+        </ul>
       </div>
     </animated.div>
   );
@@ -91,6 +99,7 @@ function Menu(props) {
 
 Menu.propTypes = {
   open: PropTypes.bool.isRequired,
+  closeMenu: PropTypes.func.isRequired,
 };
 
 export default Menu;
