@@ -123,16 +123,14 @@ function Technologies() {
     <div className="page technologies">
       <div className="my-container">
         <h1 className="page-heading">Technologies</h1>
-        <div className="page-wrapper">
-          <HeaderImage
-            imgUrl={imgsPath + "img.jpg"}
-            alt="Turned on mackbook pro near brown ceramic mug"
-          />
-          <Content
-            technologies={TECHNOLOGIES}
-            legendBullets={Object.values(PROFFESIONCY_LEVELS)}
-          />
-        </div>
+        <HeaderImage
+          imgUrl={imgsPath + "img.jpg"}
+          alt="Turned on mackbook pro near brown ceramic mug"
+        />
+        <Content
+          technologies={TECHNOLOGIES}
+          legendBullets={Object.values(PROFFESIONCY_LEVELS)}
+        />
       </div>
     </div>
   );

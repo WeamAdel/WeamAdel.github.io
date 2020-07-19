@@ -11,20 +11,15 @@ function Navbar() {
     toggle(!open);
   };
 
-  // //if (!window.onscroll) {
-  // window.addEventListener("scroll", function () {
-  //   let menu = document.getElementById("main-nav-menu");
-  //   console.log(menu);
-  //   let menuHeight = menu ? menu.offsetHeight : 0;
-  //   if (open && window.pageYOffset >= menuHeight) {
-  //     toggle(false);
-  //   }
-  // });
-  // //}
-
-  // window.addEventListener("click", function (e) {
-  //   console.log(e.target);
-  // });
+  let menu = document.getElementById("main-nav-menu");
+  if (menu && !window.onscroll) {
+    window.addEventListener("scroll", function () {
+      let menuHeight = menu ? menu.offsetHeight : 0;
+      if (open && window.pageYOffset >= menuHeight - 120) {
+        toggle(false);
+      }
+    });
+  }
 
   return (
     <nav className="main-nav">

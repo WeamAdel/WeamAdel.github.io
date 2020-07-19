@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { useSpring, animated } from "react-spring";
 import NavLink from "./NavLink/NavLink";
 const imgsPath = "/assets/images/nav/";
@@ -87,5 +88,9 @@ function Menu(props) {
     </animated.div>
   );
 }
+
+Menu.propTypes = {
+  open: PropTypes.bool.isRequired,
+};
 
 export default Menu;
