@@ -16,7 +16,7 @@ function Layout(props) {
   const headerJSX = HEADERS[props.page] ? HEADERS[props.page] : HEADERS.default;
   const pageContentsJSX = (
     <>
-      <div className="page-wrapper flex">
+      <div className={`page-wrapper ${props.flex ? "flex" : ""}`}>
         {headerJSX}
         <Content>{props.children}</Content>
       </div>

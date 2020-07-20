@@ -210,6 +210,69 @@ span.advanced {
   margin-bottom: 32px;
 }
 
+.agenda .tech-cards h2 {
+  margin-bottom: 60px;
+  font-family: "Bernard MT";
+}
+.agenda .tech-cards .cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 32px;
+}
+.agenda .tech-cards .cards-wrapper .tech-card {
+  padding: 77px 32px;
+  max-width: 280px;
+  position: relative;
+}
+.agenda .tech-cards .cards-wrapper .tech-card .priority {
+  height: 5px;
+  width: 60px;
+  display: block;
+  position: absolute;
+  top: -12px;
+  left: 0;
+}
+.agenda .tech-cards .cards-wrapper .tech-card .priority.high {
+  background-color: #9f1725;
+}
+.agenda .tech-cards .cards-wrapper .tech-card .priority.medium {
+  background-color: #f5a900;
+}
+.agenda .tech-cards .cards-wrapper .tech-card .priority.low {
+  background-color: #eeff00;
+}
+.agenda .tech-cards .cards-wrapper .tech-card .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.agenda .tech-cards .cards-wrapper .tech-card .head .name {
+  font-size: 16px;
+  font-family: "Roboto Condensed Regular";
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.agenda .tech-cards .cards-wrapper .tech-card .head a {
+  color: inherit;
+  font-size: 14px;
+}
+.agenda .tech-cards .cards-wrapper .tech-card .head a img {
+  width: 14px;
+}
+.agenda .tech-cards .cards-wrapper .tech-card .about {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.agenda .tech-cards .cards-wrapper .tech-card:nth-of-type(odd) {
+  background-color: #f8f8f8;
+  color: #0a0c1b;
+}
+.agenda .tech-cards .cards-wrapper .tech-card:nth-of-type(even) {
+  background-color: #0a0c1b;
+  color: #f8f8f8;
+}
+
 .contact .header-image img {
   max-height: 350px;
 }
