@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderImage from "../shared/HeaderImage/HeaderImage";
+import HeaderImage from "../shared/Layout/Header/HeaderImage/HeaderImage";
 import Content from "./Content/Content";
 
 const imgsPath = "/assets/images/technologies/";

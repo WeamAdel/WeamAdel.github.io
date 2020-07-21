@@ -11,8 +11,8 @@ function Layout(props) {
     alt: props.alt,
   };
   const HEADERS = {
-    agenda: <AgendaHeader {...headerProps} />,
-    default: <Header {...headerProps} />,
+    agenda: <AgendaHeader {...headerProps} flex={props.flex} />,
+    default: <Header {...headerProps} flex={props.flex} />,
   };
   const headerJSX = HEADERS[props.page] ? HEADERS[props.page] : HEADERS.default;
   const pageContentsJSX = (

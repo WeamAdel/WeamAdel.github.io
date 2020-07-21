@@ -225,17 +225,58 @@ span.advanced {
   display: flex;
   align-items: flex-end;
 }
+.agenda header .content .quote {
+  background-color: #0a0c1b;
+  color: white;
+  padding: 48px 32px 48px 64px;
+  margin-bottom: 0;
+  background-image: url("/assets/images/agenda/books.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 36%;
+  max-width: 400px;
+}
+.agenda header .content .quote p {
+  position: relative;
+  font-size: 18px;
+}
+.agenda header .content .quote p::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -32px;
+  color: red;
+  background-image: url("/assets/images/agenda/quote.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 18px;
+  width: 18px;
+}
+.agenda header .content .quote cite {
+  text-align: right;
+  display: block;
+  font-size: 14px;
+}
+.agenda header .content .lorem-bg {
+  background-image: url("/assets/images/agenda/lorem-ipsum.svg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
 .agenda .tech-cards h2 {
   margin-bottom: 60px;
   font-family: "Bernard MT";
 }
 .agenda .tech-cards .cards-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-gap: 32px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 49px 32px;
 }
 .agenda .tech-cards .cards-wrapper .tech-card {
-  padding: 77px 32px;
+  padding: 60px 32px;
   max-width: 280px;
   position: relative;
 }
@@ -287,34 +328,12 @@ span.advanced {
   background-color: #0a0c1b;
   color: #f8f8f8;
 }
-.agenda .quote {
-  background-color: #0a0c1b;
-  color: white;
-  padding: 48px 32px 48px 64px;
-  margin-bottom: 0;
-  background-image: url("/assets/images/agenda/books.svg");
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: 36%;
-  margin-left: -30%;
-  max-width: 400px;
-}
-.agenda .quote p {
-  position: relative;
-}
-.agenda .quote p::before {
-  content: "";
-  position: absolute;
-  top: -12px;
-  left: -32px;
-  color: red;
-  background-image: url("/assets/images/agenda/quote.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 18px;
-  width: 18px;
-}
 
+@media (min-width: 767px) {
+  .agenda header .content .quote {
+    margin-left: -30%;
+  }
+}
 .contact .header-image img {
   max-height: 350px;
 }
@@ -332,6 +351,41 @@ span.advanced {
   width: 24px;
   margin-right: 8px;
   text-align: center;
+}
+
+.home {
+  min-height: calc(100vh - 64px);
+}
+.home .heading {
+  padding: 32px 0;
+}
+.home .heading .main-heading {
+  font-size: 54px;
+}
+.home .heading .main-heading .underlined {
+  position: relative;
+}
+.home .heading .main-heading .underlined::after {
+  content: "";
+  height: 12px;
+  width: 100%;
+  position: absolute;
+  left: 6px;
+  bottom: 12px;
+  background-color: rgba(10, 216, 239, 0.52);
+}
+.home .heading .main-heading .design {
+  position: relative;
+}
+.home .heading .main-heading .design::after {
+  content: "";
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  right: -7px;
+  top: -7px;
+  background-image: url("/assets/images/home/brush.svg");
+  background-repeat: no-repeat;
 }
 
 .technologies .content .tech-category .heading {

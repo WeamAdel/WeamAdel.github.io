@@ -1,0 +1,37 @@
+.home {
+  min-height: calc(100vh - 64px);
+  .heading {
+    padding: 32px 0;
+
+    .main-heading {
+      font-size: 54px;
+
+      .underlined {
+        position: relative;
+        &::after {
+          content: "";
+          height: 12px;
+          width: 100%;
+          position: absolute;
+          left: 6px;
+          bottom: 12px;
+          background-color: $attract;
+        }
+      }
+
+      .design {
+        position: relative;
+        &::after {
+          content: "";
+          height: 28px;
+          width: 28px;
+          position: absolute;
+          right: -7px;
+          top: -7px;
+          background-image: url("/assets/images/home/brush.svg");
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}

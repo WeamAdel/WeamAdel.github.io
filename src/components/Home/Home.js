@@ -1,12 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { URL_PREFIX } from "./../../config/config";
+import Heading from "./Heading/Heading";
 
 function Home() {
   return (
-    <Link to={"technologies"} exact>
-      Technologies
-    </Link>
+    <header className="home">
+      <div className="my-container">
+        <div className="row">
+          <Heading />
+        </div>
+      </div>
+    </header>
   );
 }
 
