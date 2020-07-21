@@ -1,6 +1,23 @@
+%welcomeImage {
+  position: absolute;
+  height: 100%;
+}
+
 .home {
   min-height: calc(100vh - 64px);
-
+  overflow-x: hidden;
+  position: relative;
+  .welcome {
+    @extend %welcomeImage;
+    &:first-of-type {
+      left: 0;
+      transform: translateX(calc(-100% + 80px));
+    }
+    &:last-of-type {
+      right: 0;
+      transform: translateX(calc(100% - 80px));
+    }
+  }
   .heading {
     padding: calc(32px + 64px) 0 32px; //Adding padding of Navbar height
 
@@ -69,11 +86,11 @@
         top: 7px;
         z-index: 1;
 
-        &.awake {
+        &.available {
           background-color: $flatGreen;
         }
-        &.sleeping {
-          background-color: black;
+        &.not-available {
+          background-color: rgb(193, 170, 190);
         }
       }
     }

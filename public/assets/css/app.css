@@ -363,8 +363,23 @@ span.advanced {
   text-align: center;
 }
 
+.home .welcome {
+  position: absolute;
+  height: 100%;
+}
+
 .home {
   min-height: calc(100vh - 64px);
+  overflow-x: hidden;
+  position: relative;
+}
+.home .welcome:first-of-type {
+  left: 0;
+  transform: translateX(calc(-100% + 80px));
+}
+.home .welcome:last-of-type {
+  right: 0;
+  transform: translateX(calc(100% - 80px));
 }
 .home .heading {
   padding: calc(32px + 64px) 0 32px;
@@ -429,11 +444,11 @@ span.advanced {
   top: 7px;
   z-index: 1;
 }
-.home .right-column .avatar .status.awake {
+.home .right-column .avatar .status.available {
   background-color: #c4ffbd;
 }
-.home .right-column .avatar .status.sleeping {
-  background-color: black;
+.home .right-column .avatar .status.not-available {
+  background-color: #c1aabe;
 }
 .home .right-column .quote {
   background-image: none;
