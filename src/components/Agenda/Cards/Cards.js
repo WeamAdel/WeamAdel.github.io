@@ -84,7 +84,7 @@ function Cards() {
     <Card key={tech.name} {...tech} />
   ));
   return (
-    <section className="tech-cards">
+    <section className="page-section tech-cards">
       <div className="my-container">
         <h2>Technologies</h2>
         <div className="cards-wrapper">{technologiesJSX}</div>

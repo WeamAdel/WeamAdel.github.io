@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from "./Header/Header";
 import Content from "./Content/Content";
-import ContactHeader from "./Header/Headers/ContactHeader/ContactHeader";
+import AgendaHeader from "./Header/Headers/AgendaHeader/AgendaHeader";
 
 function Layout(props) {
   const headerProps = {
@@ -11,6 +11,7 @@ function Layout(props) {
     alt: props.alt,
   };
   const HEADERS = {
+    agenda: <AgendaHeader {...headerProps} />,
     default: <Header {...headerProps} />,
   };
   const headerJSX = HEADERS[props.page] ? HEADERS[props.page] : HEADERS.default;

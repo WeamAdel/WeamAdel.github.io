@@ -5,10 +5,12 @@ import PropTypes from "prop-types";
 function Header(props) {
   return (
     <header>
-      <h1 className="page-heading">{props.heading}</h1>
-      <div className="header-wrapper">
-        <HeaderImage imgUrl={props.imgUrl} alt={props.alt} />
-        {props.children ? props.children : null}
+      <div className="my-container">
+        <h1 className="page-heading">{props.heading}</h1>
+        <div className="header-wrapper">
+          <HeaderImage imgUrl={props.imgUrl} alt={props.alt} />
+          {props.children ? props.children : null}
+        </div>
       </div>
     </header>
   );

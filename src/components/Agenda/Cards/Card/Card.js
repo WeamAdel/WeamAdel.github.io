@@ -4,7 +4,12 @@ import PropTypes from "prop-types";
 function Card(props) {
   return (
     <div className="tech-card">
-      <span className={`priority ${props.priority}`} />
+      <span
+        className={`priority ${props.priority}`}
+        title={`${props.priority[0].toUpperCase()}${props.priority.slice(
+          1
+        )} Priority`}
+      />
       <div className="head">
         <h3 className="name">{props.name}</h3>
         <a href={props.link} target="_blank" rel="noopener noreferer">

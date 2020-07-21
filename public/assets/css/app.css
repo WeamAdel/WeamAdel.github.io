@@ -40,11 +40,18 @@ button:active {
   transform: scale(0.9);
 }
 
-main.content,
 header .content {
-  padding: 60px 0;
   position: relative;
   z-index: 2;
+  padding: 60px 0;
+}
+
+.page-wrapper main.content {
+  position: relative;
+  z-index: 2;
+}
+.page-wrapper.flex main.content {
+  padding: 60px 0;
 }
 
 .header-image {
@@ -87,6 +94,10 @@ header .content {
     font-size: 60px;
   }
 }
+.page-section {
+  margin: 100px 0;
+}
+
 .my-container {
   padding: 0 20px;
 }
@@ -210,6 +221,10 @@ span.advanced {
   margin-bottom: 32px;
 }
 
+.agenda header .content {
+  display: flex;
+  align-items: flex-end;
+}
 .agenda .tech-cards h2 {
   margin-bottom: 60px;
   font-family: "Bernard MT";
@@ -271,6 +286,33 @@ span.advanced {
 .agenda .tech-cards .cards-wrapper .tech-card:nth-of-type(even) {
   background-color: #0a0c1b;
   color: #f8f8f8;
+}
+.agenda .quote {
+  background-color: #0a0c1b;
+  color: white;
+  padding: 48px 32px 48px 64px;
+  margin-bottom: 0;
+  background-image: url("/assets/images/agenda/books.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 36%;
+  margin-left: -30%;
+  max-width: 400px;
+}
+.agenda .quote p {
+  position: relative;
+}
+.agenda .quote p::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -32px;
+  color: red;
+  background-image: url("/assets/images/agenda/quote.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 18px;
+  width: 18px;
 }
 
 .contact .header-image img {
