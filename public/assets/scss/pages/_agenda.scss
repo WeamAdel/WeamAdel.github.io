@@ -3,41 +3,12 @@
     .content {
       display: flex;
       align-items: flex-end;
+
       .quote {
-        background-color: $main;
-        color: white;
         padding: 48px 32px 48px 64px;
         margin-bottom: 0;
-        background-image: url("/assets/images/agenda/books.svg");
-        background-repeat: no-repeat;
-        background-position: bottom right;
-        background-size: 36%;
-        max-width: 400px;
-
-        p {
-          position: relative;
-          font-size: 18px;
-
-          &::before {
-            content: "";
-            position: absolute;
-            top: -12px;
-            left: -32px;
-            color: red;
-            background-image: url("/assets/images/agenda/quote.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 18px;
-            width: 18px;
-          }
-        }
-
-        cite {
-          text-align: right;
-          display: block;
-          font-size: 14px;
-        }
       }
+
       .lorem-bg {
         background-image: url("/assets/images/agenda/lorem-ipsum.svg");
         position: absolute;

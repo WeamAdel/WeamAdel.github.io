@@ -1,10 +1,12 @@
 .home {
   min-height: calc(100vh - 64px);
+
   .heading {
-    padding: 32px 0;
+    padding: calc(32px + 64px) 0 32px; //Adding padding of Navbar height
 
     .main-heading {
-      font-size: 54px;
+      font-size: 52px;
+      color: $main;
 
       .underlined {
         position: relative;
@@ -30,6 +32,63 @@
           top: -7px;
           background-image: url("/assets/images/home/brush.svg");
           background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+  .right-column {
+    background-color: $main;
+    padding: calc(32px + 64px) 44px 32px; //Adding padding of Navbar height
+    min-height: 90vh;
+    border-radius: 0 0 25px 25px;
+    max-width: 380px;
+    margin-right: 8px;
+
+    $avatarDimentions: 120px;
+    .avatar {
+      width: $avatarDimentions;
+      position: relative;
+      margin: auto;
+
+      img {
+        border-radius: 50%;
+        object-fit: cover;
+        height: $avatarDimentions;
+        width: $avatarDimentions;
+        object-position: left;
+        mix-blend-mode: luminosity;
+      }
+
+      .status {
+        height: 14px;
+        width: 14px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        right: 16px;
+        top: 7px;
+        z-index: 1;
+
+        &.awake {
+          background-color: $flatGreen;
+        }
+        &.sleeping {
+          background-color: black;
+        }
+      }
+    }
+
+    .quote {
+      background-image: none;
+      margin: 32px auto;
+      max-width: 230px;
+
+      p {
+        font-size: 16px;
+        &::before {
+          top: -12px;
+          left: -18px;
+          background-size: 80%;
         }
       }
     }

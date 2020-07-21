@@ -155,6 +155,12 @@ span.advanced {
 
 .main-nav {
   padding: 16px 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 .main-nav * {
   color: #f5f5f7;
@@ -174,6 +180,7 @@ span.advanced {
 }
 .main-nav .toggler {
   border: none;
+  border-radius: 4px;
   width: 32px;
   height: 32px;
   background-color: #0a0c1b;
@@ -221,26 +228,20 @@ span.advanced {
   margin-bottom: 32px;
 }
 
-.agenda header .content {
-  display: flex;
-  align-items: flex-end;
-}
-.agenda header .content .quote {
+.quote {
   background-color: #0a0c1b;
   color: white;
-  padding: 48px 32px 48px 64px;
-  margin-bottom: 0;
   background-image: url("/assets/images/agenda/books.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 36%;
   max-width: 400px;
 }
-.agenda header .content .quote p {
+.quote p {
   position: relative;
   font-size: 18px;
 }
-.agenda header .content .quote p::before {
+.quote p::before {
   content: "";
   position: absolute;
   top: -12px;
@@ -252,10 +253,19 @@ span.advanced {
   height: 18px;
   width: 18px;
 }
-.agenda header .content .quote cite {
+.quote cite {
   text-align: right;
   display: block;
   font-size: 14px;
+}
+
+.agenda header .content {
+  display: flex;
+  align-items: flex-end;
+}
+.agenda header .content .quote {
+  padding: 48px 32px 48px 64px;
+  margin-bottom: 0;
 }
 .agenda header .content .lorem-bg {
   background-image: url("/assets/images/agenda/lorem-ipsum.svg");
@@ -357,10 +367,11 @@ span.advanced {
   min-height: calc(100vh - 64px);
 }
 .home .heading {
-  padding: 32px 0;
+  padding: calc(32px + 64px) 0 32px;
 }
 .home .heading .main-heading {
-  font-size: 54px;
+  font-size: 52px;
+  color: #0a0c1b;
 }
 .home .heading .main-heading .underlined {
   position: relative;
@@ -386,6 +397,56 @@ span.advanced {
   top: -7px;
   background-image: url("/assets/images/home/brush.svg");
   background-repeat: no-repeat;
+}
+.home .right-column {
+  background-color: #0a0c1b;
+  padding: calc(32px + 64px) 44px 32px;
+  min-height: 90vh;
+  border-radius: 0 0 25px 25px;
+  max-width: 380px;
+  margin-right: 8px;
+}
+.home .right-column .avatar {
+  width: 120px;
+  position: relative;
+  margin: auto;
+}
+.home .right-column .avatar img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 120px;
+  width: 120px;
+  object-position: left;
+  mix-blend-mode: luminosity;
+}
+.home .right-column .avatar .status {
+  height: 14px;
+  width: 14px;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  right: 16px;
+  top: 7px;
+  z-index: 1;
+}
+.home .right-column .avatar .status.awake {
+  background-color: #c4ffbd;
+}
+.home .right-column .avatar .status.sleeping {
+  background-color: black;
+}
+.home .right-column .quote {
+  background-image: none;
+  margin: 32px auto;
+  max-width: 230px;
+}
+.home .right-column .quote p {
+  font-size: 16px;
+}
+.home .right-column .quote p::before {
+  top: -12px;
+  left: -18px;
+  background-size: 80%;
 }
 
 .technologies .content .tech-category .heading {

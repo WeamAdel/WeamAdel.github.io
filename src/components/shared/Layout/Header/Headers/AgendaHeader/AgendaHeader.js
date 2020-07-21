@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Header from "../../Header";
-import Quote from "./Quote/Quote";
+import Quote from "./../../../../Quote/Quote";
 
 function AgendaHeader(props) {
   return (
@@ -13,7 +13,11 @@ function AgendaHeader(props) {
     >
       <section className="content">
         <span className="lorem-bg"></span>
-        <Quote />
+        <Quote
+          cite="Morgan Freeman"
+          quote="I'm always trying new things and learning new things. If there isn't
+        anything more you can learn - go off and die"
+        />
       </section>
     </Header>
   );
