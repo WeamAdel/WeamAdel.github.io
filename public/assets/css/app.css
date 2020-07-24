@@ -413,20 +413,21 @@ span.advanced {
   background-image: url("/assets/images/home/brush.svg");
   background-repeat: no-repeat;
 }
-.home .right-column {
+.home .right-column .main-content {
   background-color: #0a0c1b;
+  color: white;
   padding: calc(32px + 64px) 44px 32px;
   min-height: 90vh;
   border-radius: 0 0 25px 25px;
   max-width: 380px;
   margin-right: 8px;
 }
-.home .right-column .avatar {
+.home .right-column .main-content .avatar {
   width: 120px;
   position: relative;
   margin: auto;
 }
-.home .right-column .avatar img {
+.home .right-column .main-content .avatar img {
   border-radius: 50%;
   object-fit: cover;
   height: 120px;
@@ -434,7 +435,7 @@ span.advanced {
   object-position: left;
   mix-blend-mode: luminosity;
 }
-.home .right-column .avatar .status {
+.home .right-column .main-content .avatar .status {
   height: 14px;
   width: 14px;
   display: block;
@@ -444,24 +445,37 @@ span.advanced {
   top: 7px;
   z-index: 1;
 }
-.home .right-column .avatar .status.available {
+.home .right-column .main-content .avatar .status.available {
   background-color: #c4ffbd;
 }
-.home .right-column .avatar .status.not-available {
+.home .right-column .main-content .avatar .status.not-available {
   background-color: #c1aabe;
 }
-.home .right-column .quote {
+.home .right-column .main-content .quote {
   background-image: none;
   margin: 32px auto;
   max-width: 230px;
 }
-.home .right-column .quote p {
+.home .right-column .main-content .quote p {
   font-size: 16px;
 }
-.home .right-column .quote p::before {
+.home .right-column .main-content .quote p::before {
   top: -12px;
   left: -18px;
   background-size: 80%;
+}
+.home .right-column .main-content .coffee {
+  color: #bdddff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .right-column .main-content .coffee .coffee-wrapper {
+  margin-right: 16px;
+  display: flex;
+}
+.home .right-column .main-content .coffee .coffee-wrapper .coffee-cup:not(:last-of-type) {
+  margin-right: 8px;
 }
 
 .technologies .content .tech-category .heading {
