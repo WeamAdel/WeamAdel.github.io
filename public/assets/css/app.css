@@ -395,6 +395,8 @@ span.advanced {
   font-size: 48px;
   color: #0a0c1b;
   max-width: 350px;
+  display: flex;
+  align-items: center;
 }
 .home .heading .main-heading .underlined {
   position: relative;

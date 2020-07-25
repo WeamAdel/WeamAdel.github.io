@@ -19,9 +19,12 @@ function Heading() {
             opacity: opacity,
           }}
         >
-          <span className="d-block">Hi,</span>
-          my name is <span className="underlined">Weam</span>, I am a front-end
-          engineer and a <span className="design">design</span> enthusiast
+          <div className="wrapper">
+            <span className="d-block">Hi,</span>
+            my name is <span className="underlined">Weam</span>, I am a
+            front-end engineer and a <span className="design">design</span>{" "}
+            enthusiast
+          </div>
         </animated.h1>
       </div>
     </div>

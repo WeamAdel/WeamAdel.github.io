@@ -33,6 +33,8 @@
       font-size: 48px;
       color: $main;
       max-width: 350px;
+      display: flex;
+      align-items: center;
 
       .underlined {
         position: relative;

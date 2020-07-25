@@ -8,7 +8,7 @@ import Accounts from "./Accounts/Accounts";
 function RightColumn() {
   let { height, opacity } = useSpring({
     from: { height: 0, opacity: 0 },
-    to: { height: 100, opacity: 1 },
+    to: { height: "auto", opacity: 1 },
     delay: 2000,
     duration: config.slow,
   });
@@ -18,10 +18,7 @@ function RightColumn() {
       <animated.div
         className="right-column"
         style={{
-          height: height.interpolate((h) => {
-            console.log(h);
-            return h + "%";
-          }),
+          height: height,
           opacity: opacity,
         }}
       >
