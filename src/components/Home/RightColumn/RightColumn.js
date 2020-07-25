@@ -1,29 +1,40 @@
 import React from "react";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, config } from "react-spring";
 import Avatar from "./Avatar/Avatar";
 import Quote from "./../../shared/Quote/Quote";
 import Coffee from "./Coffee/Coffee";
 import Accounts from "./Accounts/Accounts";
 
 function RightColumn() {
-  const springProps = useSpring({
-    form: { height: 0 },
-    to: { height: "auto" },
+  let { height, opacity } = useSpring({
+    from: { height: 0, opacity: 0 },
+    to: { height: 100, opacity: 1 },
+    delay: 2000,
+    duration: config.slow,
   });
 
   return (
-    <div className="col-md-5 offset-md-1 order-first order-md-last">
-      <div className="right-column">
-        <animated.div className="main-content" style={springProps}>
+    <div className="column col-md-5 offset-md-1 order-first order-md-last">
+      <animated.div
+        className="right-column"
+        style={{
+          height: height.interpolate((h) => {
+            console.log(h);
+            return h + "%";
+          }),
+          opacity: opacity,
+        }}
+      >
+        <div className="main-content">
           <Avatar />
           <Quote
             quote="The powers of a man's mind are directly proportioned to the quantity of coffee he drinks."
             cite="Sir James Mackintosh"
           />
           <Coffee />
-        </animated.div>
+        </div>
         <Accounts />
-      </div>
+      </animated.div>
     </div>
   );
 }

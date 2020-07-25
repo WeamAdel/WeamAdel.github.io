@@ -1,5 +1,6 @@
 import React from "react";
-import { ACCOUNTS } from "./../../../../utility/utilConsts";
+import { useSpring, animated, config } from "react-spring";
+import { ACCOUNTS } from "../../../../utility/utilConsts";
 import AccountsWrapper from "./AccountsWrapper/AccountsWrapper";
 
 function Accounts() {
@@ -13,11 +14,27 @@ function Accounts() {
     formalAccounts[1],
   ];
 
+  let { width, opacity } = useSpring({
+    from: { width: 0, opacity: 0 },
+    to: { width: 100, opacity: 1 },
+    delay: 3000,
+    duration: config.slow,
+  });
+
   return (
-    <ul className="accounts list-unstyled mb-0">
+    <animated.ul
+      style={{
+        width: width.interpolate((w) => {
+          //console.log(w);
+          return w + "%";
+        }),
+        opacity: opacity,
+      }}
+      className="accounts list-unstyled mb-0"
+    >
       <AccountsWrapper theme="dark" accounts={darkThemeAccounts} />
       <AccountsWrapper theme="light" accounts={ACCOUNTS.design} />
-    </ul>
+    </animated.ul>
   );
 }
 

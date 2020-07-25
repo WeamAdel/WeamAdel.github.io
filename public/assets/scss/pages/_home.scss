@@ -1,6 +1,7 @@
 %welcomeImage {
   position: absolute;
   height: 100%;
+  display: none;
 }
 
 .home {
@@ -26,6 +27,9 @@
     align-items: center;
 
     .main-heading {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
       font-size: 48px;
       color: $main;
       max-width: 350px;
@@ -58,15 +62,17 @@
       }
     }
   }
+
   .right-column {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
     .main-content {
       background-color: $main;
       color: white;
       padding: calc(32px + 64px) 44px 32px; //Adding padding of Navbar height
       border-radius: 0 0 25px 25px;
       position: relative;
-      //overflow-y: hidden;
-      //height: 0;
 
       $avatarDimentions: 120px;
       .avatar {
@@ -132,29 +138,69 @@
         }
       }
     }
+
+    .accounts {
+      display: flex;
+      margin: 32px 0;
+      background-color: $main;
+      border-radius: 50px;
+      width: 0;
+      overflow: hidden;
+      opacity: 0;
+
+      > .accounts-wrapper {
+        display: flex;
+        padding: 12px;
+        justify-content: center;
+        border-radius: 50px;
+
+        &.dark {
+          width: 55%;
+          background-color: $main;
+          a {
+            color: $lightMain;
+          }
+        }
+
+        &.light {
+          width: 45%;
+          background-color: $lightMain;
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+          position: relative;
+          right: -4px;
+          a {
+            color: $main;
+          }
+        }
+
+        li:not(:last-of-type) {
+          margin-right: 4px;
+        }
+      }
+    }
   }
 }
 
 @media (min-width: 960px) {
   .home {
+    .column::before {
+      content: "";
+      position: absolute;
+      top: 32px;
+      left: 0;
+      background-image: url("/assets/images/home/grid.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 330px;
+      width: 150px;
+      z-index: 2;
+      transform: translateX(-66%);
+    }
+
     .right-column {
       margin-right: 8px;
       .main-content {
         max-width: 380px;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 32px;
-          left: 0;
-          background-image: url("/assets/images/home/grid.svg");
-          background-size: 100%;
-          background-repeat: no-repeat;
-          height: 330px;
-          width: 150px;
-          z-index: 2;
-          transform: translateX(-66%);
-        }
       }
     }
   }
