@@ -18,22 +18,27 @@
       transform: translateX(calc(100% - 80px));
     }
   }
+
   .heading {
     padding: calc(32px + 64px) 0 32px; //Adding padding of Navbar height
+    height: 100%;
+    display: flex;
+    align-items: center;
 
     .main-heading {
-      font-size: 52px;
+      font-size: 48px;
       color: $main;
+      max-width: 350px;
 
       .underlined {
         position: relative;
         &::after {
           content: "";
-          height: 12px;
+          height: 10px;
           width: 100%;
           position: absolute;
           left: 6px;
-          bottom: 12px;
+          bottom: 8px;
           background-color: $attract;
         }
       }
@@ -58,10 +63,11 @@
       background-color: $main;
       color: white;
       padding: calc(32px + 64px) 44px 32px; //Adding padding of Navbar height
-      min-height: 90vh;
       border-radius: 0 0 25px 25px;
-      max-width: 380px;
-      margin-right: 8px;
+      position: relative;
+      //overflow-y: hidden;
+      //height: 0;
+
       $avatarDimentions: 120px;
       .avatar {
         width: $avatarDimentions;
@@ -120,9 +126,34 @@
         .coffee-wrapper {
           margin-right: 16px;
           display: flex;
-          .coffee-cup:not(:last-of-type) {
-            margin-right: 8px;
+          > *:not(:last-of-type) {
+            margin-right: 4px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .home {
+    .right-column {
+      margin-right: 8px;
+      .main-content {
+        max-width: 380px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 32px;
+          left: 0;
+          background-image: url("/assets/images/home/grid.svg");
+          background-size: 100%;
+          background-repeat: no-repeat;
+          height: 330px;
+          width: 150px;
+          z-index: 2;
+          transform: translateX(-66%);
         }
       }
     }

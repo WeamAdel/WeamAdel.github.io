@@ -383,21 +383,25 @@ span.advanced {
 }
 .home .heading {
   padding: calc(32px + 64px) 0 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .home .heading .main-heading {
-  font-size: 52px;
+  font-size: 48px;
   color: #0a0c1b;
+  max-width: 350px;
 }
 .home .heading .main-heading .underlined {
   position: relative;
 }
 .home .heading .main-heading .underlined::after {
   content: "";
-  height: 12px;
+  height: 10px;
   width: 100%;
   position: absolute;
   left: 6px;
-  bottom: 12px;
+  bottom: 8px;
   background-color: rgba(10, 216, 239, 0.52);
 }
 .home .heading .main-heading .design {
@@ -417,10 +421,8 @@ span.advanced {
   background-color: #0a0c1b;
   color: white;
   padding: calc(32px + 64px) 44px 32px;
-  min-height: 90vh;
   border-radius: 0 0 25px 25px;
-  max-width: 380px;
-  margin-right: 8px;
+  position: relative;
 }
 .home .right-column .main-content .avatar {
   width: 120px;
@@ -474,10 +476,31 @@ span.advanced {
   margin-right: 16px;
   display: flex;
 }
-.home .right-column .main-content .coffee .coffee-wrapper .coffee-cup:not(:last-of-type) {
-  margin-right: 8px;
+.home .right-column .main-content .coffee .coffee-wrapper > *:not(:last-of-type) {
+  margin-right: 4px;
 }
 
+@media (min-width: 960px) {
+  .home .right-column {
+    margin-right: 8px;
+  }
+  .home .right-column .main-content {
+    max-width: 380px;
+  }
+  .home .right-column .main-content::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 0;
+    background-image: url("/assets/images/home/grid.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 330px;
+    width: 150px;
+    z-index: 2;
+    transform: translateX(-66%);
+  }
+}
 .technologies .content .tech-category .heading {
   margin-bottom: 24px;
   font-size: 24px;
