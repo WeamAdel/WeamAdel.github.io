@@ -40,10 +40,11 @@
 
   main {
     .info-section {
-      padding: 32px 0;
+      padding: 44px 0;
       h3 {
         font-size: 24px;
         font-family: $robotoCondensed;
+        margin-bottom: 32px;
         &::before {
           content: "";
           height: 2px;
@@ -57,11 +58,22 @@
           li {
             max-width: 30em;
           }
+          &.check {
+            padding-left: 16px;
+            list-style-image: url("/assets/images/portfolio/case-studies/check.svg");
+          }
           &.contrast {
+            padding-left: 16px;
             list-style-image: url("/assets/images/portfolio/case-studies/contrast.svg");
           }
-          &.check {
-            list-style-image: url("/assets/images/portfolio/case-studies/contrast.svg");
+
+          &.pallet {
+            li {
+              display: inline;
+              &:not(:last-of-type) {
+                margin-right: 8px;
+              }
+            }
           }
         }
       }

@@ -384,11 +384,12 @@ span.advanced {
   margin-bottom: 32px;
 }
 .case-study main .info-section {
-  padding: 32px 0;
+  padding: 44px 0;
 }
 .case-study main .info-section h3 {
   font-size: 24px;
   font-family: "Roboto Condensed Regular";
+  margin-bottom: 32px;
 }
 .case-study main .info-section h3::before {
   content: "";
@@ -400,11 +401,19 @@ span.advanced {
 .case-study main .info-section .main-content ul li {
   max-width: 30em;
 }
+.case-study main .info-section .main-content ul.check {
+  padding-left: 16px;
+  list-style-image: url("/assets/images/portfolio/case-studies/check.svg");
+}
 .case-study main .info-section .main-content ul.contrast {
+  padding-left: 16px;
   list-style-image: url("/assets/images/portfolio/case-studies/contrast.svg");
 }
-.case-study main .info-section .main-content ul.check {
-  list-style-image: url("/assets/images/portfolio/case-studies/contrast.svg");
+.case-study main .info-section .main-content ul.pallet li {
+  display: inline;
+}
+.case-study main .info-section .main-content ul.pallet li:not(:last-of-type) {
+  margin-right: 8px;
 }
 .case-study main .info-section:not(:last-of-type) {
   border-bottom: 1px dashed #d5d5d6;

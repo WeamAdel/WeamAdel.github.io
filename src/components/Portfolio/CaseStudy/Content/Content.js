@@ -11,25 +11,25 @@ function Content() {
           <List items={PROJECTS.mfg.features} iconType="check" />
         </Layout>
         <Layout heading="My Role">
-          <p>Hi</p>
+          <List items={PROJECTS.mfg.role} />
         </Layout>
         <Layout heading="Technologies">
-          <p>Hi</p>
+          <List items={PROJECTS.mfg.technologies} />
         </Layout>
         <Layout heading="Color Pallet">
-          <p>Hi</p>
+          <List items={PROJECTS.mfg.pallet} type="pallet" />
         </Layout>
         <Layout heading="Typography">
-          <p>Hi</p>
+          <List items={PROJECTS.mfg.typography} />
         </Layout>
         <Layout heading="Sample Screenshots">
           <p>Hi</p>
         </Layout>
         <Layout heading="Things I've Learned">
-          <p>Hi</p>
+          <List items={PROJECTS.mfg.learned} iconType="check" />
         </Layout>
         <Layout heading="Things I Need To Improve">
-          <p>Hi</p>
+          <List items={PROJECTS.mfg.improvement} iconType="contrast" />
         </Layout>
         <Layout heading="View Full Project On">
           <p>Hi</p>
