@@ -20,5 +20,6 @@ Header.propTypes = {
   heading: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  headingLineColor: PropTypes.string,
 };
 export default Header;

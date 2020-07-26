@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Header from "./Header/Header";
 import Content from "./Content/Content";
 import AgendaHeader from "./Header/Headers/AgendaHeader/AgendaHeader";
+import CaseStudyHeader from "./Header/Headers/CaseStudyHeader/CaseStudyHeader";
 
 function Layout(props) {
   const headerProps = {
@@ -12,6 +13,13 @@ function Layout(props) {
   };
   const HEADERS = {
     agenda: <AgendaHeader {...headerProps} flex={props.flex} />,
+    caseStudy: (
+      <CaseStudyHeader
+        {...headerProps}
+        flex={props.flex}
+        headingLineColor={props.headingLineColor}
+      />
+    ),
     default: <Header {...headerProps} flex={props.flex} />,
   };
   const headerJSX = HEADERS[props.page] ? HEADERS[props.page] : HEADERS.default;
@@ -37,5 +45,6 @@ Layout.propTypes = {
   heading: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  headingLineColor: PropTypes.string,
 };
 export default Layout;
