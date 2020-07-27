@@ -1,4 +1,17 @@
 header {
+  .header-image {
+    min-width: 250px;
+    max-width: 500px;
+    img {
+      max-height: calc(
+        100vh - 64px - 100px
+      ); //100vh - nav height - top padding height
+      width: 100%;
+      object-fit: cover;
+      filter: grayscale(0.6);
+    }
+  }
+
   .content {
     position: relative;
     z-index: 2;
@@ -24,18 +37,6 @@ header {
   }
 }
 
-.header-image {
-  max-width: 40vw;
-  min-width: 250px;
-
-  img {
-    width: 100%;
-    //min-height: 80vh;
-    object-fit: cover;
-    filter: grayscale(0.6);
-  }
-}
-
 @media (min-width: 767px) {
   .page-wrapper.flex,
   .header-wrapper {
@@ -45,9 +46,12 @@ header {
     }
   }
 
-  .header-image {
-    .page-wrapper {
-      margin: 0;
+  header {
+    .header-image {
+      width: 50%;
+    }
+    .content {
+      width: 50%;
     }
   }
 }

@@ -1,5 +1,16 @@
 .agenda {
   header {
+    .lorem-bg {
+      background-image: url("/assets/images/agenda/lorem-ipsum.svg");
+      background-repeat: repeat-y;
+      position: absolute;
+      top: 0;
+      //left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 50%;
+    }
     .content {
       display: flex;
       align-items: flex-end;
@@ -7,16 +18,6 @@
       .quote {
         padding: 48px 32px 48px 64px;
         margin-bottom: 0;
-      }
-
-      .lorem-bg {
-        background-image: url("/assets/images/agenda/lorem-ipsum.svg");
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
       }
     }
   }
