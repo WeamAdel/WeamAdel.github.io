@@ -287,6 +287,11 @@ span.advanced {
   font-size: 24px;
   display: grid;
   grid-template: repeat(6, 60px)/repeat(5, 1fr);
+  display: none;
+}
+.agenda header .icons-bg .icon {
+  text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.3);
+  z-index: 3;
 }
 .agenda header .icons-bg .icon:first-child {
   grid-row: 1/2;
@@ -313,7 +318,7 @@ span.advanced {
   grid-row: 2/3;
   grid-column: 1/2;
   align-self: end;
-  justify-self: left;
+  justify-self: center;
   animation: animate4 11s infinite ease-in-out;
 }
 .agenda header .icons-bg .icon:nth-child(5) {
@@ -361,10 +366,18 @@ span.advanced {
 .agenda header .content {
   display: flex;
   align-items: flex-end;
+  padding: 60px 16px 0;
+  margin-top: -80%;
 }
 .agenda header .content .quote {
-  padding: 24px 24px 24px 44px;
-  margin-bottom: 0;
+  padding: 32px 24px 24px 44px;
+  margin-bottom: 16px;
+}
+.agenda header .content .quote p {
+  font-size: 14px;
+}
+.agenda header .content .quote cite {
+  font-size: 12px;
 }
 .agenda .tech-cards h2 {
   margin-bottom: 60px;
@@ -530,8 +543,21 @@ span.advanced {
   }
 }
 @media (min-width: 767px) {
+  .agenda header .icons-bg {
+    display: grid;
+  }
+  .agenda header .content {
+    padding: 60px 0 0;
+    margin-top: 0;
+  }
   .agenda header .content .quote {
     margin-left: -30%;
+  }
+  .agenda header .content .quote p {
+    font-size: 18px;
+  }
+  .agenda header .content .quote cite {
+    font-size: 14px;
   }
 }
 .case-study header .heading-wrapper .project-theme-line {
