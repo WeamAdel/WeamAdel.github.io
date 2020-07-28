@@ -138,6 +138,10 @@ span.advanced {
   margin-right: 24px;
 }
 
+button:active {
+  transform: scale(0.9);
+}
+
 .secondary-btn {
   padding: 4px 16px;
   color: #0a0c1b;
@@ -145,10 +149,16 @@ span.advanced {
   background-color: #f5f5f7;
   font-size: 14px;
   font-family: "Roboto Condensed Regular";
+  transition: all 0.3s ease-in-out;
 }
 .secondary-btn i {
   margin-left: 8px;
   font-size: 12px;
+}
+.secondary-btn:hover {
+  background-color: #0a0c1b;
+  color: #f5f5f7;
+  border-color: #f5f5f7;
 }
 
 .legend {
@@ -864,8 +874,28 @@ span.advanced {
   align-items: center;
   height: 100%;
 }
+.story header .text .page-heading {
+  margin-bottom: 16px;
+}
 .story header .text p {
   font-size: 14px;
+  max-width: 30rem;
+  margin-bottom: 32px;
+  text-align: justify;
+}
+.story .timed-summary {
+  background-color: #0a0c1b;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.story .timed-summary canvas {
+  background-color: plum;
 }
 
 .technologies .content .tech-category .heading {
