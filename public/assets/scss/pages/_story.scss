@@ -1,0 +1,27 @@
+.story {
+  header {
+    background-color: $fadeWhite;
+    padding: 60px 0;
+    margin: 32px 0 100px;
+    display: flex;
+
+    .page-heading {
+      transform: none;
+    }
+    .image {
+      img {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
+    .text {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
