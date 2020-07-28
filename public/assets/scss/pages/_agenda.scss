@@ -11,12 +11,98 @@
       z-index: -1;
       width: 50%;
     }
+
+    .icons-bg {
+      position: absolute;
+      top: 64px;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      color: $main;
+      font-size: 24px;
+      display: grid;
+      grid-template: repeat(6, 60px) / repeat(5, 1fr);
+
+      .icon {
+        &:first-child {
+          grid-row: 1/2;
+          grid-column: 1/2;
+          align-self: start;
+          justify-self: center;
+          animation: animate1 8s infinite ease-in-out;
+        }
+        &:nth-child(2) {
+          grid-row: 1/2;
+          grid-column: 2/3;
+          align-self: center;
+          justify-self: left;
+          animation: animate2 10s infinite ease-in-out;
+        }
+        &:nth-child(3) {
+          grid-row: 1/2;
+          grid-column: 3/4;
+          align-self: end;
+          justify-self: right;
+          animation: animate3 9s infinite ease-in-out;
+        }
+        &:nth-child(4) {
+          grid-row: 2/3;
+          grid-column: 1/2;
+          align-self: end;
+          justify-self: left;
+          animation: animate4 11s infinite ease-in-out;
+        }
+        &:nth-child(5) {
+          grid-row: 2/3;
+          grid-column: 2/3;
+          align-self: start;
+          justify-self: right;
+          animation: animate5 12s infinite ease-in-out;
+        }
+        &:nth-child(6) {
+          grid-row: 3/4;
+          grid-column: 2/3;
+          align-self: end;
+          justify-self: center;
+          animation: animate1 8s infinite ease-in-out;
+        }
+        &:nth-child(7) {
+          grid-row: 3/4;
+          grid-column: 3/4;
+          align-self: center;
+          justify-self: center;
+          animation: animate2 10s infinite ease-in-out;
+        }
+        &:nth-child(8) {
+          grid-row: 3/4;
+          grid-column: 4/5;
+          align-self: end;
+          justify-self: right;
+          animation: animate2 9s infinite ease-in-out;
+        }
+        &:nth-child(9) {
+          grid-row: 4/5;
+          grid-column: 3/4;
+          align-self: end;
+          justify-self: right;
+          animation: animate4 11s infinite ease-in-out;
+        }
+        &:nth-child(10) {
+          grid-row: 5/6;
+          grid-column: 4/5;
+          align-self: end;
+          justify-self: right;
+          animation: animate5 8s infinite ease-in-out;
+        }
+      }
+    }
     .content {
       display: flex;
       align-items: flex-end;
 
       .quote {
-        padding: 48px 32px 48px 64px;
+        //padding: 48px 32px 48px 64px;
+        padding: 24px 24px 24px 44px;
         margin-bottom: 0;
       }
     }
@@ -90,6 +176,87 @@
     }
   }
 }
+
+@mixin animateAgendaIcons(
+  $name,
+  $phase1,
+  $phase2,
+  $phase3,
+  $phase4,
+  $phase5,
+  $phase6,
+  $phase7,
+  $phase8
+) {
+  @keyframes #{$name} {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate($phase1, $phase2);
+    }
+    40% {
+      transform: translate($phase3, $phase4);
+    }
+    60% {
+      transform: translate($phase5, $phase6);
+    }
+    80% {
+      transform: translate($phase7, $phase8);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+}
+
+@include animateAgendaIcons("animate1", 4px, 6px, 5px, 2px, 3px, 4px, 3px, 1px);
+
+@include animateAgendaIcons(
+  "animate2",
+  -4px,
+  -6px,
+  -5px,
+  -2px,
+  -3px,
+  -4px,
+  -3px,
+  -1px
+);
+@include animateAgendaIcons(
+  "animate3",
+  2px,
+  4px,
+  6px,
+  1px,
+  2px,
+  -3px,
+  -4px,
+  0px
+);
+@include animateAgendaIcons(
+  "animate4",
+  -2px,
+  -4px,
+  -6px,
+  -1px,
+  -2px,
+  3px,
+  4px,
+  0px
+);
+
+@include animateAgendaIcons(
+  "animate5",
+  7px,
+  2px,
+  5px,
+  4px,
+  3px,
+  2px,
+  1px,
+  -2px
+);
 
 @media (min-width: 767px) {
   .agenda {

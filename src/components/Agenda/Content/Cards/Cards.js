@@ -31,49 +31,57 @@ const TECHNOLOGIES = [
   },
   {
     name: "TypeScript",
-    about: "kkkksjf",
+    about:
+      "It is a typed superset of JavaScript that compiles to plain JavaScript.  Learning Angular framework needs prior knowledge of TypeScript, too.",
     link: "https://www.typescriptlang.org/",
     priority: PRIORITIES.medium,
   },
   {
     name: "WebPack",
-    about: "kkk",
+    about:
+      "It k is a tool that compile JavaScript modules, also known as module or assets bundler. it generates a single file (or a few files) that run your app.",
     link: "https://webpack.js.org/",
     priority: PRIORITIES.high,
   },
   {
     name: "AWS",
-    about: "kkk",
+    about:
+      "Amazon Web Services is a cloud platform offering numerous fully featured services from data centers globally.",
     link: "https://aws.amazon.com/",
     priority: PRIORITIES.low,
   },
   {
     name: "Node.js",
-    about: "kkk",
+    about:
+      "It  is an open source, cross-platform runtime environment for developing server-side and networking applications.",
     link: "https://nodejs.org/",
     priority: PRIORITIES.low,
   },
   {
     name: "Firebase",
-    about: "kkk",
+    about:
+      "It helps build apps fast by giving functionality like analytics, databases, crash reporting without managing infrastructure.",
     link: "https://firebase.google.com/",
     priority: PRIORITIES.medium,
   },
   {
     name: "Angular.js",
-    about: "kkk",
+    about:
+      "It’s an open-source full-fledged framework used to create Single Page Apps, it is built on TypeScript, developed and maintained by Google.",
     link: "https://angular.io/",
     priority: PRIORITIES.low,
   },
   {
     name: "Next.js",
-    about: "kkk",
+    about:
+      "Next.js is based on react, webpack and babel. It is an awesome tool for creating web application and famous for server-side rendering.",
     link: "https://nextjs.org/",
     priority: PRIORITIES.medium,
   },
   {
     name: "React Testing Library",
-    about: "kkk",
+    about:
+      "It is a family of packages that helps test UI components to give high confidence that components are working for users",
     link: "https://testing-library.com/",
     priority: PRIORITIES.high,
   },

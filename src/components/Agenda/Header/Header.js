@@ -1,13 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 import HeaderImage from "./../../shared/Layout/Header/HeaderImage/HeaderImage";
 import Quote from "./../../shared/Quote/Quote";
+import Icons from "./Icons/Icons";
 
 function Header(props) {
   return (
     <header>
       <span className="lorem-bg" />
-      <div className="container">
+      <Icons />
+      <div className="my-container">
         <h1 className="page-heading">My Agenda</h1>
         <div className="header-wrapper">
           <HeaderImage
