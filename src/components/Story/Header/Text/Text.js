@@ -4,7 +4,7 @@ function Text() {
   return (
     <div className="col-md-6">
       <section className="text">
-        <div className="text-wrapper">
+        <div className="text-wrapper mx-auto mx-md-0 text-center text-md-left">
           <h1 className="page-heading">My Story</h1>
           <p>
             The journey to identify what you love and where you fit best is not

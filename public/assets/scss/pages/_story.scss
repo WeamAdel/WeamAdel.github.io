@@ -55,6 +55,7 @@
         box-shadow: 2px 1px 0.5rem rgba(0, 0, 0, 0.1);
         position: relative;
         max-width: 350px;
+        margin: 0 auto;
         .flip-page {
           display: block;
           position: relative;
@@ -104,12 +105,12 @@
             display: block;
             color: $lightMain;
             position: absolute;
-            left: 32px;
-            top: -32px;
+            left: 0;
+            top: 0;
             z-index: -1;
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: $main;
-            transform: translate(10%, -10%);
+            transform: translate(20%, -20%);
           }
         }
       }

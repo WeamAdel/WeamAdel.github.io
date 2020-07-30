@@ -902,6 +902,7 @@ button:active {
   box-shadow: 2px 1px 0.5rem rgba(0, 0, 0, 0.1);
   position: relative;
   max-width: 350px;
+  margin: 0 auto;
 }
 .story main.content .story-segment .story-card .flip-page {
   display: block;
@@ -951,12 +952,12 @@ button:active {
   display: block;
   color: #f5f5f7;
   position: absolute;
-  left: 32px;
-  top: -32px;
+  left: 0;
+  top: 0;
   z-index: -1;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0a0c1b;
-  transform: translate(10%, -10%);
+  transform: translate(20%, -20%);
 }
 .story main.content .story-segment:not(:last-of-type) {
   margin-bottom: 60px;
