@@ -2,7 +2,7 @@
   header {
     background-color: $fadeWhite;
     padding: 60px 0;
-    margin: 32px 0 100px;
+    // margin: 32px 0 100px;
     display: flex;
 
     .page-heading {
@@ -44,6 +44,78 @@
 
     canvas {
       background-color: plum;
+    }
+  }
+
+  main.content {
+    .story-segment {
+      .story-card {
+        padding: 80px 32px 60px;
+        background-color: $fadeWhite;
+        box-shadow: 2px 1px 0.5rem rgba(0, 0, 0, 0.1);
+        position: relative;
+        max-width: 350px;
+        .flip-page {
+          display: block;
+          position: relative;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          filter: drop-shadow(2px 1px 3px rgba(0, 0, 0, 0.1));
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 80px;
+            height: 80px;
+            background-color: $fadeWhite;
+            clip-path: polygon(100% 100%, 0 0, 0 100%);
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          z-index: -1;
+          background-color: $fadeWhite;
+          transform: translate(32px, -32px);
+          box-shadow: 2px 1px 0.5rem rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      .story-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          color: $main;
+          font-family: $bernard;
+          font-size: 280px;
+          margin-bottom: 0;
+          position: relative;
+          line-height: 1.8;
+
+          &::after {
+            content: attr(data-content);
+            display: block;
+            color: $lightMain;
+            position: absolute;
+            left: 32px;
+            top: -32px;
+            z-index: -1;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $main;
+            transform: translate(10%, -10%);
+          }
+        }
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 60px;
+      }
     }
   }
 }
