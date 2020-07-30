@@ -8,7 +8,7 @@ function StorySegment(props) {
     <section className="story-segment">
       <div className="row">
         <Number number={props.number} />
-        <Card content={props.content} />
+        <Card content={props.content} height={props.height} />
       </div>
     </section>
   );

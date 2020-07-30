@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import StorySegment from "./StorySegment/StorySegment";
 
 const STORIES = [
@@ -10,9 +10,30 @@ const STORIES = [
 ];
 
 function Content() {
+  let [maxStoryCardHeight, setHeight] = useState(0);
+
+  useEffect(() => {
+    let stories = document.getElementsByClassName("story-card");
+    if (stories.length > 0) {
+      stories = Array.from(stories);
+      let maxHeight = 0;
+      for (let story of stories) {
+        let style = getComputedStyle(story);
+        let height = parseInt(style.getPropertyValue("height"));
+        maxHeight = height > maxHeight ? height : maxHeight;
+      }
+      setHeight(maxHeight);
+    }
+  });
   let storiesJSX = STORIES.map((story, index) => (
-    <StorySegment key={index} content={story} number={index + 1} />
+    <StorySegment
+      key={index}
+      content={story}
+      number={index + 1}
+      height={maxStoryCardHeight}
+    />
   ));
+
   return (
     <main className="content">
       <div className="my-container">{storiesJSX}</div>
