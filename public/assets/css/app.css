@@ -20,7 +20,7 @@
   src: url("/assets/fonts/BERNHC.ttf");
 }
 body {
-  font-family: "Roboto Regular";
+  font-family: "Roboto Regular" !important;
   background-color: #f5f5f7 !important;
   color: #0a0c1b;
 }
@@ -884,17 +884,59 @@ button:active {
 }
 .story .timed-summary {
   background-color: #0a0c1b;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   z-index: 100;
+  padding: 60px 0;
+}
+.story .timed-summary h2 {
+  color: #fe9f9d;
+  font-family: "Roboto Condensed Regular";
+  margin-bottom: 44px;
+  display: none;
+}
+.story .timed-summary .image svg {
+  max-width: 100%;
+  height: auto;
+}
+.story .timed-summary .schedule {
+  max-width: 320px;
+  background: #231b28;
+  padding: 32px;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+.story .timed-summary .schedule .schedule-item {
+  display: flex;
+  align-items: baseline;
+}
+.story .timed-summary .schedule .schedule-item * {
+  font-size: 14px;
+}
+.story .timed-summary .schedule .schedule-item h3 {
+  margin-bottom: 2px;
+}
+.story .timed-summary .schedule .schedule-item .icon {
+  margin-right: 8px;
+}
+.story .timed-summary .schedule .schedule-item time {
+  font-size: 12px;
+  color: white;
+}
+.story .timed-summary .schedule .schedule-item.education {
+  color: #e3c19d;
+}
+.story .timed-summary .schedule .schedule-item.work {
+  color: #fe9f9d;
+}
+.story .timed-summary .schedule .schedule-item:not(:last-of-type) {
+  margin-bottom: 16px;
 }
 .story .timed-summary canvas {
-  background-color: plum;
+  background-color: #0a0c1b;
 }
 .story main.content .story-segment .story-card {
   padding: 80px 32px 60px;

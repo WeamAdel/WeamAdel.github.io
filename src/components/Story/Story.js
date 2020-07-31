@@ -8,7 +8,7 @@ function Story() {
     <div className="page story">
       <div className="page-wrapper">
         <Header />
-        {/* <TimedSummary /> */}
+        <TimedSummary />
         <Content />
       </div>
     </div>
