@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { useSpring, animated } from "react-spring";
+import PropTypes from "prop-types";
 import Schedule from "./Schedule/Schedule";
 import Image from "./Image/Image";
-
+// import Confetti from "./Confetti/Confetti";
 // function setCanvasSize(canvas) {
 //   let windowWidth = window.innerWidth;
 //   let windowHeight = window.innerHeight;
@@ -34,31 +36,49 @@ import Image from "./Image/Image";
 //   }
 //   return canvas;
 // }
+// useEffect(() => {
+//   let canvas = document.getElementById("story-canvas");
+//   let numOfCircles = calculateNumOfCircles();
+//   setCanvasSize(canvas);
+//   drawCanvasCircles(canvas, numOfCircles);
+//   window.addEventListener("resize", function () {
+//     numOfCircles = calculateNumOfCircles();
+//     setCanvasSize(canvas);
+//     drawCanvasCircles(canvas, numOfCircles);
+//   });
+// });
 
-function TimedSummary() {
-  // useEffect(() => {
-  //   let canvas = document.getElementById("story-canvas");
-  //   let numOfCircles = calculateNumOfCircles();
-  //   setCanvasSize(canvas);
-  //   drawCanvasCircles(canvas, numOfCircles);
-  //   window.addEventListener("resize", function () {
-  //     numOfCircles = calculateNumOfCircles();
-  //     setCanvasSize(canvas);
-  //     drawCanvasCircles(canvas, numOfCircles);
-  //   });
-  // });
+function TimedSummary(props) {
+  let props1 = { transform: -100, opacity: 0 };
+  let props2 = { transform: 0, opacity: 1 };
+  let from = props.open ? props1 : props2;
+  let to = props.open ? props2 : props1;
+  let { transform, opacity } = useSpring({ from, to });
+
   return (
-    <section className="timed-summary">
+    <animated.section
+      className="timed-summary"
+      style={{
+        transform: transform.interpolate((num) => `translateY(${num}%)`),
+        opacity: opacity,
+      }}
+    >
       <div className="my-container">
+        <button className="toggle-summary" onClick={props.toggleSummary}>
+          <i className="fa fa-backspace" />
+        </button>
         <h2>Summary</h2>
         <div className="row">
           <Image />
           <Schedule />
         </div>
       </div>
-      {/* <canvas id="story-canvas" /> */}
-    </section>
+      {/* <Confetti /> */}
+    </animated.section>
   );
 }
-
+TimedSummary.propTypes = {
+  toggleSummary: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+};
 export default TimedSummary;

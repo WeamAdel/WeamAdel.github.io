@@ -15,6 +15,7 @@ const SCHEDULE_ITEMS = [
       </span>
     ),
     date: "Sept 2013 - Aug 2018",
+    type: "education",
   },
   {
     title: "UTW Mechanical Department Internship (Best Member)",

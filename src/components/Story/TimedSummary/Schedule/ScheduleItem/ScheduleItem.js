@@ -19,7 +19,7 @@ function ScheduleItem(props) {
 }
 
 ScheduleItem.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   date: PropTypes.string.isRequired,
   type: PropTypes.oneOf(["education", "work"]).isRequired,
   iconName: PropTypes.string,

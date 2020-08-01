@@ -1,6 +1,6 @@
 import React from "react";
-
-function Text() {
+import PropTypes from "prop-types";
+function Text(props) {
   return (
     <div className="col-md-6">
       <section className="text">
@@ -13,7 +13,7 @@ function Text() {
             engineer. Please feel free to jump to a timed summary to what I
             achieved throw that journey.
           </p>
-          <button className="secondary-btn">
+          <button className="secondary-btn" onClick={props.toggleSummary}>
             <span>Jump to Timed Summary</span>
             <i className="fa fa-calendar" />
           </button>
@@ -22,5 +22,9 @@ function Text() {
     </div>
   );
 }
+
+Text.propTypes = {
+  toggleSummary: PropTypes.func.isRequired,
+};
 
 export default Text;

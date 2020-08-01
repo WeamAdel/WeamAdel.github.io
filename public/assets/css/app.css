@@ -892,6 +892,8 @@ button:active {
   right: 0;
   z-index: 100;
   padding: 60px 0;
+  transform: translateY(-100%);
+  opacity: 0;
 }
 .story .timed-summary h2 {
   color: #fe9f9d;
@@ -900,7 +902,7 @@ button:active {
   display: none;
 }
 .story .timed-summary .image svg {
-  max-width: 100%;
+  max-width: min(350px, 100%);
   height: auto;
 }
 .story .timed-summary .schedule {
@@ -918,6 +920,9 @@ button:active {
 }
 .story .timed-summary .schedule .schedule-item h3 {
   margin-bottom: 2px;
+}
+.story .timed-summary .schedule .schedule-item h3 sup {
+  font-size: 10px;
 }
 .story .timed-summary .schedule .schedule-item .icon {
   margin-right: 8px;
