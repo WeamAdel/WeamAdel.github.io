@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const PLUGINS = [
   { name: "PropTypes", link: "https://github.com/facebook/prop-types" },
+  { name: "React Spring", link: "https://www.react-spring.io/" },
   { name: "React Sheet", link: "https://github.com/nadbm/react-datasheet" },
   {
     name: "Owl Carousel",

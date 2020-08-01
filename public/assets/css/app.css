@@ -42,10 +42,10 @@ button:active {
 
 header .header-image {
   min-width: 250px;
-  max-width: 500px;
+  max-width: 600px;
 }
 header .header-image img {
-  max-height: calc( 100vh - 64px - 100px );
+  min-height: min(400px, calc(100vh - 64px - 100px));
   width: 100%;
   object-fit: cover;
   filter: grayscale(0.6);
@@ -77,13 +77,6 @@ header .content {
   .page-wrapper.flex .content,
 .header-wrapper .content {
     margin-left: 32px;
-  }
-
-  header .header-image {
-    width: 50%;
-  }
-  header .content {
-    width: 50%;
   }
 }
 .page-heading {
@@ -654,18 +647,22 @@ button:active {
 }
 
 .contact .header-image img {
-  max-height: 350px;
+  max-height: 50vh;
+  width: auto;
 }
-.contact main .content p:first-of-type {
+.contact main {
+  margin-left: 0 !important;
+}
+.contact main .contact-info p:first-of-type {
   font-family: "Roboto Condensed Regular";
   font-weight: 600;
   margin-bottom: 32px;
 }
-.contact main .content .info-list {
+.contact main .contact-info .info-list {
   line-height: 2.2;
   font-size: 14px;
 }
-.contact main .content .info-list .icon {
+.contact main .contact-info .info-list .icon {
   display: inline-block;
   width: 24px;
   margin-right: 8px;

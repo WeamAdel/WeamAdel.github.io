@@ -1,11 +1,13 @@
 .contact {
   .header-image {
     img {
-      max-height: 350px;
+      max-height: 50vh;
+      width: auto;
     }
   }
   main {
-    .content {
+    margin-left: 0 !important;
+    .contact-info {
       p:first-of-type {
         font-family: $robotoCondensed;
         font-weight: 600;

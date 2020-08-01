@@ -1,7 +1,6 @@
 import React from "react";
-import HeaderImage from "../shared/Layout/Header/HeaderImage/HeaderImage";
 import Content from "./Content/Content";
-
+import Header from "./Header/Header";
 const imgsPath = "/assets/images/technologies/";
 
 const PROFFESIONCY_LEVELS = {
@@ -124,10 +123,7 @@ function Technologies() {
       <div className="my-container">
         <h1 className="page-heading">Technologies</h1>
         <div className="page-wrapper flex">
-          <HeaderImage
-            imgUrl={imgsPath + "img.jpg"}
-            alt="Turned on mackbook pro near brown ceramic mug"
-          />
+          <Header />
           <Content
             technologies={TECHNOLOGIES}
             legendBullets={Object.values(PROFFESIONCY_LEVELS)}

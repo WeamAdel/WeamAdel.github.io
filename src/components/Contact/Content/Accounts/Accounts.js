@@ -1,5 +1,5 @@
 import React from "react";
-import { ACCOUNTS } from "./../../../utility/utilConsts";
+import { ACCOUNTS } from "../../../../utility/utilConsts";
 
 function Accounts() {
   let accountsJSX = Object.values(ACCOUNTS)
