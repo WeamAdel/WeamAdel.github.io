@@ -23,9 +23,14 @@
   src: url("/assets/fonts/BERNHC.ttf");
 }
 
+@font-face {
+  font-family: "Saol";
+  src: url("/assets/fonts/SaolDisplay-Regular.ttf");
+}
+
 $roboto: "Roboto Regular";
 $robotoBold: "Roboto Bold";
 $robotoCondensed: "Roboto Condensed Regular";
 $robotoCondensedBold: "Roboto Condensed Bold";
 $bernard: "Bernard MT";
-$saol: "";
+$saol: "Saol";

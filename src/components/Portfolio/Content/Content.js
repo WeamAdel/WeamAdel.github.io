@@ -23,8 +23,8 @@ const PROJECTS = [
         link: null,
         iconName: "link.svg",
       },
-      livePreview: {
-        title: "Live Preview",
+      contact: {
+        title: "Contact Me",
         link: "/contact",
         iconName: "email.svg",
       },

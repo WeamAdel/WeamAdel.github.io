@@ -19,6 +19,10 @@
   font-family: "Bernard MT";
   src: url("/assets/fonts/BERNHC.ttf");
 }
+@font-face {
+  font-family: "Saol";
+  src: url("/assets/fonts/SaolDisplay-Regular.ttf");
+}
 body {
   font-family: "Roboto Regular" !important;
   background-color: #f5f5f7 !important;
@@ -853,54 +857,116 @@ button:active {
     max-width: 380px;
   }
 }
-.portfolio .project-card {
+.portfolio .card-wrapper {
+  display: flex;
+}
+.portfolio .card-wrapper .links-list {
+  background-color: #c4ffbd;
+  height: fit-content;
+  padding: 8px 12px;
+}
+.portfolio .card-wrapper .links-list li img {
+  width: 16px;
+}
+.portfolio .card-wrapper .project-card {
   background-color: #d4e2e4;
   display: grid;
   grid-template: 20vh 60vh/1fr 2fr 2fr 1fr;
   overflow: hidden;
+  font-family: "Saol";
+  position: relative;
+  filter: grayscale(0.5);
 }
-.portfolio .project-card img.item {
+.portfolio .card-wrapper .project-card .lines {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: grid;
+  grid-template: 80vh/1fr 2fr 2fr 1fr;
+}
+.portfolio .card-wrapper .project-card .lines span {
+  display: block;
+  height: 100%;
+  width: 1px;
+  background-color: #959597;
+}
+.portfolio .card-wrapper .project-card .lines span:first-child {
+  grid-column: 2/3;
+}
+.portfolio .card-wrapper .project-card img.item {
   max-width: 100%;
 }
-.portfolio .project-card .item.idea {
+.portfolio .card-wrapper .project-card .item.idea {
   grid-row: 1/2;
   grid-column: 1/2;
   place-self: end center;
+  font-size: 14px;
+  letter-spacing: 4px;
 }
-.portfolio .project-card .item.top {
+.portfolio .card-wrapper .project-card .item.top {
   grid-row: 1/2;
   grid-column: 2/3;
   place-self: start center;
   transform: translateY(calc(-100% + 24px));
+  padding: 0 24px;
 }
-.portfolio .project-card .item.release-date {
+.portfolio .card-wrapper .project-card .item.release-date {
   grid-row: 1/2;
   grid-column: 4/5;
   place-self: end center;
+  font-size: 14px;
+  letter-spacing: 4px;
 }
-.portfolio .project-card .item.left {
+.portfolio .card-wrapper .project-card .item.left {
   grid-row: 2/3;
   grid-column: 1/2;
   place-self: end left;
   transform: translate(calc(-100% + 24px), calc(100% - 200px));
 }
-.portfolio .project-card .item.name {
+.portfolio .card-wrapper .project-card .item.name {
   grid-row: 2/3;
   grid-column: 2/4;
   place-self: start left;
+  letter-spacing: 16px;
+  font-size: 80px;
+  z-index: 1;
+  padding: 0 24px;
 }
-.portfolio .project-card .item.info {
+.portfolio .card-wrapper .project-card .item.info {
   grid-row: 2/3;
   grid-column: 2/3;
   place-self: end left;
+  font-size: 14px;
+  padding: 0 24px;
 }
-.portfolio .project-card .item.main {
+.portfolio .card-wrapper .project-card .item.info .description {
+  font-family: "Roboto Regular";
+}
+.portfolio .card-wrapper .project-card .item.info .category {
+  position: relative;
+  padding-left: 46px;
+}
+.portfolio .card-wrapper .project-card .item.info .category::before {
+  content: "";
+  height: 1px;
+  width: 44px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+}
+.portfolio .card-wrapper .project-card .item.main {
   grid-row: 2/3;
   grid-column: 3/4;
   place-self: end center;
   max-height: 60vh;
+  padding: 0 24px;
 }
-.portfolio .project-card .item.type {
+.portfolio .card-wrapper .project-card .item.type {
   grid-row: 2/3;
   grid-column: 4/5;
   place-self: end right;
@@ -908,13 +974,21 @@ button:active {
   font-size: 12px;
   letter-spacing: 6px;
 }
-.portfolio .project-card .item.right {
+.portfolio .card-wrapper .project-card .item.right {
   grid-row: 2/3;
   grid-column: 4/5;
   place-self: end right;
   transform: translate(calc(100% - 24px), calc(100% - 80px));
 }
 
+@media (min-width: 767px) {
+  .portfolio .card-wrapper:nth-child(odd) {
+    padding-left: 60px;
+  }
+  .portfolio .card-wrapper:nth-child(even) {
+    padding-right: 60px;
+  }
+}
 .story header {
   background-color: #f8f8f8;
   padding: 60px 0;
