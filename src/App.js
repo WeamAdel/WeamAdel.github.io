@@ -6,6 +6,7 @@ import Story from "./components/Story/Story";
 import Technologies from "./components/Technologies/Technologies";
 import Agenda from "./components/Agenda/Agenda";
 import Contact from "./components/Contact/Contact";
+import Portfolio from "./components/Portfolio/Portfolio";
 import CaseStudy from "./components/Portfolio/CaseStudy/CaseStudy";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/technologies" exact component={Technologies}></Route>
           <Route path="/contact" exact component={Contact}></Route>
           <Route path="/agenda" exact component={Agenda}></Route>
+          <Route path="/portfolio" exact component={Portfolio}></Route>
           <Route path="/case" exact component={CaseStudy}></Route>
         </Switch>
       </BrowserRouter>
