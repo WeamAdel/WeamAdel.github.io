@@ -1,4 +1,14 @@
 .portfolio {
+  header {
+    .content {
+      display: flex;
+      align-items: center;
+      p {
+        color: $main;
+        max-width: 30rem;
+      }
+    }
+  }
   .card-wrapper {
     max-width: 300px;
     margin: auto;

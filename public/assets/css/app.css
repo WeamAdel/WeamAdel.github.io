@@ -52,7 +52,7 @@ header .header-image img {
   min-height: min(400px, calc(100vh - 64px - 100px));
   width: 100%;
   object-fit: cover;
-  filter: grayscale(0.6);
+  filter: grayscale(0.8);
 }
 header .content {
   position: relative;
@@ -856,6 +856,14 @@ button:active {
   .home .right-column .main-content {
     max-width: 380px;
   }
+}
+.portfolio header .content {
+  display: flex;
+  align-items: center;
+}
+.portfolio header .content p {
+  color: #0a0c1b;
+  max-width: 30rem;
 }
 .portfolio .card-wrapper {
   max-width: 300px;

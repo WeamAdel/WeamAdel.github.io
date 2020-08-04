@@ -21,7 +21,11 @@ function App() {
           <Route path="/contact" exact component={Contact}></Route>
           <Route path="/agenda" exact component={Agenda}></Route>
           <Route path="/portfolio" exact component={Portfolio}></Route>
-          <Route path="/case" exact component={CaseStudy}></Route>
+          <Route
+            path="/case-study/:projectName"
+            exact
+            component={CaseStudy}
+          ></Route>
         </Switch>
       </BrowserRouter>
     </div>
