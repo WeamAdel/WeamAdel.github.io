@@ -10,7 +10,7 @@ function LinksList(props) {
   let livePreview = links.livePreview;
   let caseStudy = links.caseStudy;
   return (
-    <ul className="links-list list-unstyled">
+    <ul className="links-list list-unstyled m-0">
       <li title={caseStudy.title}>
         <Link to={caseStudy.link}>
           <img src={portfolioIconsPath + caseStudy.iconName} />
