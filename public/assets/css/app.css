@@ -990,6 +990,9 @@ button:active {
   place-self: end right;
   transform: translate(calc(100% - 24px), calc(100% - 80px));
 }
+.portfolio .card-wrapper:not(:last-of-type) {
+  margin-bottom: 60px;
+}
 
 @media (min-width: 767px) {
   .portfolio .card-wrapper .project-card .item.name {
@@ -1006,6 +1009,9 @@ button:active {
   .portfolio .card-wrapper {
     max-width: none;
     display: flex;
+  }
+  .portfolio .card-wrapper:nth-child(even) {
+    flex-direction: row-reverse;
   }
   .portfolio .card-wrapper .links-list {
     height: fit-content;

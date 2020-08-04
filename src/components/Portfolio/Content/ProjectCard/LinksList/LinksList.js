@@ -6,9 +6,9 @@ const portfolioIconsPath = "/assets/images/portfolio/icons/";
 
 function LinksList(props) {
   let links = props.links;
-  let contact = links.contact;
   let livePreview = links.livePreview;
   let caseStudy = links.caseStudy;
+
   return (
     <ul className="links-list list-unstyled m-0">
       <li title={caseStudy.title}>
@@ -24,9 +24,9 @@ function LinksList(props) {
         </li>
       ) : null}
 
-      <li title={contact.title}>
-        <Link to={contact.link}>
-          <img src={portfolioIconsPath + contact.iconName} />
+      <li title="Contact Me">
+        <Link to="/contact">
+          <img src={portfolioIconsPath + "email.svg"} />
         </Link>
       </li>
     </ul>
@@ -41,11 +41,6 @@ LinksList.propTypes = {
       iconName: PropTypes.string.isRequired,
     }),
     livePreview: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      link: PropTypes.string,
-      iconName: PropTypes.string.isRequired,
-    }),
-    contact: PropTypes.shape({
       title: PropTypes.string.isRequired,
       link: PropTypes.string,
       iconName: PropTypes.string.isRequired,

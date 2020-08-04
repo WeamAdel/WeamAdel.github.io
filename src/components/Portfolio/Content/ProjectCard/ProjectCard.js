@@ -62,11 +62,6 @@ ProjectCard.propTypes = {
       link: PropTypes.string,
       iconName: PropTypes.string.isRequired,
     }),
-    contact: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      link: PropTypes.string,
-      iconName: PropTypes.string.isRequired,
-    }),
   }).isRequired,
 };
 export default ProjectCard;

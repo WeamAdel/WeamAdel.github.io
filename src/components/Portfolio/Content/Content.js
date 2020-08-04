@@ -23,10 +23,70 @@ const PROJECTS = [
         link: null,
         iconName: "link.svg",
       },
-      contact: {
-        title: "Contact Me",
-        link: "/contact",
-        iconName: "email.svg",
+    },
+  },
+  {
+    name: "Task Scheduler",
+    idea: "Solution",
+    imagesDir: "/scheduler",
+    releaseDate: "2019 Dec",
+    description: "Web app for users shcedule and prioritize their tasks.",
+    category: "Tools & Productivity",
+    type: "SPA",
+    redirect: {
+      caseStudy: {
+        title: "Case Study",
+        link: "/scheduler",
+        iconName: "case.svg",
+      },
+      livePreview: {
+        title: "Live Preview",
+        link: null,
+        iconName: "link.svg",
+      },
+    },
+  },
+  {
+    name: "Quantum",
+    idea: "Solution",
+    imagesDir: "/quantum",
+    releaseDate: "2019 Oct",
+    description:
+      "A static website for student mobility service in Mansoura, Egypt",
+    category: "Education & Travel",
+    type: "Static",
+    redirect: {
+      caseStudy: {
+        title: "Case Study",
+        link: "/quantum",
+        iconName: "case.svg",
+      },
+      livePreview: {
+        title: "Live Preview",
+        link: null,
+        iconName: "link.svg",
+      },
+    },
+  },
+  {
+    name: "Pharmacy",
+    idea: "Dummy",
+    imagesDir: "/pharmacy",
+    releaseDate: "2019 Aug",
+    description:
+      "A dummy front-end project made to practice html, css and javascript.",
+    category: "E-commerce",
+    type: "Static",
+    redirect: {
+      caseStudy: {
+        title: "Case Study",
+        link: "/pharmacy",
+        iconName: "case.svg",
+      },
+      livePreview: {
+        title: "Live Preview",
+        link: null,
+        iconName: "link.svg",
       },
     },
   },

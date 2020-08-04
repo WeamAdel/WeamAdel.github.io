@@ -141,6 +141,10 @@
         }
       }
     }
+
+    &:not(:last-of-type) {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -167,6 +171,9 @@
     .card-wrapper {
       max-width: none;
       display: flex;
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
       .links-list {
         height: fit-content;
       }
