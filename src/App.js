@@ -8,6 +8,7 @@ import Agenda from "./components/Agenda/Agenda";
 import Contact from "./components/Contact/Contact";
 import Portfolio from "./components/Portfolio/Portfolio";
 import CaseStudy from "./components/Portfolio/CaseStudy/CaseStudy";
+import BeingCooked from "./components/BeingCooked/BeingCooked";
 
 function App() {
   return (
@@ -15,17 +16,14 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Switch>
-          <Route path="/" exact component={Home}></Route>
-          <Route path="/story" exact component={Story}></Route>
-          <Route path="/technologies" exact component={Technologies}></Route>
-          <Route path="/contact" exact component={Contact}></Route>
-          <Route path="/agenda" exact component={Agenda}></Route>
-          <Route path="/portfolio" exact component={Portfolio}></Route>
-          <Route
-            path="/case-study/:projectName"
-            exact
-            component={CaseStudy}
-          ></Route>
+          <Route path="/" exact component={Home} />
+          <Route path="/story" exact component={Story} />
+          <Route path="/technologies" exact component={Technologies} />
+          <Route path="/contact" exact component={Contact} />
+          <Route path="/agenda" exact component={Agenda} />
+          <Route path="/portfolio" exact component={Portfolio} />
+          <Route path="/case-study/:projectName" exact component={CaseStudy} />
+          <Route path="/being-cooked" exact component={BeingCooked} />
         </Switch>
       </BrowserRouter>
     </div>

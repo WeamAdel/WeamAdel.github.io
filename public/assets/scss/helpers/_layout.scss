@@ -47,12 +47,12 @@ header {
     }
   }
 
-  // header {
-  //   .header-image {
-  //     width: 50%;
-  //   }
-  //   .content {
-  //     width: 50%;
-  //   }
-  // }
+  .page-wrapper.flex {
+    header {
+      width: 50%;
+    }
+    main {
+      width: 50%;
+    }
+  }
 }
