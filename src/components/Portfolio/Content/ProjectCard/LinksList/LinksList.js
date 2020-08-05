@@ -13,20 +13,20 @@ function LinksList(props) {
     <ul className="links-list list-unstyled m-0">
       <li title={caseStudy.title}>
         <Link to={`/case-study${caseStudy.link}`}>
-          <img src={portfolioIconsPath + caseStudy.iconName} />
+          <img src={portfolioIconsPath + caseStudy.iconName} alt="Grid" />
         </Link>
       </li>
       {livePreview.link ? (
         <li title={livePreview.title}>
           <a href={livePreview.link}>
-            <img src={portfolioIconsPath + livePreview.iconName} />
+            <img src={portfolioIconsPath + livePreview.iconName} alt="Arrow" />
           </a>
         </li>
       ) : null}
 
       <li title="Contact Me">
         <Link to="/contact">
-          <img src={portfolioIconsPath + "email.svg"} />
+          <img src={portfolioIconsPath + "email.svg"} alt="Email Icon" />
         </Link>
       </li>
     </ul>

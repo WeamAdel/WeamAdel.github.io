@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Logo from "./Logo/Logo";
 import Toggler from "./Toggler/Toggler";
 import Menu from "./Menu/Menu";

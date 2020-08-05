@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const PLUGINS = [
   { name: "PropTypes", link: "https://github.com/facebook/prop-types" },

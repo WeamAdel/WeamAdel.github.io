@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function StoryNumber(props) {
-  const isEven = props.number % 2 == 0;
+  const isEven = props.number % 2 === 0;
   return (
     <div className={`col-md-6 ${isEven ? "order-md-last" : ""}`}>
       <div className="story-number">

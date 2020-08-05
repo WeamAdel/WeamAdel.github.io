@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import Content from "./Content/Content";
 
 function CaseStudy(props) {
+  console.log(props);
   const projectName = props.match.params.projectName;
   let project = {};
 

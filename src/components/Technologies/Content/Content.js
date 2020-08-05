@@ -1,5 +1,5 @@
 import React from "react";
-import Proptypes from "prop-types";
+import PropTypes from "prop-types";
 import TechCategory from "./TechCategory/TechCategory";
 import Legend from "./../../shared/Legend/Legend";
 import Plugins from "./Plugins/Plugins";
@@ -20,5 +20,10 @@ function Content(props) {
     </main>
   );
 }
+
+Content.propTypes = {
+  technologies: PropTypes.array.isRequired,
+  legendBullets: PropTypes.array.isRequired,
+};
 
 export default Content;

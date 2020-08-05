@@ -12,7 +12,7 @@ function Card(props) {
       />
       <div className="head">
         <h3 className="name">{props.name}</h3>
-        <a href={props.link} target="_blank" rel="noopener noreferer">
+        <a href={props.link} target="_blank" rel="noopener noreferrer">
           {/* <img
             src="/assets/images/shared/external-link.svg"
             alt="external link icon"

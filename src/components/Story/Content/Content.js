@@ -24,7 +24,7 @@ function Content() {
       }
       setHeight(maxHeight);
     }
-  });
+  }, []);
   let storiesJSX = STORIES.map((story, index) => (
     <StorySegment
       key={index}

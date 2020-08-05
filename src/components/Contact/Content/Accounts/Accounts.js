@@ -6,7 +6,7 @@ function Accounts() {
     .flat()
     .map((account) => (
       <li key={account.title} title={account.title}>
-        <a href={account.link} target="_blank" rel="noopener noreferer">
+        <a href={account.link} target="_blank" rel="noopener noreferrer">
           <i className={`fa fa-${account.fontIcon}`} />
         </a>
       </li>
