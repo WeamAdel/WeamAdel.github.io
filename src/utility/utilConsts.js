@@ -65,6 +65,15 @@ const DESIGN_TOOLS = {
 
 export const PROJECTS = {
   mfg: {
+    header: {
+      name: "My Fitness Goal",
+      description: [
+        "MFG is a web app where users can find coaches, nutritionists, gyms and nutrition clinics. a user can reach for the desired staff member (coach or nutritionist), find an empty slot in their schedules and request a reservation or booking.",
+        "sers can also find branches (gyms or clinics) based on the city and find info about them such as opening hours, available classes, photo gallery, addresses etc.",
+      ],
+      imgUrl: "/assets/images/portfolio/case-studies/header-images/mfg.jpg",
+      alt: "Woman doing yoga",
+    },
     features: [
       "User/staff accounts",
       "Gym, clinic info page",
@@ -89,6 +98,40 @@ export const PROJECTS = {
     improvement: [
       "Consistency in naming and structure patterns",
       "Use 3rd party plugins to validate client side forms",
+    ],
+    fullProject: [ACCOUNTS.design[2], ACCOUNTS.design[3]],
+  },
+  scheduler: {
+    header: {
+      name: "Task Scheduler",
+      description: [
+        "Task scheduler was part of my last internship evaluation test, it was the first full SPA project i worked on",
+        "As its name's descripe it's a simple scheduler where the user can organize his/her tasks and interact with other people",
+      ],
+      imgUrl: "",
+      alt: "",
+    },
+    features: [
+      "User/staff accounts",
+      "Add, Edit, Remove and mark done tasks",
+      "Other users Subscription",
+      "Search other users",
+    ],
+    role: ["UI - UX Designer", "Full Stack Developer"],
+    technologies: ["React", "React Native", "Redux", "Laravel", "MySQL"],
+    designTools: [DESIGN_TOOLS.xd],
+    pallet: ["#FF7B62", "#2C2F32", "#6c757d"],
+    typography: ["Roboto [Regular - Condensed]"],
+    screenshots: [{ title: "", imgUrl: "", alt: "" }],
+    video: "",
+    learned: [
+      "Interpreting written requirments to a real project",
+      "More understanding and convenience working with redux",
+      "More understanding and convenience working with laravel",
+      "Better module and redux reducers structuring.",
+    ],
+    improvement: [
+      "Better project structuring by using a separate redux store for each feature",
     ],
     fullProject: [ACCOUNTS.design[2], ACCOUNTS.design[3]],
   },
