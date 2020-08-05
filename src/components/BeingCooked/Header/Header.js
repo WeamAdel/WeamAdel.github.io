@@ -6,7 +6,7 @@ function Header() {
     <header>
       <h1 className="page-heading">Being Cooked</h1>
       <HeaderImage
-        imgUrl="/assets/images/technologies/img.jpg"
+        imgUrl="/assets/images/cooked/header.jpg"
         alt="Turned on mackbook pro near brown ceramic mug"
       />
     </header>

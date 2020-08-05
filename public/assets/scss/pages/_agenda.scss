@@ -1,5 +1,10 @@
 .agenda {
   header {
+    .header-image {
+      img {
+        max-height: min(calc(100vh - 164px), 450px);
+      }
+    }
     .lorem-bg {
       background-image: url("/assets/images/agenda/lorem-ipsum.svg");
       background-repeat: repeat-y;
@@ -105,7 +110,7 @@
       display: flex;
       align-items: flex-end;
       padding: 60px 16px 0;
-      margin-top: -80%;
+      margin-top: -160px;
 
       .quote {
         //padding: 48px 32px 48px 64px;
@@ -274,6 +279,9 @@
 @media (min-width: 767px) {
   .agenda {
     header {
+      .header-image {
+        width: 50%;
+      }
       .icons-bg {
         display: grid;
       }

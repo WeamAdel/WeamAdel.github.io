@@ -52,7 +52,7 @@ header .header-image img {
   min-height: min(400px, calc(100vh - 64px - 100px));
   width: 100%;
   object-fit: cover;
-  filter: grayscale(0.8);
+  mix-blend-mode: luminosity;
 }
 header .content {
   position: relative;
@@ -294,6 +294,9 @@ button:active {
   font-size: 14px;
 }
 
+.agenda header .header-image img {
+  max-height: min(calc(100vh - 164px), 450px);
+}
 .agenda header .lorem-bg {
   background-image: url("/assets/images/agenda/lorem-ipsum.svg");
   background-repeat: repeat-y;
@@ -394,7 +397,7 @@ button:active {
   display: flex;
   align-items: flex-end;
   padding: 60px 16px 0;
-  margin-top: -80%;
+  margin-top: -160px;
 }
 .agenda header .content .quote {
   padding: 32px 24px 24px 44px;
@@ -570,6 +573,9 @@ button:active {
   }
 }
 @media (min-width: 767px) {
+  .agenda header .header-image {
+    width: 50%;
+  }
   .agenda header .icons-bg {
     display: grid;
   }
@@ -587,6 +593,41 @@ button:active {
     font-size: 14px;
   }
 }
+.being-cooked main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-gap: 16px;
+}
+.being-cooked main .project-card .type, .being-cooked main .project-card .wrapper .idea {
+  background-color: #f8f8f8;
+  padding: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+.being-cooked main .project-card .wrapper {
+  position: relative;
+  width: 100px;
+}
+.being-cooked main .project-card .wrapper img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.being-cooked main .project-card .wrapper .idea {
+  margin-bottom: 0;
+  margin-bottom: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: rotateZ(-90deg) translateX(-50%) translateY(106px);
+  transform-origin: 0 0;
+  width: 200px;
+}
+.being-cooked main .project-card .type {
+  width: 100px;
+  margin-bottom: 8px;
+}
+
 .case-study header .heading-wrapper .project-theme-line {
   height: 4px;
   width: 100%;

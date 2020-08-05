@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card/Card";
 
 const BEING_COOKED_PROJECTS = [
   {
@@ -22,11 +23,10 @@ const BEING_COOKED_PROJECTS = [
 ];
 
 function Content() {
-  return (
-    <main className="main content">
-      <p>lkl</p>
-    </main>
-  );
+  let projectsCardsJSX = BEING_COOKED_PROJECTS.map((project, index) => (
+    <Card key={index} project={project} />
+  ));
+  return <main className="main content">{projectsCardsJSX}</main>;
 }
 
 export default Content;
