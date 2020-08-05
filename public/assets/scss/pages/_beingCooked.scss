@@ -1,9 +1,10 @@
 .being-cooked {
   main {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     grid-gap: 16px;
     .project-card {
+      opacity: 0;
       %paragraphs {
         background-color: $fadeWhite;
         padding: 4px;

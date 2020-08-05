@@ -24,7 +24,7 @@ const BEING_COOKED_PROJECTS = [
 
 function Content() {
   let projectsCardsJSX = BEING_COOKED_PROJECTS.map((project, index) => (
-    <Card key={index} project={project} />
+    <Card key={index} project={project} index={index} />
   ));
   return <main className="main content">{projectsCardsJSX}</main>;
 }

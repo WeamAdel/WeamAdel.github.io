@@ -1,11 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { animated, useSpring, config } from "react-spring";
 
 function Card(props) {
+  console.log(props);
   let project = props.project;
-
+  let { transform, opacity } = useSpring({
+    from: { transform: 0, opacity: 0 },
+    to: { transform: props.index * 20 + 5, opacity: 1 },
+    delay: props.index * 1000,
+    config: config.molasses,
+  });
   return (
-    <div className="project-card">
+    <animated.div
+      className="project-card"
+      style={{
+        transform: transform.interpolate((y) => `translateY(${y}%)`),
+        opacity: opacity,
+      }}
+    >
       <p className="type">{project.type}</p>
       <div className="wrapper">
         <img
@@ -14,7 +27,7 @@ function Card(props) {
         />
         <p className="idea">{project.idea}</p>
       </div>
-    </div>
+    </animated.div>
   );
 }
 

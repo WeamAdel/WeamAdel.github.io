@@ -595,8 +595,11 @@ button:active {
 }
 .being-cooked main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   grid-gap: 16px;
+}
+.being-cooked main .project-card {
+  opacity: 0;
 }
 .being-cooked main .project-card .type, .being-cooked main .project-card .wrapper .idea {
   background-color: #f8f8f8;
