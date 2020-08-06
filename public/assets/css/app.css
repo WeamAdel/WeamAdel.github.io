@@ -665,6 +665,12 @@ button:active {
   font-family: "Roboto Condensed Regular";
   margin-bottom: 32px;
 }
+.case-study main .info-section .main-content ul.icon li, .case-study main .info-section .main-content ul.pallet li {
+  display: inline;
+}
+.case-study main .info-section .main-content ul.icon li:not(:last-of-type), .case-study main .info-section .main-content ul.pallet li:not(:last-of-type) {
+  margin-right: 8px;
+}
 .case-study main .info-section {
   padding: 44px 0;
 }
@@ -691,11 +697,8 @@ button:active {
   padding-left: 16px;
   list-style-image: url("/assets/images/portfolio/case-studies/contrast.svg");
 }
-.case-study main .info-section .main-content ul.pallet li {
-  display: inline;
-}
-.case-study main .info-section .main-content ul.pallet li:not(:last-of-type) {
-  margin-right: 8px;
+.case-study main .info-section .main-content ul.icon img {
+  width: 50px;
 }
 .case-study main .info-section:not(:last-of-type) {
   border-bottom: 1px dashed #d5d5d6;

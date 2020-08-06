@@ -2,38 +2,44 @@ import React from "react";
 import Layout from "./Layout/Layout";
 import List from "./List/List";
 
+const STUDY_ASPECTS = {
+  features: { heading: "Features Highlight", iconType: "check" },
+  role: { heading: "My Role", iconType: null },
+  technologies: { heading: "Technologies", iconType: null },
+  designTools: { heading: "Design Tools", iconType: null, type: "icon" },
+  pallet: { heading: "Color Pallet", iconType: null, type: "pallet" },
+  typography: { heading: "Typography", iconType: null },
+  screenshots: { heading: "Sample Screenshots", iconType: null },
+  video: { heading: "Demo Video", iconType: null },
+  learned: { heading: "Things I've Learned", iconType: "check" },
+  improvement: { heading: "Things I Need To Improve", iconType: "contrast" },
+  fullProject: {
+    heading: "View Full Project On",
+    iconType: null,
+    type: "icon",
+  },
+};
+
 function Content(props) {
   let project = props.project;
+  let contentJSX = Object.keys(project).map((key, index) => {
+    if (project[key] && STUDY_ASPECTS[key]) {
+      return (
+        <Layout heading={STUDY_ASPECTS[key].heading} key={index}>
+          <List
+            items={project[key]}
+            iconType={STUDY_ASPECTS[key].iconType}
+            type={STUDY_ASPECTS[key].type}
+          />
+        </Layout>
+      );
+    }
+  });
+
   return (
     <main className="content">
       <div className="my-container">
-        <Layout heading="Features Highlight">
-          <List items={project.features} iconType="check" />
-        </Layout>
-        <Layout heading="My Role">
-          <List items={project.role} />
-        </Layout>
-        <Layout heading="Technologies">
-          <List items={project.technologies} />
-        </Layout>
-        <Layout heading="Color Pallet">
-          <List items={project.pallet} type="pallet" />
-        </Layout>
-        <Layout heading="Typography">
-          <List items={project.typography} />
-        </Layout>
-        <Layout heading="Sample Screenshots">
-          <p>Hi</p>
-        </Layout>
-        <Layout heading="Things I've Learned">
-          <List items={project.learned} iconType="check" />
-        </Layout>
-        <Layout heading="Things I Need To Improve">
-          <List items={project.improvement} iconType="contrast" />
-        </Layout>
-        <Layout heading="View Full Project On">
-          <p>Hi</p>
-        </Layout>
+        {contentJSX}
         <p>Navigate</p>
       </div>
     </main>

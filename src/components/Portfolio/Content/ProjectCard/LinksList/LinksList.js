@@ -12,7 +12,7 @@ function LinksList(props) {
   return (
     <ul className="links-list list-unstyled m-0">
       <li title={caseStudy.title}>
-        <Link to={`/case-study${caseStudy.link}`}>
+        <Link to={`/portfolio/case-study${caseStudy.link}`}>
           <img src={portfolioIconsPath + caseStudy.iconName} alt="Grid" />
         </Link>
       </li>

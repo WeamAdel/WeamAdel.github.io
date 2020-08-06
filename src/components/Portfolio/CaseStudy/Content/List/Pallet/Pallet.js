@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function pallet(props) {
+function Pallet(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,4 +20,8 @@ function pallet(props) {
   );
 }
 
-export default pallet;
+Pallet.propTypes = {
+  fill: PropTypes.string.isRequired,
+};
+
+export default Pallet;

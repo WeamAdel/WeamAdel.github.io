@@ -37,7 +37,14 @@
       }
     }
   }
-
+  %inline {
+    li {
+      display: inline;
+      &:not(:last-of-type) {
+        margin-right: 8px;
+      }
+    }
+  }
   main {
     .info-section {
       padding: 44px 0;
@@ -66,13 +73,13 @@
             padding-left: 16px;
             list-style-image: url("/assets/images/portfolio/case-studies/contrast.svg");
           }
-
           &.pallet {
-            li {
-              display: inline;
-              &:not(:last-of-type) {
-                margin-right: 8px;
-              }
+            @extend %inline;
+          }
+          &.icon {
+            @extend %inline;
+            img {
+              width: 50px;
             }
           }
         }

@@ -44,13 +44,11 @@ export const ACCOUNTS = {
     },
     {
       title: "Behance",
-      iconUrl: accountsIconsPath + "behance.svg",
       link: "",
       fontIcon: "behance",
     },
     {
       title: "Dribble",
-      iconUrl: accountsIconsPath + "dribble.svg",
       link: "",
       fontIcon: "dribbble",
     },
@@ -59,8 +57,16 @@ export const ACCOUNTS = {
 
 const toolsIconsPath = "/assets/images/portfolio/case-studies/";
 const DESIGN_TOOLS = {
-  xd: { title: "Adobe XD", iconUrl: toolsIconsPath + "xd.svg" },
-  photoshop: { title: "Adobe Photoshop", iconUrl: toolsIconsPath + "ps.svg" },
+  xd: {
+    title: "Adobe XD",
+    iconUrl: toolsIconsPath + "xd.svg",
+    alt: "Adobe Xd Icon",
+  },
+  photoshop: {
+    title: "Adobe Photoshop",
+    iconUrl: toolsIconsPath + "ps.svg",
+    alt: "Adobe Photoshop Icon",
+  },
 };
 
 export const PROJECTS = {
@@ -86,7 +92,7 @@ export const PROJECTS = {
     designTools: [DESIGN_TOOLS.xd, DESIGN_TOOLS.photoshop],
     pallet: ["#fff701", "#242529", "#2e2f33", "#d5d5d6"],
     typography: ["Roboto [Regular - Condensed]", "Edwardian Script ITC"],
-    screenshots: [{ title: "", imgUrl: "", alt: "" }],
+    screenshots: null,
     video: "",
     learned: [
       "Interpreting client's needs to a real project.",
@@ -99,7 +105,7 @@ export const PROJECTS = {
       "Consistency in naming and structure patterns",
       "Use 3rd party plugins to validate client side forms",
     ],
-    fullProject: [ACCOUNTS.design[2], ACCOUNTS.design[3]],
+    fullProject: [ACCOUNTS.design[1], ACCOUNTS.design[2]],
   },
   scheduler: {
     header: {
@@ -122,7 +128,7 @@ export const PROJECTS = {
     designTools: [DESIGN_TOOLS.xd],
     pallet: ["#FF7B62", "#2C2F32", "#6c757d"],
     typography: ["Roboto [Regular - Condensed]"],
-    screenshots: [{ title: "", imgUrl: "", alt: "" }],
+    screenshots: null,
     video: "",
     learned: [
       "Interpreting written requirments to a real project",
@@ -133,6 +139,32 @@ export const PROJECTS = {
     improvement: [
       "Better project structuring by using a separate redux store for each feature",
     ],
-    fullProject: [ACCOUNTS.design[2], ACCOUNTS.design[3]],
+    fullProject: [ACCOUNTS.design[1], ACCOUNTS.design[2]],
+  },
+  quantum: {
+    header: {
+      name: "Quantum",
+      description: [
+        "Quantum is a student mobility service based in mansoura, they nedded a website to get students familiar with their service, countries they cover and the process to apply for a certain program",
+      ],
+      imgUrl: "/assets/images/portfolio/case-studies/header-images/quantum.jpg",
+      alt: "Woman doing yoga",
+    },
+    features: null,
+    role: ["UI - UX Designer", "Full Stack Developer"],
+    technologies: ["HTML5", "PHP", "JavaScript", "JQuery"],
+    designTools: [DESIGN_TOOLS.xd, DESIGN_TOOLS.photoshop],
+    pallet: ["#FB7262", "#F0988E", "#17486D", "#999999"],
+    typography: ["Roboto [Regular]", "Georgia"],
+    screenshots: null,
+    video: "",
+    learned: [
+      "More understanding of the business logic and try to convert this to a real project",
+      "Working with multilingual website",
+    ],
+    improvement: null,
+    fullProject: [ACCOUNTS.design[1], ACCOUNTS.design[2]],
   },
 };
+
+// [{ title: "", imgUrl: "", alt: "" }]

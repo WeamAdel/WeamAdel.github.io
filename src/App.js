@@ -22,7 +22,11 @@ function App() {
           <Route path="/contact" exact component={Contact} />
           <Route path="/agenda" exact component={Agenda} />
           <Route path="/portfolio" exact component={Portfolio} />
-          <Route path="/case-study/:projectName" exact component={CaseStudy} />
+          <Route
+            path="/portfolio/case-study/:projectName"
+            exact
+            component={CaseStudy}
+          />
           <Route path="/being-cooked" exact component={BeingCooked} />
         </Switch>
       </BrowserRouter>
