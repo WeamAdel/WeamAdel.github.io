@@ -38,10 +38,7 @@ function Content(props) {
 
   return (
     <main className="content">
-      <div className="my-container">
-        {contentJSX}
-        <p>Navigate</p>
-      </div>
+      <div className="my-container">{contentJSX}</div>
     </main>
   );
 }

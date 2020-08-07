@@ -69,13 +69,14 @@ const DESIGN_TOOLS = {
   },
 };
 
+const basics = ["HTML5", "SASS", "Bootstrap4", "JavaScript", "JQuery", "PHP"];
 export const PROJECTS = {
   mfg: {
     header: {
       name: "My Fitness Goal",
       description: [
         "MFG is a web app where users can find coaches, nutritionists, gyms and nutrition clinics. a user can reach for the desired staff member (coach or nutritionist), find an empty slot in their schedules and request a reservation or booking.",
-        "sers can also find branches (gyms or clinics) based on the city and find info about them such as opening hours, available classes, photo gallery, addresses etc.",
+        "Users can also find branches (gyms or clinics) based on the city and find info about them such as opening hours, available classes, photo gallery, addresses etc.",
       ],
       imgUrl: "/assets/images/portfolio/case-studies/header-images/mfg.jpg",
       alt: "Woman doing yoga",
@@ -93,7 +94,7 @@ export const PROJECTS = {
     pallet: ["#fff701", "#242529", "#2e2f33", "#d5d5d6"],
     typography: ["Roboto [Regular - Condensed]", "Edwardian Script ITC"],
     screenshots: null,
-    video: "",
+    video: null,
     learned: [
       "Interpreting client's needs to a real project.",
       "More understanding and convenience working with react component life cycle.",
@@ -129,7 +130,7 @@ export const PROJECTS = {
     pallet: ["#FF7B62", "#2C2F32", "#6c757d"],
     typography: ["Roboto [Regular - Condensed]"],
     screenshots: null,
-    video: "",
+    video: null,
     learned: [
       "Interpreting written requirments to a real project",
       "More understanding and convenience working with redux",
@@ -148,19 +149,67 @@ export const PROJECTS = {
         "Quantum is a student mobility service based in mansoura, they nedded a website to get students familiar with their service, countries they cover and the process to apply for a certain program",
       ],
       imgUrl: "/assets/images/portfolio/case-studies/header-images/quantum.jpg",
-      alt: "Woman doing yoga",
+      alt: "Young black women students holding books",
     },
     features: null,
-    role: ["UI - UX Designer", "Full Stack Developer"],
-    technologies: ["HTML5", "PHP", "JavaScript", "JQuery"],
+    role: ["UI - UX Designer", "Front-End Developer"],
+    technologies: basics,
     designTools: [DESIGN_TOOLS.xd, DESIGN_TOOLS.photoshop],
     pallet: ["#FB7262", "#F0988E", "#17486D", "#999999"],
     typography: ["Roboto [Regular]", "Georgia"],
     screenshots: null,
-    video: "",
+    video: null,
     learned: [
       "More understanding of the business logic and try to convert this to a real project",
       "Working with multilingual website",
+    ],
+    improvement: null,
+    fullProject: [ACCOUNTS.design[1], ACCOUNTS.design[2]],
+  },
+  pharmacy: {
+    header: {
+      name: "Pharmacy E-Commerce",
+      description: [
+        "Pharmacy is an E-commerce project built by the very basic front-end languages. This project is one of the first projects i've worked on as an intern in BlueOcean Solutions.",
+      ],
+      imgUrl:
+        "/assets/images/portfolio/case-studies/header-images/pharmacy.jpg",
+      alt: "Syrum bottle near to syrum pipe placed over pearl balls",
+    },
+    features: null,
+    role: ["UI - UX Designer", "Front-End Developer"],
+    technologies: basics,
+    designTools: [DESIGN_TOOLS.xd],
+    pallet: ["#2DC4CF", "#2D2D2D", "#FFFFFF", "#F5F5F5"],
+    typography: ["Roboto [Regular - Condensed]"],
+    screenshots: null,
+    video: null,
+    learned: ["More Convenience working with Adobe Xd"],
+    improvement: null,
+    fullProject: [ACCOUNTS.design[1], ACCOUNTS.design[2]],
+  },
+  portfolio: {
+    header: {
+      name: "My Old Portfolio",
+      description: [
+        "MFG is a web app where users can find coaches, nutritionists, gyms and nutrition clinics. a user can reach for the desired staff member (coach or nutritionist), find an empty slot in their schedules and request a reservation or booking.",
+        "Users can also find branches (gyms or clinics) based on the city and find info about them such as opening hours, available classes, photo gallery, addresses etc.",
+      ],
+      imgUrl: "/assets/images/portfolio/case-studies/header-images/old.jpg",
+      alt: "Woman doing yoga",
+    },
+    features: null,
+    role: ["UI - UX Designer", "Front-End Developer"],
+    technologies: basics,
+    designTools: [DESIGN_TOOLS.xd, DESIGN_TOOLS.photoshop],
+    pallet: ["#f6efef", "#c1aabe", "#504f67", "#333240"],
+    typography: ["Roboto [Regular]", "Showcard Gothic"],
+    screenshots: null,
+    video: null,
+    learned: [
+      "Apply some of the UI design principles i learned",
+      "More convenience working with responsive layouts",
+      "Applying custom animations and more complex positionings",
     ],
     improvement: null,
     fullProject: [ACCOUNTS.design[1], ACCOUNTS.design[2]],

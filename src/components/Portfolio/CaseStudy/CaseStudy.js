@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { PROJECTS } from "./../../../utility/utilConsts";
 import Header from "./Header/Header";
 import Content from "./Content/Content";
+import Navigator from "./Content/Navigator/Navigator";
 
 function CaseStudy(props) {
+  let [indexes, setIndexes] = useState({
+    current: null,
+    next: null,
+    prev: null,
+  });
   const projectName = props.match.params.projectName;
   let project = {};
 
@@ -14,6 +20,26 @@ function CaseStudy(props) {
     );
   if (projectName && PROJECTS[projectName]) project = PROJECTS[projectName];
 
+  const projectNames = Object.keys(PROJECTS);
+  function findCurrentPrevNextIndexes() {
+    const currentIndex = projectNames.findIndex((name) => name === projectName);
+    if (currentIndex < 0) {
+      throw new Error(
+        "Provided project name does not match any of the existing projects"
+      );
+    }
+
+    const prevIndex = currentIndex === 0 ? null : currentIndex - 1;
+    const nextIndex =
+      currentIndex === PROJECTS.length - 1 ? null : currentIndex + 1;
+
+    return { current: currentIndex, prev: prevIndex, next: nextIndex };
+  }
+
+  useEffect(() => {
+    setIndexes(findCurrentPrevNextIndexes());
+  }, [projectName]);
+
   return (
     <div className="page case-study">
       <div className="page-wrapper">
@@ -22,6 +48,10 @@ function CaseStudy(props) {
           mainThemeColor={project ? project.pallet[0] : ""}
         />
         <Content project={project} />
+        <Navigator
+          next={projectNames[indexes.next]}
+          prev={projectNames[indexes.prev]}
+        />
       </div>
     </div>
   );

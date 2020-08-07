@@ -90,4 +90,27 @@
       }
     }
   }
+  .navigator {
+    background-image: url("/assets/images/portfolio/case-studies/waves.svg");
+    .project-navigator {
+      min-height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .nav-item {
+        transform: translateY(30px);
+        font-size: 14px;
+        font-family: $robotoCondensed;
+        * {
+          color: $lightMain;
+        }
+        i {
+          margin: 0 8px;
+        }
+        &:first-of-type {
+          margin-right: 32px;
+        }
+      }
+    }
+  }
 }
