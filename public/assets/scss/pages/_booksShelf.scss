@@ -1,0 +1,54 @@
+.books {
+  .my-process {
+    color: white;
+    padding: 100px 0;
+
+    background-color: $main;
+    h2 {
+      margin-bottom: 60px;
+      letter-spacing: 0.15rem;
+    }
+    section.process {
+      .text {
+        .number {
+          color: $flatGreen;
+          font-family: $bernard;
+          font-size: 32px;
+        }
+        .title {
+          color: #f08;
+          font-family: $bernard;
+          font-size: 16px;
+          letter-spacing: 0.15rem;
+        }
+        p {
+          text-align: justify;
+          max-width: 32rem;
+        }
+      }
+      .image {
+        img {
+          max-width: 100%;
+        }
+      }
+      &:nth-child(even) {
+        .image-col {
+          order: -1;
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 80px;
+      }
+      &:last-of-type {
+        .row {
+          flex-direction: column;
+          align-items: center;
+          .image-col {
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@ import Contact from "./components/Contact/Contact";
 import Portfolio from "./components/Portfolio/Portfolio";
 import CaseStudy from "./components/Portfolio/CaseStudy/CaseStudy";
 import BeingCooked from "./components/BeingCooked/BeingCooked";
+import BooksShelf from "./components/BooksShelf/BooksShelf";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             component={CaseStudy}
           />
           <Route path="/being-cooked" exact component={BeingCooked} />
+          <Route path="/books-shelf" exact component={BooksShelf} />
         </Switch>
       </BrowserRouter>
     </div>

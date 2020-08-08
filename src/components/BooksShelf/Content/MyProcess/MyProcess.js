@@ -4,7 +4,7 @@ import Row from "./Row/Row";
 const PROCESSES = [
   {
     image: {
-      name: "",
+      name: "source",
       alt:
         "Illustration of a woman holding a book standing in front of a library",
     },
@@ -18,7 +18,7 @@ const PROCESSES = [
   },
   {
     image: {
-      name: "",
+      name: "less-more",
       alt:
         "Illustration of a woman holding a book standing in front of a library",
     },
@@ -31,7 +31,7 @@ const PROCESSES = [
   },
   {
     image: {
-      name: "",
+      name: "iterate",
       alt:
         "Illustration of a woman holding a book standing in front of a library",
     },
@@ -52,7 +52,7 @@ const PROCESSES = [
   },
   {
     image: {
-      name: "",
+      name: "enjoy",
       alt:
         "Illustration of a woman holding a book standing in front of a library",
     },
@@ -67,7 +67,7 @@ const PROCESSES = [
   },
   {
     image: {
-      name: "",
+      name: "drink",
       alt:
         "Illustration of a woman holding a book standing in front of a library",
     },
@@ -77,10 +77,17 @@ const PROCESSES = [
     },
   },
 ];
-function MyProcess(props) {
+function MyProcess() {
+  let processJSX = PROCESSES.map((process, index) => {
+    return <Row key={index} process={process} number={index + 1} />;
+  });
+
   return (
     <section className="my-process">
-      <div className="my-container"></div>
+      <div className="my-container">
+        <h2>My Process</h2>
+        <div className="processes-wrapper">{processJSX}</div>
+      </div>
     </section>
   );
 }

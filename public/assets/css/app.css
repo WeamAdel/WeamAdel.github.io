@@ -631,6 +631,47 @@ button:active {
   margin-bottom: 8px;
 }
 
+.books .my-process {
+  color: white;
+  padding: 100px 0;
+  background-color: #0a0c1b;
+}
+.books .my-process h2 {
+  margin-bottom: 60px;
+  letter-spacing: 0.15rem;
+}
+.books .my-process section.process .text .number {
+  color: #c4ffbd;
+  font-family: "Bernard MT";
+  font-size: 32px;
+}
+.books .my-process section.process .text .title {
+  color: #f08;
+  font-family: "Bernard MT";
+  font-size: 16px;
+  letter-spacing: 0.15rem;
+}
+.books .my-process section.process .text p {
+  text-align: justify;
+  max-width: 32rem;
+}
+.books .my-process section.process .image img {
+  max-width: 100%;
+}
+.books .my-process section.process:nth-child(even) .image-col {
+  order: -1;
+}
+.books .my-process section.process:not(:last-of-type) {
+  margin-bottom: 80px;
+}
+.books .my-process section.process:last-of-type .row {
+  flex-direction: column;
+  align-items: center;
+}
+.books .my-process section.process:last-of-type .row .image-col {
+  order: 1;
+}
+
 .case-study header .heading-wrapper .project-theme-line {
   height: 4px;
   width: 100%;
