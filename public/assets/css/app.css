@@ -791,6 +791,83 @@ button:active {
   text-align: center;
 }
 
+.experience {
+  background-color: #0a0c1b;
+  min-height: 100vh;
+}
+.experience .content {
+  position: relative;
+  width: 60%;
+  padding: 32px 0 !important;
+}
+.experience .content .page-heading {
+  color: #fe9f9d;
+  transform: none;
+  margin-bottom: 60px;
+}
+.experience .content .exp-cards .exp-card {
+  border: 1px solid #fe9f9d;
+  padding: 24px;
+  color: #f5f5f7;
+  max-width: 400px;
+  border-radius: 14px;
+  box-shadow: 0 0 0.5rem #fe9f9d;
+}
+.experience .content .exp-cards .exp-card .time {
+  font-family: "Bernard MT";
+  letter-spacing: 0.25rem;
+  margin-bottom: 12px;
+}
+.experience .content .exp-cards .exp-card .time .year {
+  color: #fe9f9d;
+  display: inline-block;
+  font-size: 32px;
+  position: relative;
+  margin-bottom: 4px;
+}
+.experience .content .exp-cards .exp-card .time .year::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #fe9f9d;
+  border-radius: 50%;
+}
+.experience .content .exp-cards .exp-card .time .months {
+  font-size: 24px;
+  color: transparent;
+  display: block;
+  -webkit-text-stroke: 1px white;
+}
+.experience .content .exp-cards .exp-card .description {
+  margin-bottom: 0;
+}
+.experience .content .exp-cards .exp-card:not(:last-of-type) {
+  margin-bottom: 32px;
+}
+.experience .image {
+  width: 40%;
+  max-width: 400px;
+  position: fixed;
+  right: 60px;
+  top: 0;
+  padding: calc(64px + 32px) 0;
+}
+.experience .image img {
+  width: 100%;
+}
+.experience .sort-btn {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  transform: translateX(-50%);
+}
+
 .home .welcome {
   position: absolute;
   height: 100%;

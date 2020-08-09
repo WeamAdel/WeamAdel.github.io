@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./components/shared/Navbar/Navbar";
 import Home from "./components/Home/Home";
+import Experience from "./components/Experience/Experience";
 import Story from "./components/Story/Story";
 import Technologies from "./components/Technologies/Technologies";
 import Agenda from "./components/Agenda/Agenda";
@@ -18,6 +19,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/experience" exact component={Experience} />
           <Route path="/story" exact component={Story} />
           <Route path="/technologies" exact component={Technologies} />
           <Route path="/contact" exact component={Contact} />
