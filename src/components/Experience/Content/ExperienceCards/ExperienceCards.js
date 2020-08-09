@@ -1,4 +1,5 @@
 import React from "react";
+import { useSpring, animated, config } from "react-spring";
 import ExperienceCard from "./ExperienceCard/ExperienceCard";
 
 const MONTHS = {
@@ -21,11 +22,19 @@ const EXPERIENCE = [
       "Full Stack Web Developer at Blue Ocean Solutions (Technical Lead)",
   },
 ];
-function ExperienceCards() {
-  let cardsJSX = EXPERIENCE.map((exp, index) => (
+function ExperienceCards(props) {
+  let sortedArray =
+    props.sortType !== "asc"
+      ? [...EXPERIENCE].sort((a, b) => {
+          return a.year === b.year ? 0 : a.year > b.year ? -1 : 1;
+        })
+      : EXPERIENCE;
+
+  let cardsJSX = sortedArray.map((exp, index) => (
     <ExperienceCard key={index} {...exp} />
   ));
-  return <section className="exp-cards">{cardsJSX}</section>;
+
+  return <animated.section className="exp-cards">{cardsJSX}</animated.section>;
 }
 
 export default ExperienceCards;

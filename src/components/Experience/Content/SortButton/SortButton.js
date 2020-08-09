@@ -1,9 +1,13 @@
 import React from "react";
 import ButtonBG from "./ButtonBG";
 
-function SortButton() {
+function SortButton(props) {
   return (
-    <button className="sort-btn">
+    <button
+      onClick={props.flipSorting}
+      className="sort-btn"
+      title={props.title}
+    >
       <ButtonBG />
     </button>
   );

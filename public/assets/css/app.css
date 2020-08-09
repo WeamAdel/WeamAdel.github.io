@@ -795,10 +795,12 @@ button:active {
   background-color: #0a0c1b;
   min-height: 100vh;
 }
+.experience .wrapper {
+  display: flex;
+  flex-direction: column;
+}
 .experience .content {
-  position: relative;
-  width: 60%;
-  padding: 32px 0 !important;
+  padding: 32px 0 calc(50px + 24px + 24px + 60px) !important;
 }
 .experience .content .page-heading {
   color: #fe9f9d;
@@ -847,27 +849,63 @@ button:active {
 .experience .content .exp-cards .exp-card:not(:last-of-type) {
   margin-bottom: 32px;
 }
-.experience .image {
-  width: 40%;
-  max-width: 400px;
-  position: fixed;
-  right: 60px;
-  top: 0;
-  padding: calc(64px + 32px) 0;
-}
-.experience .image img {
-  width: 100%;
-}
-.experience .sort-btn {
+.experience .content .sort-btn {
   position: fixed;
   left: 50%;
   bottom: 40px;
+  z-index: 2;
   border: none;
   background-color: transparent;
   padding: 0;
   transform: translateX(-50%);
 }
+.experience .content .sort-btn:active, .experience .content .sort-btn:focus {
+  outline: none !important;
+}
+.experience .content .sort-btn:active svg #main, .experience .content .sort-btn:focus svg #main {
+  stroke: aliceblue;
+  stroke-width: 2px;
+}
+.experience .content .sort-btn svg {
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.25s ease-in-out;
+}
+.experience .content .sort-btn svg:hover {
+  transform: scale(1.1);
+}
+.experience .content .sort-btn svg:active,
+.experience .content .sort-btn svg :focus {
+  transform: scale(0.9);
+}
+.experience .image {
+  padding: calc(64px + 32px) 0;
+  order: -1;
+}
+.experience .image img {
+  width: 100%;
+}
 
+@media (min-width: 1000px) {
+  .experience .wrapper {
+    display: block;
+  }
+  .experience .image {
+    position: fixed;
+    right: 60px;
+    top: 0;
+    width: 40%;
+  }
+  .experience .content {
+    position: relative;
+    width: 60%;
+  }
+}
+@media (min-width: 1300px) {
+  .experience .content .exp-cards .exp-card {
+    max-width: 500px;
+  }
+}
 .home .welcome {
   position: absolute;
   height: 100%;
