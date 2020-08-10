@@ -1,51 +1,69 @@
 .books {
-  .my-process {
-    color: white;
-    padding: 100px 0;
-
-    background-color: $main;
-    h2 {
-      margin-bottom: 60px;
-      letter-spacing: 0.15rem;
-    }
-    section.process {
-      .text {
-        .number {
-          color: $flatGreen;
-          font-family: $bernard;
+  main.content {
+    padding: 0;
+    .left-column {
+      padding: 60px 0;
+      .intro {
+        .page-heading {
           font-size: 32px;
-        }
-        .title {
-          color: #f08;
-          font-family: $bernard;
-          font-size: 16px;
-          letter-spacing: 0.15rem;
+          transform: none;
+          margin-bottom: 44px;
         }
         p {
+          font-size: 14px;
           text-align: justify;
           max-width: 32rem;
         }
       }
-      .image {
-        img {
-          max-width: 100%;
-        }
-      }
-      &:nth-child(even) {
-        .image-col {
-          order: -1;
-        }
-      }
+    }
+    .my-process {
+      color: white;
+      padding: 100px 0;
 
-      &:not(:last-of-type) {
-        margin-bottom: 80px;
+      background-color: $main;
+      h2 {
+        margin-bottom: 60px;
+        letter-spacing: 0.15rem;
       }
-      &:last-of-type {
-        .row {
-          flex-direction: column;
-          align-items: center;
+      section.process {
+        .text {
+          .number {
+            color: $flatGreen;
+            font-family: $bernard;
+            font-size: 32px;
+          }
+          .title {
+            color: #f08;
+            font-family: $bernard;
+            font-size: 16px;
+            letter-spacing: 0.15rem;
+          }
+          p {
+            text-align: justify;
+            max-width: 32rem;
+          }
+        }
+        .image {
+          img {
+            max-width: 100%;
+          }
+        }
+        &:nth-child(even) {
           .image-col {
-            order: 1;
+            order: -1;
+          }
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 80px;
+        }
+        &:last-of-type {
+          .row {
+            flex-direction: column;
+            align-items: center;
+            .image-col {
+              order: 1;
+            }
           }
         }
       }

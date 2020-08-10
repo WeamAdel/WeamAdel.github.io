@@ -631,44 +631,60 @@ button:active {
   margin-bottom: 8px;
 }
 
-.books .my-process {
+.books main.content {
+  padding: 0;
+}
+.books main.content .left-column {
+  padding: 60px 0;
+}
+.books main.content .left-column .intro .page-heading {
+  font-size: 32px;
+  transform: none;
+  margin-bottom: 44px;
+}
+.books main.content .left-column .intro p {
+  font-size: 14px;
+  text-align: justify;
+  max-width: 32rem;
+}
+.books main.content .my-process {
   color: white;
   padding: 100px 0;
   background-color: #0a0c1b;
 }
-.books .my-process h2 {
+.books main.content .my-process h2 {
   margin-bottom: 60px;
   letter-spacing: 0.15rem;
 }
-.books .my-process section.process .text .number {
+.books main.content .my-process section.process .text .number {
   color: #c4ffbd;
   font-family: "Bernard MT";
   font-size: 32px;
 }
-.books .my-process section.process .text .title {
+.books main.content .my-process section.process .text .title {
   color: #f08;
   font-family: "Bernard MT";
   font-size: 16px;
   letter-spacing: 0.15rem;
 }
-.books .my-process section.process .text p {
+.books main.content .my-process section.process .text p {
   text-align: justify;
   max-width: 32rem;
 }
-.books .my-process section.process .image img {
+.books main.content .my-process section.process .image img {
   max-width: 100%;
 }
-.books .my-process section.process:nth-child(even) .image-col {
+.books main.content .my-process section.process:nth-child(even) .image-col {
   order: -1;
 }
-.books .my-process section.process:not(:last-of-type) {
+.books main.content .my-process section.process:not(:last-of-type) {
   margin-bottom: 80px;
 }
-.books .my-process section.process:last-of-type .row {
+.books main.content .my-process section.process:last-of-type .row {
   flex-direction: column;
   align-items: center;
 }
-.books .my-process section.process:last-of-type .row .image-col {
+.books main.content .my-process section.process:last-of-type .row .image-col {
   order: 1;
 }
 

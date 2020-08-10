@@ -4,7 +4,11 @@ import PropTypes from "prop-types";
 function ExperienceCard(props) {
   const months = `${props.months[0].name} - ${props.months[1].name}`;
   return (
-    <div className="exp-card">
+    <div
+      className="exp-card"
+      id={props.cardId}
+      data-follow={props.follow ? props.follow : null}
+    >
       <h2 className="time">
         <time className="year" dateTime={props.year}>
           {props.year}
@@ -19,6 +23,7 @@ function ExperienceCard(props) {
 }
 
 ExperienceCard.propTypes = {
+  cardId: PropTypes.string.isRequired,
   year: PropTypes.number.isRequired,
   months: PropTypes.arrayOf(
     PropTypes.shape({

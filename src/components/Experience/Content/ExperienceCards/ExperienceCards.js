@@ -10,18 +10,23 @@ const MONTHS = {
 };
 const EXPERIENCE = [
   {
+    id: "blue_ocean_intern",
     year: 2019,
     months: [MONTHS.july, MONTHS.dec],
     description:
       "Blue Ocean Solutions For Digital Solutions Internship (Best Member)",
+    follow: "blue_ocean",
   },
   {
+    id: "blue_ocean",
     year: 2020,
     months: [MONTHS.jan, MONTHS.june],
     description:
       "Full Stack Web Developer at Blue Ocean Solutions (Technical Lead)",
+    lead: "blue_ocean_intern",
   },
 ];
+
 function ExperienceCards(props) {
   let sortedArray =
     props.sortType !== "asc"
@@ -31,7 +36,7 @@ function ExperienceCards(props) {
       : EXPERIENCE;
 
   let cardsJSX = sortedArray.map((exp, index) => (
-    <ExperienceCard key={index} {...exp} />
+    <ExperienceCard key={index} {...exp} cardId={"exp-card-" + index} />
   ));
 
   return <animated.section className="exp-cards">{cardsJSX}</animated.section>;
