@@ -4,10 +4,10 @@ import ProgressBar from "./ProgressBar/ProgressBar";
 
 function Category(props) {
   return (
-    <li className="category">
+    <li className={`category ${props.id}`}>
       <span className="name">{props.name}</span>
       <div className="progress-wrapper">
-        <span>{"0" + props.count}</span>
+        <span className="count">{"0" + props.count}</span>
         <ProgressBar percentage={props.percentage} />
       </div>
     </li>
@@ -15,6 +15,7 @@ function Category(props) {
 }
 
 Category.propTypes = {
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   count: PropTypes.number.isRequired,
   percentage: PropTypes.number.isRequired,

@@ -1,11 +1,12 @@
 import React from "react";
 import LeftColumn from "./LeftColumn/LeftColumn";
+import BooksCarousel from "./BooksCarousel/BooksCarousel";
 
 const BOOK_CATEGORIES = {
-  design: { id: "design", name: "design", count: 0 },
-  front: { id: "front", name: "front-end", count: 0 },
-  back: { id: "back", name: "back-end", count: 0 },
-  other: { id: "other", name: "other", count: 0 },
+  front: { id: "front", name: "Front-End", count: 0 },
+  back: { id: "back", name: "Back-End", count: 0 },
+  design: { id: "design", name: "Design", count: 0 },
+  other: { id: "other", name: "Other", count: 0 },
 };
 
 const BOOKS = [
@@ -121,6 +122,7 @@ function MyBooks() {
           categories={BOOK_CATEGORIES}
           totalBooksCount={BOOKS.length}
         />
+        <BooksCarousel />
       </div>
     </section>
   );

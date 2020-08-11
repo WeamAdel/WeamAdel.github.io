@@ -7,8 +7,7 @@ function Categories(props) {
     return (
       <Category
         key={index}
-        name={cat.name}
-        count={cat.count}
+        {...cat}
         percentage={(cat.count / props.totalBooksCount) * 100}
       />
     );

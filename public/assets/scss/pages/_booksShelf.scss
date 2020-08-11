@@ -1,19 +1,88 @@
 .books {
+  padding-top: 0;
   main.content {
     padding: 0;
     .left-column {
-      padding: 60px 0;
+      //Normal top padding + navbar padding removed from the page
+      padding: calc(60px + 64px) 0 60px;
       .intro {
+        margin-bottom: 32px;
+
         .page-heading {
-          font-size: 32px;
+          font-size: 44px;
+          font-family: $robotoCondensed;
+          font-weight: 900;
+          letter-spacing: normal;
           transform: none;
           margin-bottom: 44px;
         }
         p {
           font-size: 14px;
-          text-align: justify;
           max-width: 32rem;
         }
+      }
+
+      .categories {
+        background-color: white;
+        padding: 60px;
+        border-radius: 50px;
+        max-width: 400px;
+
+        .category {
+          .name {
+            color: $gray;
+          }
+          .progress-wrapper {
+            display: flex;
+            align-items: center;
+
+            .count {
+              margin-right: 8px;
+              font-size: 32px;
+            }
+
+            .progress {
+              width: 100%;
+              height: 10px;
+            }
+          }
+
+          &.front {
+            .progress-bar {
+              background-color: purple;
+            }
+          }
+          &.back {
+            .progress-bar {
+              background-color: salmon;
+            }
+          }
+          &.design {
+            .progress-bar {
+              background-color: slateblue;
+            }
+          }
+          &.other {
+            .progress-bar {
+              background-color: turquoise;
+            }
+          }
+
+          &:not(:last-of-type) {
+            margin-bottom: 32px;
+          }
+        }
+      }
+    }
+
+    .carousel-col {
+      background-color: $main;
+      .books-carousel {
+        width: 100%;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        right: 0;
       }
     }
     .my-process {

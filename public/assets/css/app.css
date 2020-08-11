@@ -631,21 +631,75 @@ button:active {
   margin-bottom: 8px;
 }
 
+.books {
+  padding-top: 0;
+}
 .books main.content {
   padding: 0;
 }
 .books main.content .left-column {
-  padding: 60px 0;
+  padding: calc(60px + 64px) 0 60px;
+}
+.books main.content .left-column .intro {
+  margin-bottom: 32px;
 }
 .books main.content .left-column .intro .page-heading {
-  font-size: 32px;
+  font-size: 44px;
+  font-family: "Roboto Condensed Regular";
+  font-weight: 900;
+  letter-spacing: normal;
   transform: none;
   margin-bottom: 44px;
 }
 .books main.content .left-column .intro p {
   font-size: 14px;
-  text-align: justify;
   max-width: 32rem;
+}
+.books main.content .left-column .categories {
+  background-color: white;
+  padding: 60px;
+  border-radius: 50px;
+  max-width: 400px;
+}
+.books main.content .left-column .categories .category .name {
+  color: #707070;
+}
+.books main.content .left-column .categories .category .progress-wrapper {
+  display: flex;
+  align-items: center;
+}
+.books main.content .left-column .categories .category .progress-wrapper .count {
+  margin-right: 8px;
+  font-size: 32px;
+}
+.books main.content .left-column .categories .category .progress-wrapper .progress {
+  width: 100%;
+  height: 10px;
+}
+.books main.content .left-column .categories .category.front .progress-bar {
+  background-color: purple;
+}
+.books main.content .left-column .categories .category.back .progress-bar {
+  background-color: salmon;
+}
+.books main.content .left-column .categories .category.design .progress-bar {
+  background-color: slateblue;
+}
+.books main.content .left-column .categories .category.other .progress-bar {
+  background-color: turquoise;
+}
+.books main.content .left-column .categories .category:not(:last-of-type) {
+  margin-bottom: 32px;
+}
+.books main.content .carousel-col {
+  background-color: #0a0c1b;
+}
+.books main.content .carousel-col .books-carousel {
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  right: 0;
 }
 .books main.content .my-process {
   color: white;

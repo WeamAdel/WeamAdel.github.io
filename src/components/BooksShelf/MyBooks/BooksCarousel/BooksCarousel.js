@@ -2,9 +2,11 @@ import React from "react";
 
 function BooksCarousel() {
   return (
-    <section className="books-carousel">
-      <div className="my-container"></div>
-    </section>
+    <div className="carousel-col col-md-6 d-md-last d-first">
+      <section className="books-carousel">
+        <div className="my-container"></div>
+      </section>
+    </div>
   );
 }
 
