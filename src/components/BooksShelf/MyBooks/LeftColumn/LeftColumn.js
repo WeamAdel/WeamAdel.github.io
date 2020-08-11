@@ -5,7 +5,7 @@ import Categories from "./Categories/Categories";
 
 function LeftColumn(props) {
   return (
-    <div className="col-md-6">
+    <div className="col-lg-6">
       <section className="left-column">
         <div className="my-container">
           <Intro />
@@ -33,7 +33,7 @@ const categoriesShape = {
 };
 
 LeftColumn.propTypes = {
-  categories: PropTypes.arrayOf(PropTypes.shape(categoriesShape).isRequired),
+  categories: PropTypes.shape(categoriesShape).isRequired,
   books: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,

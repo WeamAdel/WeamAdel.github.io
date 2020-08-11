@@ -16,6 +16,7 @@ const BOOKS = [
     numOfPages: 141,
     readingDate: 2018,
     category: BOOK_CATEGORIES.front,
+    imgName: "js-enlightenment",
   },
   {
     name: "Fundamentals of computer programming with C#",
@@ -23,6 +24,7 @@ const BOOKS = [
     numOfPages: 1121,
     readingDate: 2019,
     category: BOOK_CATEGORIES.other,
+    imgName: "fundamentals-of-programming",
   },
   {
     name: "Css Mastery",
@@ -30,6 +32,7 @@ const BOOKS = [
     numOfPages: 1000,
     readingDate: 2019,
     category: BOOK_CATEGORIES.front,
+    imgName: "css-mastery",
   },
   {
     name: "Visual Design Solutions",
@@ -37,6 +40,7 @@ const BOOKS = [
     numOfPages: 1000,
     readingDate: 2019,
     category: BOOK_CATEGORIES.design,
+    imgName: "vds",
   },
   {
     name: "Code Simplicity",
@@ -44,6 +48,7 @@ const BOOKS = [
     numOfPages: 78,
     readingDate: 2019,
     category: BOOK_CATEGORIES.other,
+    imgName: "code-simplicity",
   },
   {
     name: "Refactoring UI",
@@ -51,6 +56,7 @@ const BOOKS = [
     numOfPages: 252,
     readingDate: 2019,
     category: BOOK_CATEGORIES.design,
+    imgName: "refactoring-ui",
   },
   {
     name: "Eloquent JavaScript",
@@ -58,14 +64,16 @@ const BOOKS = [
     numOfPages: 436,
     readingDate: 2020,
     category: BOOK_CATEGORIES.front,
+    imgName: "eloquent-js",
   },
   {
-    name: "PHP A Beginner’s Guide",
+    name: "PHP a Beginner’s Guide",
     author: "Vikram Vaswani",
     numOfPages: 453,
     readingDate: 2019,
     category: BOOK_CATEGORIES.back,
     visible: false,
+    imgName: "php-guide",
   },
   {
     name: "Clean Code",
@@ -73,6 +81,7 @@ const BOOKS = [
     numOfPages: 431,
     readingDate: 2020,
     category: BOOK_CATEGORIES.other,
+    imgName: "clean-code",
   },
   {
     name: "Design Thinking Handbook",
@@ -80,6 +89,7 @@ const BOOKS = [
     numOfPages: 110,
     readingDate: 2020,
     category: BOOK_CATEGORIES.design,
+    imgName: "design-thinking-handbook",
   },
   {
     name: "JavaScript Design Patterns",
@@ -87,6 +97,7 @@ const BOOKS = [
     numOfPages: 187,
     readingDate: 2020,
     category: BOOK_CATEGORIES.front,
+    imgName: "js-patterns",
   },
   {
     name: "Principles of Product Design",
@@ -94,6 +105,7 @@ const BOOKS = [
     numOfPages: 182,
     readingDate: 2020,
     category: BOOK_CATEGORIES.design,
+    imgName: "principles-of-product-design",
   },
   {
     name: "The Clean Coder",
@@ -101,6 +113,7 @@ const BOOKS = [
     numOfPages: 210,
     readingDate: 2020,
     category: BOOK_CATEGORIES.other,
+    imgName: "clean-coder",
   },
 ];
 
@@ -122,7 +135,7 @@ function MyBooks() {
           categories={BOOK_CATEGORIES}
           totalBooksCount={BOOKS.length}
         />
-        <BooksCarousel />
+        <BooksCarousel books={BOOKS} />
       </div>
     </section>
   );
