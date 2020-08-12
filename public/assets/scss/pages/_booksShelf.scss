@@ -25,54 +25,77 @@
         }
       }
 
-      .categories {
-        background-color: white;
-        padding: 60px;
-        border-radius: 50px;
-        max-width: 450px;
+      .categories-wrapper {
+        position: relative;
+        > * {
+          border-radius: 50px;
+        }
+        .categories {
+          background-color: white;
+          padding: 60px;
+          max-width: 450px;
+          position: relative;
+          z-index: 1;
 
-        .category {
-          .name {
-            color: $gray;
+          .category {
+            .name {
+              color: $gray;
+            }
+            .progress-wrapper {
+              display: flex;
+              align-items: center;
+
+              .count {
+                margin-right: 8px;
+                font-size: 24px;
+              }
+
+              .progress {
+                width: 100%;
+                height: 10px;
+              }
+            }
+
+            &:not(:last-of-type) {
+              margin-bottom: 16px;
+            }
           }
-          .progress-wrapper {
+        }
+        .sort-panel {
+          background-color: $main;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: -40px;
+          height: 100%;
+          display: flex;
+          justify-content: flex-end;
+          max-width: 490px;
+          border: 1px solid $lightMain;
+
+          ul {
+            transform: translateX(calc(-50% - 5px));
+            margin-bottom: 0;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center;
 
-            .count {
-              margin-right: 8px;
-              font-size: 24px;
-            }
+            .dot {
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+              cursor: pointer;
+              transition: transform 0.15s ease-in;
 
-            .progress {
-              width: 100%;
-              height: 10px;
-            }
-          }
+              &:active {
+                transform: scale(0.8);
+              }
 
-          &.front {
-            .progress-bar {
-              background-color: purple;
+              &:not(:last-of-type) {
+                margin-bottom: 8px;
+              }
             }
-          }
-          &.back {
-            .progress-bar {
-              background-color: salmon;
-            }
-          }
-          &.design {
-            .progress-bar {
-              background-color: slateblue;
-            }
-          }
-          &.other {
-            .progress-bar {
-              background-color: turquoise;
-            }
-          }
-
-          &:not(:last-of-type) {
-            margin-bottom: 16px;
           }
         }
       }
@@ -109,16 +132,22 @@
               position: relative;
               z-index: 1;
               transform: rotate(15deg) translateY(-22px);
-              margin-right: 32px;
+              margin-right: 24px;
+              position: relative;
 
               img {
                 width: 11px;
+              }
+
+              svg {
+                position: absolute;
+                transform: translate(-100%, -100%);
               }
             }
             .book-img {
               transform: rotate(15deg);
               img {
-                width: 120px;
+                width: 150px;
               }
             }
           }

@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import LeftColumn from "./LeftColumn/LeftColumn";
 import BooksCarousel from "./BooksCarousel/BooksCarousel";
 
 const BOOK_CATEGORIES = {
-  front: { id: "front", name: "Front-End", count: 0 },
-  back: { id: "back", name: "Back-End", count: 0 },
-  design: { id: "design", name: "Design", count: 0 },
-  other: { id: "other", name: "Other", count: 0 },
+  front: { id: "front", name: "Front-End", count: 0, color: "purple" },
+  back: { id: "back", name: "Back-End", count: 0, color: "salmon" },
+  design: { id: "design", name: "Design", count: 0, color: "slateblue" },
+  other: { id: "other", name: "Other", count: 0, color: "turquoise" },
 };
 
 const BOOKS = [
@@ -124,18 +124,26 @@ const BOOKS = [
   }
 })();
 
-console.log(BOOK_CATEGORIES);
-
 function MyBooks() {
+  let [filteredBooks, setFilteredBooks] = useState(BOOKS);
+
+  function filterBooksByCategory(catId) {
+    let books = BOOKS.filter((book) => book.category.id === catId);
+    setFilteredBooks(books);
+  }
+
+  console.log(filteredBooks);
+
   return (
     <section className="my-books">
       <div className="row">
         <LeftColumn
-          books={BOOKS}
+          books={filteredBooks}
           categories={BOOK_CATEGORIES}
           totalBooksCount={BOOKS.length}
+          filterBooks={filterBooksByCategory}
         />
-        <BooksCarousel books={BOOKS} />
+        <BooksCarousel books={filteredBooks} />
       </div>
     </section>
   );

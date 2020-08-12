@@ -12,6 +12,7 @@ function Book(props) {
         imgName={book.imgName}
         bookName={book.name}
         categoryId={book.category.id}
+        categoryColor={book.category.color}
       />
       <Info book={book} />
     </div>

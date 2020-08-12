@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Category from "./Category/Category";
+import FilterPanel from "./FilterPanel/FilterPanel";
 
 function Categories(props) {
   let categoryJSX = Object.values(props.categories).map((cat, index) => {
@@ -14,8 +15,14 @@ function Categories(props) {
   });
 
   return (
-    <div className="categories">
-      <ul className="list-unstyled">{categoryJSX}</ul>
+    <div className="categories-wrapper">
+      <div className="categories">
+        <ul className="list-unstyled">{categoryJSX}</ul>
+      </div>
+      <FilterPanel
+        categories={props.categories}
+        filterBooks={props.filterBooks}
+      />
     </div>
   );
 }

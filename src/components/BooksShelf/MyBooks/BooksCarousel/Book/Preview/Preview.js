@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import PenWriting from "./PenWriting";
 
 function Preview(props) {
   return (
     <div className="preview">
       <div className="pen-img">
         <img src="/assets/images/books/pen.png" />
-        {/* <span>SVG</span> */}
+        <PenWriting stroke={props.categoryColor} />
       </div>
       <div className="book-img">
         <img

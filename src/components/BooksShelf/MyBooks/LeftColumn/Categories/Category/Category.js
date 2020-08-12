@@ -8,7 +8,7 @@ function Category(props) {
       <span className="name">{props.name}</span>
       <div className="progress-wrapper">
         <span className="count">{"0" + props.count}</span>
-        <ProgressBar percentage={props.percentage} />
+        <ProgressBar percentage={props.percentage} color={props.color} />
       </div>
     </li>
   );

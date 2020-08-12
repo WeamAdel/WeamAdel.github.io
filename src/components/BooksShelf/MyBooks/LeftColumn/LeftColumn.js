@@ -12,6 +12,7 @@ function LeftColumn(props) {
           <Categories
             categories={props.categories}
             totalBooksCount={props.totalBooksCount}
+            filterBooks={props.filterBooks}
           />
         </div>
       </section>
@@ -39,7 +40,7 @@ LeftColumn.propTypes = {
       name: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
       numOfPages: PropTypes.number.isRequired,
-      readingDate: PropTypes.string.isRequired,
+      readingDate: PropTypes.number.isRequired,
       category: PropTypes.shape(categoryShape),
     })
   ).isRequired,
