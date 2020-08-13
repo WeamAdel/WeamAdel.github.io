@@ -68,6 +68,9 @@
           &.active {
             border: 1px solid white;
             box-shadow: 0 0 0.5rem;
+            img {
+              animation: activeNavLink 5s infinite ease-in-out;
+            }
           }
 
           img {
@@ -80,5 +83,31 @@
         }
       }
     }
+  }
+}
+
+@keyframes activeNavLink {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  15% {
+    transform: scale(1.05) rotate(0);
+  }
+  30% {
+    transform: scale(1.05) rotate(-5deg);
+  }
+  45% {
+  }
+  60% {
+    transform: scale(1.05) rotate(0);
+  }
+  75% {
+    transform: scale(1.05) rotate(5deg);
+  }
+  90% {
+    transform: scale(1.05) rotate(0);
+  }
+  100% {
+    transform: scale(1) rotate(0);
   }
 }

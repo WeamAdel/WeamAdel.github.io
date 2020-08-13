@@ -115,6 +115,24 @@
   }
 
   main.content {
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      display: flex;
+
+      span {
+        height: 8px;
+        flex-grow: 1;
+        border: 1px solid $main;
+        border-radius: 25px;
+        &:not(:last-of-type) {
+          margin-right: 4px;
+        }
+      }
+    }
     .story-segment {
       .story-card {
         padding: 80px 32px 60px;

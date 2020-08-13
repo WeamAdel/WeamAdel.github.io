@@ -149,6 +149,7 @@
       width: 0;
       overflow: hidden;
       opacity: 0;
+      border: 4px solid $main;
 
       > .accounts-wrapper {
         display: flex;

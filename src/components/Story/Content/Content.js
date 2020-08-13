@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import StorySegment from "./StorySegment/StorySegment";
+import ReadingProgress from "./ReadingProgress/ReadingProgress";
 
 const STORIES = [
   "I am a self-taught front-end engineer who has studied mechatronics engineering at faculty of engineering Mansoura university in Egypt. Before taking web development as a career and before graduation I've spent quite long time exploring to find what I want to do with my life, starting from learning arduino, c++, electronics for embedded systems, through Solidworks, Fusion360 and Ansys for mechanical modeling and analysis.",
@@ -10,7 +11,8 @@ const STORIES = [
 ];
 
 function Content() {
-  let [maxStoryCardHeight, setHeight] = useState(0);
+  const [maxStoryCardHeight, setHeight] = useState(0);
+  const [visible, setReadingProgressVisibility] = useState(false);
 
   useEffect(() => {
     let stories = document.getElementsByClassName("story-card");
@@ -25,6 +27,27 @@ function Content() {
       setHeight(maxHeight);
     }
   }, []);
+
+  useEffect(() => {
+    function storyContentIsReached() {
+      const storyContent = document.getElementById("story-content");
+      const storyContentTopOffset = storyContent.offsetTop;
+      const windowScrollTop = window.scrollY;
+
+      return windowScrollTop >= storyContentTopOffset;
+    }
+
+    function toggleReadingProgress() {
+      if (storyContentIsReached() && !visible) {
+        setReadingProgressVisibility(true);
+      } else if (!storyContentIsReached() && visible) {
+        setReadingProgressVisibility(false);
+      }
+    }
+    window.addEventListener("scroll", toggleReadingProgress);
+    window.addEventListener("resize", toggleReadingProgress);
+  });
+
   let storiesJSX = STORIES.map((story, index) => (
     <StorySegment
       key={index}
@@ -35,7 +58,8 @@ function Content() {
   ));
 
   return (
-    <main className="content">
+    <main id="story-content" className="content">
+      {visible ? <ReadingProgress stories={STORIES} /> : null}
       <div className="my-container">{storiesJSX}</div>
     </main>
   );
