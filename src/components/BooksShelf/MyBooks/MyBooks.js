@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import LeftColumn from "./LeftColumn/LeftColumn";
 import BooksCarousel from "./BooksCarousel/BooksCarousel";
+import Alert from "./Alert/Alert";
 
 const BOOK_CATEGORIES = {
-  front: { id: "front", name: "Front-End", count: 0, color: "purple" },
+  front: { id: "front", name: "Front-End", count: 0, color: "#2ABAA0" },
   back: { id: "back", name: "Back-End", count: 0, color: "salmon" },
-  design: { id: "design", name: "Design", count: 0, color: "slateblue" },
-  other: { id: "other", name: "Other", count: 0, color: "turquoise" },
+  design: { id: "design", name: "Design", count: 0, color: "#E9358B" },
+  other: { id: "other", name: "Other", count: 0, color: "#DBEB28" },
 };
 
 const BOOKS = [
@@ -27,7 +28,7 @@ const BOOKS = [
     imgName: "fundamentals-of-programming",
   },
   {
-    name: "Css Mastery",
+    name: "CSS Mastery",
     author: "Andy Budd",
     numOfPages: 1000,
     readingDate: 2019,
@@ -126,9 +127,14 @@ const BOOKS = [
 
 function MyBooks() {
   let [filteredBooks, setFilteredBooks] = useState(BOOKS);
+  let [activeCategoryId, setActiveCategoryId] = useState(null);
 
   function filterBooksByCategory(catId) {
-    let books = BOOKS.filter((book) => book.category.id === catId);
+    let books =
+      catId === activeCategoryId
+        ? BOOKS
+        : BOOKS.filter((book) => book.category.id === catId);
+    setActiveCategoryId(catId === activeCategoryId ? null : catId);
     setFilteredBooks(books);
   }
 
@@ -136,12 +142,14 @@ function MyBooks() {
 
   return (
     <section className="my-books">
-      <div className="row">
+      {/* <Alert /> */}
+      <div className="row mr-0">
         <LeftColumn
           books={filteredBooks}
           categories={BOOK_CATEGORIES}
           totalBooksCount={BOOKS.length}
           filterBooks={filterBooksByCategory}
+          activeCategoryId={activeCategoryId}
         />
         <BooksCarousel books={filteredBooks} />
       </div>

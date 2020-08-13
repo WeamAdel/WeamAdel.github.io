@@ -658,14 +658,15 @@ button:active {
 }
 .books main.content .left-column .categories-wrapper {
   position: relative;
+  max-width: 380px;
 }
 .books main.content .left-column .categories-wrapper > * {
   border-radius: 50px;
 }
 .books main.content .left-column .categories-wrapper .categories {
   background-color: white;
-  padding: 60px;
-  max-width: 450px;
+  padding: 32px;
+  max-width: 380px;
   position: relative;
   z-index: 1;
 }
@@ -692,19 +693,18 @@ button:active {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: -40px;
-  height: 100%;
+  bottom: -40px;
+  right: 0;
   display: flex;
   justify-content: flex-end;
-  max-width: 490px;
+  flex-direction: column;
+  max-width: 420px;
   border: 1px solid #f5f5f7;
 }
 .books main.content .left-column .categories-wrapper .sort-panel ul {
-  transform: translateX(calc(-50% - 5px));
   margin-bottom: 0;
   display: flex;
-  flex-direction: column;
+  transform: translateY(calc(-50% - 5px));
   justify-content: center;
 }
 .books main.content .left-column .categories-wrapper .sort-panel ul .dot {
@@ -717,8 +717,12 @@ button:active {
 .books main.content .left-column .categories-wrapper .sort-panel ul .dot:active {
   transform: scale(0.8);
 }
+.books main.content .left-column .categories-wrapper .sort-panel ul .dot.active {
+  border: 1px solid white;
+  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.4);
+}
 .books main.content .left-column .categories-wrapper .sort-panel ul .dot:not(:last-of-type) {
-  margin-bottom: 8px;
+  margin-right: 8px;
 }
 .books main.content .carousel-col {
   background-color: #0a0c1b;
@@ -739,8 +743,7 @@ button:active {
 .books main.content .carousel-col .books-carousel .book .preview {
   width: 280px;
   height: 280px;
-  margin-bottom: 32px;
-  background: radial-gradient(40.66% 40.66% at 50% 50%, #bdddff 0%, #bdddff00 100%);
+  background: radial-gradient(40.66% 40.66% at 50% 50%, #bdddff 0%, #bdddff00 120%);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -765,6 +768,13 @@ button:active {
 }
 .books main.content .carousel-col .books-carousel .book .preview .book-img img {
   width: 150px;
+}
+.books main.content .carousel-col .books-carousel .book .book-name {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Roboto Condensed Regular";
+  margin: 16px 0 44px;
+  color: #f5f5f7;
 }
 .books main.content .carousel-col .books-carousel .book .info {
   display: grid;
@@ -827,6 +837,31 @@ button:active {
   order: 1;
 }
 
+@media (min-width: 767px), (orientation: portrait) {
+  .books main.content .left-column .categories-wrapper .categories {
+    padding: 60px;
+  }
+}
+@media (min-width: 767px) {
+  .books main.content .left-column .categories-wrapper {
+    margin-right: 40px;
+    max-width: none;
+  }
+  .books main.content .left-column .categories-wrapper .sort-panel {
+    bottom: 0;
+    height: 100%;
+    right: -40px;
+    flex-direction: row;
+  }
+  .books main.content .left-column .categories-wrapper .sort-panel ul {
+    transform: translateX(calc(-50% - 5px));
+    flex-direction: column;
+  }
+  .books main.content .left-column .categories-wrapper .sort-panel ul .dot:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}
 .case-study header .heading-wrapper .project-theme-line {
   height: 4px;
   width: 100%;

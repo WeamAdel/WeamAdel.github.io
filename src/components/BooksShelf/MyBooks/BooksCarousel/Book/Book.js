@@ -14,6 +14,7 @@ function Book(props) {
         categoryId={book.category.id}
         categoryColor={book.category.color}
       />
+      <h2 className="book-name">{book.name}</h2>
       <Info book={book} />
     </div>
   );

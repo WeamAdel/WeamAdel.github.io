@@ -22,6 +22,7 @@ function Categories(props) {
       <FilterPanel
         categories={props.categories}
         filterBooks={props.filterBooks}
+        activeCategoryId={props.activeCategoryId}
       />
     </div>
   );

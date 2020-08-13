@@ -6,7 +6,7 @@ function SortPanel(props) {
     <li
       key={cat.id}
       title={cat.name}
-      className="dot"
+      className={`dot ${cat.id === props.activeCategoryId ? "active" : null}`}
       style={{ backgroundColor: cat.color }}
       onClick={() => {
         props.filterBooks(cat.id);

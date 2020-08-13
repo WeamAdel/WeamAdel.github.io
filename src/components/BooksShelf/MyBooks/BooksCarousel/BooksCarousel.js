@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import OwlCarousel from "react-owl-carousel2";
 import Book from "./Book/Book";
 
@@ -17,7 +17,7 @@ function BooksCarousel(props) {
   ));
 
   return (
-    <div className="carousel-col col-lg-6 d-lg-last d-first">
+    <div className="carousel-col col-md-6 d-md-last d-first">
       <section className="books-carousel">
         <div className="my-container">
           <OwlCarousel options={options}>{booksJSX}</OwlCarousel>

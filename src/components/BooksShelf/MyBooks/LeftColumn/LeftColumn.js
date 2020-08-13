@@ -5,7 +5,7 @@ import Categories from "./Categories/Categories";
 
 function LeftColumn(props) {
   return (
-    <div className="col-lg-6">
+    <div className="col-md-6">
       <section className="left-column">
         <div className="my-container">
           <Intro />
@@ -13,6 +13,7 @@ function LeftColumn(props) {
             categories={props.categories}
             totalBooksCount={props.totalBooksCount}
             filterBooks={props.filterBooks}
+            activeCategoryId={props.activeCategoryId}
           />
         </div>
       </section>
