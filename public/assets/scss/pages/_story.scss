@@ -2,7 +2,6 @@
   header {
     background-color: $fadeWhite;
     padding: 60px 0;
-    // margin: 32px 0 100px;
     display: flex;
 
     .page-heading {
@@ -44,6 +43,18 @@
     transform: translateY(-100%);
     opacity: 0;
 
+    .toggle-summary {
+      background: none;
+      border: none;
+      float: right;
+      padding: 0;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      img {
+        width: 32px;
+      }
+    }
     h2 {
       color: $tomato;
       font-family: $robotoCondensed;

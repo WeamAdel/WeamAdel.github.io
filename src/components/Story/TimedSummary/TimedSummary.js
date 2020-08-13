@@ -51,9 +51,8 @@ import Image from "./Image/Image";
 function TimedSummary(props) {
   let props1 = { transform: -100, opacity: 0 };
   let props2 = { transform: 0, opacity: 1 };
-  let from = props.open ? props1 : props2;
   let to = props.open ? props2 : props1;
-  let { transform, opacity } = useSpring({ from, to });
+  let { transform, opacity } = useSpring({ to });
 
   return (
     <animated.section
@@ -65,7 +64,7 @@ function TimedSummary(props) {
     >
       <div className="my-container">
         <button className="toggle-summary" onClick={props.toggleSummary}>
-          <i className="fa fa-backspace" />
+          <img src="/assets/images/shared/backspace.svg" alt="Backspace Icon" />
         </button>
         <h2>Summary</h2>
         <div className="row">

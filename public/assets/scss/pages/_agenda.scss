@@ -1,10 +1,15 @@
 .agenda {
+  padding-top: 0;
   header {
+    position: relative;
+    padding-top: 64px;
+
     .header-image {
       img {
         max-height: min(calc(100vh - 164px), 450px);
       }
     }
+
     .lorem-bg {
       background-image: url("/assets/images/agenda/lorem-ipsum.svg");
       background-repeat: repeat-y;
@@ -26,7 +31,7 @@
       color: $main;
       font-size: 24px;
       display: grid;
-      grid-template: repeat(6, 60px) / repeat(5, 1fr);
+      grid-template: repeat(6, auto) / repeat(5, 1fr);
       display: none;
 
       .icon {

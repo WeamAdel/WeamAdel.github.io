@@ -210,7 +210,16 @@
       color: white;
       padding: 100px 0;
       background-color: $main;
-      clip-path: polygon(0 0, 45% 0, 50% 8%, 55% 0, 100% 0, 100% 100%, 0 100%);
+      margin-top: -1px;
+      clip-path: polygon(
+        0 0,
+        calc(42% - 32px) 0,
+        50% 32px,
+        calc(40% + 32px) 0,
+        100% 0,
+        100% 100%,
+        0 100%
+      );
 
       h2 {
         margin-bottom: 60px;

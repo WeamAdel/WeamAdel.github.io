@@ -2,7 +2,7 @@ import React from "react";
 
 function Image() {
   return (
-    <div className="col-md-6">
+    <div className="col-md-6 d-flex align-items-center">
       <div className="image">
         <svg
           id="f925b0b9-bc71-491a-a51e-0715ff181b57"
