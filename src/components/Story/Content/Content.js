@@ -14,6 +14,7 @@ function Content() {
   const [maxStoryCardHeight, setHeight] = useState(0);
   const [visible, setReadingProgressVisibility] = useState(false);
 
+  //Adjust Stories Cards heights to match the one with biggest height
   useEffect(() => {
     let stories = document.getElementsByClassName("story-card");
     if (stories.length > 0) {
@@ -28,6 +29,7 @@ function Content() {
     }
   }, []);
 
+  //Show Hide Reading Progress Bar when The stories is reached / out of view
   useEffect(() => {
     function storyContentIsReached() {
       const storyContent = document.getElementById("story-content");
@@ -44,8 +46,14 @@ function Content() {
         setReadingProgressVisibility(false);
       }
     }
+    toggleReadingProgress();
     window.addEventListener("scroll", toggleReadingProgress);
     window.addEventListener("resize", toggleReadingProgress);
+
+    return function cleanUp() {
+      window.removeEventListener("scroll", toggleReadingProgress);
+      window.removeEventListener("resize", toggleReadingProgress);
+    };
   });
 
   let storiesJSX = STORIES.map((story, index) => (

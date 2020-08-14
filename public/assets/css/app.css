@@ -1665,7 +1665,7 @@ button:active {
 }
 .story main.content .reading-progress {
   position: fixed;
-  top: 0;
+  top: 4px;
   left: 0;
   right: 0;
   z-index: 5;
