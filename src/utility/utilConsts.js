@@ -70,6 +70,7 @@ const DESIGN_TOOLS = {
 };
 
 const basics = ["HTML5", "SASS", "Bootstrap4", "JavaScript", "JQuery", "PHP"];
+
 export const PROJECTS = {
   mfg: {
     header: {
@@ -78,7 +79,6 @@ export const PROJECTS = {
         "MFG is a web app where users can find coaches, nutritionists, gyms and nutrition clinics. a user can reach for the desired staff member (coach or nutritionist), find an empty slot in their schedules and request a reservation or booking.",
         "Users can also find branches (gyms or clinics) based on the city and find info about them such as opening hours, available classes, photo gallery, addresses etc.",
       ],
-      imgUrl: "/assets/images/portfolio/case-studies/header-images/mfg.jpg",
       alt: "Woman doing yoga",
     },
     features: [
@@ -93,7 +93,31 @@ export const PROJECTS = {
     designTools: [DESIGN_TOOLS.xd, DESIGN_TOOLS.photoshop],
     pallet: ["#fff701", "#242529", "#2e2f33", "#d5d5d6"],
     typography: ["Roboto [Regular - Condensed]", "Edwardian Script ITC"],
-    screenshots: null,
+    screenshots: [
+      {
+        title: "Home Page Header",
+        imgName: "header",
+        alt: "Black Athlete Man",
+      },
+      {
+        title: "Nutritionists Page",
+        imgName: "nutritionists",
+        alt:
+          "Showing top nutritionists images and name with introduction to how booking nutritionists work and a quote of the importance of nutrition.",
+      },
+      {
+        title: "Branches [Gyms & Clinics] Filtered By City",
+        imgName: "branches",
+        alt:
+          "Cards displaying basic branches info, controls to filter branches by service and the city's image",
+      },
+      {
+        title: "Nutrition Clinic Info",
+        imgName: "clinic",
+        alt:
+          "Clinic's detailed info such as image, about, gallery, social links and opening hours",
+      },
+    ],
     video: null,
     learned: [
       "Interpreting client's needs to a real project.",
@@ -115,7 +139,6 @@ export const PROJECTS = {
         "Task scheduler was part of my last internship evaluation test, it was the first full SPA project i worked on",
         "As its name's descripe it's a simple scheduler where the user can organize his/her tasks and interact with other people",
       ],
-      imgUrl: "",
       alt: "",
     },
     features: [
@@ -148,7 +171,6 @@ export const PROJECTS = {
       description: [
         "Quantum is a student mobility service based in mansoura, they nedded a website to get students familiar with their service, countries they cover and the process to apply for a certain program",
       ],
-      imgUrl: "/assets/images/portfolio/case-studies/header-images/quantum.jpg",
       alt: "Young black women students holding books",
     },
     features: null,
@@ -172,8 +194,6 @@ export const PROJECTS = {
       description: [
         "Pharmacy is an E-commerce project built by the very basic front-end languages. This project is one of the first projects i've worked on as an intern in BlueOcean Solutions.",
       ],
-      imgUrl:
-        "/assets/images/portfolio/case-studies/header-images/pharmacy.jpg",
       alt: "Syrum bottle near to syrum pipe placed over pearl balls",
     },
     features: null,
@@ -195,7 +215,6 @@ export const PROJECTS = {
         "MFG is a web app where users can find coaches, nutritionists, gyms and nutrition clinics. a user can reach for the desired staff member (coach or nutritionist), find an empty slot in their schedules and request a reservation or booking.",
         "Users can also find branches (gyms or clinics) based on the city and find info about them such as opening hours, available classes, photo gallery, addresses etc.",
       ],
-      imgUrl: "/assets/images/portfolio/case-studies/header-images/old.jpg",
       alt: "Woman doing yoga",
     },
     features: null,
@@ -215,5 +234,3 @@ export const PROJECTS = {
     fullProject: [ACCOUNTS.design[1], ACCOUNTS.design[2]],
   },
 };
-
-// [{ title: "", imgUrl: "", alt: "" }]

@@ -44,10 +44,16 @@ function CaseStudy(props) {
     <div className="page case-study">
       <div className="page-wrapper">
         <Header
-          header={project ? project.header : {}}
+          {...project.header}
+          imgUrl={
+            "/assets/images/portfolio/projects/" +
+            projectName +
+            "/case-study/" +
+            "header.jpg"
+          }
           mainThemeColor={project ? project.pallet[0] : ""}
         />
-        <Content project={project} />
+        <Content project={project} projectName={projectName} />
         <Navigator
           next={projectNames[indexes.next]}
           prev={projectNames[indexes.prev]}

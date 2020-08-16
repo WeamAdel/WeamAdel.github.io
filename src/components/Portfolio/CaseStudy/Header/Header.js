@@ -3,9 +3,8 @@ import PropTypes from "prop-types";
 import HeaderImage from "./../../../shared/Layout/Header/HeaderImage/HeaderImage";
 
 function Header(props) {
-  const header = props.header;
-  let descriptionJSX = header.description
-    ? header.description.map((paragraph, index) => (
+  let descriptionJSX = props.description
+    ? props.description.map((paragraph, index) => (
         <p key={index}>{paragraph}</p>
       ))
     : "";
@@ -19,10 +18,10 @@ function Header(props) {
         </div>
         <div className="header-wrapper">
           <div className="image-wrapper">
-            <HeaderImage imgUrl={header.imgUrl} alt={header.alt} />
+            <HeaderImage imgUrl={props.imgUrl} alt={props.alt} />
           </div>
           <section className="content d-flex flex-column justify-content-center">
-            <h2>{header.name}</h2>
+            <h2>{props.name}</h2>
             {descriptionJSX}
           </section>
         </div>
@@ -32,12 +31,10 @@ function Header(props) {
 }
 
 Header.propTypes = {
-  header: PropTypes.shape({
-    imgUrl: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    description: PropTypes.arrayOf(PropTypes.string).isRequired,
-  }),
+  imgUrl: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.arrayOf(PropTypes.string).isRequired,
   mainThemeColor: PropTypes.string.isRequired,
 };
 export default Header;

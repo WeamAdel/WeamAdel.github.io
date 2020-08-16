@@ -23,6 +23,10 @@
   font-family: "Saol";
   src: url("/assets/fonts/SaolDisplay-Regular.ttf");
 }
+@font-face {
+  font-family: "Merienda";
+  src: url("/assets/fonts/Merienda-Regular.ttf");
+}
 body {
   font-family: "Roboto Regular" !important;
   background-color: #f5f5f7 !important;
@@ -980,6 +984,16 @@ button:active {
 .case-study main .info-section .main-content ul.icon img {
   width: 50px;
 }
+.case-study main .info-section .main-content ul.screenshot .title {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.case-study main .info-section .main-content ul.screenshot img {
+  width: 100%;
+}
+.case-study main .info-section .main-content ul.screenshot li:not(:last-of-type) {
+  margin-bottom: 44px;
+}
 .case-study main .info-section:not(:last-of-type) {
   border-bottom: 1px dashed #d5d5d6;
 }
@@ -1687,6 +1701,7 @@ button:active {
   position: relative;
   max-width: 350px;
   margin: 0 auto;
+  font-family: "Merienda";
 }
 .story main.content .story-segment .story-card .flip-page {
   display: block;

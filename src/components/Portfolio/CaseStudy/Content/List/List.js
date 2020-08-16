@@ -2,12 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import Pallet from "./Pallet/Pallet";
 import Icon from "./Icon/Icon";
+import Screenshot from "./Screenshot/Screenshot";
 
 function List(props) {
   let listClasses = ["m-0", "list-unstyled"];
   let components = {
     pallet: { name: Pallet, attr: "fill" },
     icon: { name: Icon, attr: "icon" },
+    screenshot: { name: Screenshot, attr: "image" },
   };
   let itemsJSX = props.items.map((item, index) => {
     let listComponentJSX = item;
@@ -19,6 +21,7 @@ function List(props) {
       }
       listComponentJSX = React.createElement(components[props.type].name, {
         [components[props.type].attr]: item,
+        projectName: props.projectName,
       });
     }
     return <li key={index}>{listComponentJSX}</li>;
@@ -32,6 +35,7 @@ function List(props) {
 List.propTypes = {
   items: PropTypes.array.isRequired,
   iconType: PropTypes.oneOf(["check", "contrast"]),
-  type: PropTypes.oneOf(["pallet", "icon"]),
+  type: PropTypes.oneOf(["pallet", "icon", "screenshot"]),
+  projectName: PropTypes.string.isRequired,
 };
 export default List;

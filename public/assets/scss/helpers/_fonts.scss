@@ -28,9 +28,15 @@
   src: url("/assets/fonts/SaolDisplay-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Merienda";
+  src: url("/assets/fonts/Merienda-Regular.ttf");
+}
+
 $roboto: "Roboto Regular";
 $robotoBold: "Roboto Bold";
 $robotoCondensed: "Roboto Condensed Regular";
 $robotoCondensedBold: "Roboto Condensed Bold";
 $bernard: "Bernard MT";
 $saol: "Saol";
+$merienda: "Merienda";
