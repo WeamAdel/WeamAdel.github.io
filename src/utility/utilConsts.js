@@ -200,7 +200,24 @@ export const PROJECTS = {
     designTools: [DESIGN_TOOLS.xd, DESIGN_TOOLS.photoshop],
     pallet: ["#FB7262", "#F0988E", "#17486D", "#999999"],
     typography: ["Roboto [Regular]", "Georgia"],
-    screenshots: null,
+    screenshots: [
+      {
+        title: "Header Slider",
+        imgName: "header",
+        alt: "Young black women students holding books",
+      },
+      {
+        title: "Introduction to Country",
+        imgName: "country-intro",
+        alt:
+          "Information About Studying in Canada and a gallery of the country's landmarks.",
+      },
+      {
+        title: "Universities Info",
+        imgName: "universities",
+        alt: "A List Of Universities Located In Russia ",
+      },
+    ],
     video: null,
     learned: [
       "More understanding of the business logic and try to convert this to a real project",
