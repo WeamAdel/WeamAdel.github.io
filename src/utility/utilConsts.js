@@ -75,6 +75,7 @@ export const PROJECTS = {
   mfg: {
     header: {
       name: "My Fitness Goal",
+      year: 2020,
       description: [
         "MFG is a web app where users can find coaches, nutritionists, gyms and nutrition clinics. a user can reach for the desired staff member (coach or nutritionist), find an empty slot in their schedules and request a reservation or booking.",
         "Users can also find branches (gyms or clinics) based on the city and find info about them such as opening hours, available classes, photo gallery, addresses etc.",
@@ -135,6 +136,7 @@ export const PROJECTS = {
   scheduler: {
     header: {
       name: "Task Scheduler",
+      year: 2019,
       description: [
         "Task scheduler was part of my last internship evaluation test, it was the first full SPA project i worked on. The scheduler is both mobile and web app.",
         "As its name descripe it's a simple scheduler where the user can organize his/her tasks and interact with other people",
@@ -188,7 +190,8 @@ export const PROJECTS = {
   },
   quantum: {
     header: {
-      name: "Quantum",
+      name: "Quantum Student Mobility",
+      year: 2019,
       description: [
         "Quantum is a student mobility service based in mansoura, they nedded a website to get students familiar with their service, countries they cover and the process to apply for a certain program",
       ],
@@ -229,6 +232,7 @@ export const PROJECTS = {
   pharmacy: {
     header: {
       name: "Pharmacy E-Commerce",
+      year: 2019,
       description: [
         "Pharmacy is an E-commerce project built by the very basic front-end languages. This project is one of the first projects i've worked on as an intern in BlueOcean Solutions.",
       ],
@@ -249,6 +253,7 @@ export const PROJECTS = {
   portfolio: {
     header: {
       name: "My Old Portfolio",
+      year: 2019,
       description: [
         "My old portfolio is a single page resume that gives a brief introduction of who i am and what i can do.",
       ],

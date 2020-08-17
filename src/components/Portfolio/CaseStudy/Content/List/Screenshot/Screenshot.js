@@ -27,7 +27,7 @@ function Screenshot(props) {
 Screenshot.propTypes = {
   image: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    imgUrl: PropTypes.string.isRequired,
+    imgName: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
   }).isRequired,
 };

@@ -51,7 +51,6 @@ function CaseStudy(props) {
             "/case-study/" +
             "header.jpg"
           }
-          mainThemeColor={project ? project.pallet[0] : ""}
         />
         <Content project={project} projectName={projectName} />
         <Navigator
