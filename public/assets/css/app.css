@@ -989,7 +989,7 @@ button:active {
   margin-bottom: 16px;
 }
 .case-study main .info-section .main-content ul.screenshot img {
-  width: 100%;
+  max-width: 100%;
 }
 .case-study main .info-section .main-content ul.screenshot li:not(:last-of-type) {
   margin-bottom: 44px;
@@ -1398,6 +1398,8 @@ button:active {
 }
 .portfolio .card-wrapper .project-card img.item {
   max-width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .portfolio .card-wrapper .project-card .item.idea {
   grid-row: 2/3;

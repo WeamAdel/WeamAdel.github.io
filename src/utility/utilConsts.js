@@ -136,10 +136,10 @@ export const PROJECTS = {
     header: {
       name: "Task Scheduler",
       description: [
-        "Task scheduler was part of my last internship evaluation test, it was the first full SPA project i worked on",
-        "As its name's descripe it's a simple scheduler where the user can organize his/her tasks and interact with other people",
+        "Task scheduler was part of my last internship evaluation test, it was the first full SPA project i worked on. The scheduler is both mobile and web app.",
+        "As its name descripe it's a simple scheduler where the user can organize his/her tasks and interact with other people",
       ],
-      alt: "",
+      alt: "Sandwatch near to blank calendar and paper pins.",
     },
     features: [
       "User/staff accounts",
@@ -152,7 +152,28 @@ export const PROJECTS = {
     designTools: [DESIGN_TOOLS.xd],
     pallet: ["#FF7B62", "#2C2F32", "#6c757d"],
     typography: ["Roboto [Regular - Condensed]"],
-    screenshots: null,
+    screenshots: [
+      {
+        title: "Landing Page Of React Native App",
+        imgName: "landing",
+        alt: "",
+      },
+      {
+        title: "Login Page",
+        imgName: "login",
+        alt: "",
+      },
+      {
+        title: "User Profile",
+        imgName: "profile",
+        alt: "",
+      },
+      {
+        title: "Account Settings",
+        imgName: "account-settings",
+        alt: "",
+      },
+    ],
     video: null,
     learned: [
       "Interpreting written requirments to a real project",
@@ -212,10 +233,10 @@ export const PROJECTS = {
     header: {
       name: "My Old Portfolio",
       description: [
-        "MFG is a web app where users can find coaches, nutritionists, gyms and nutrition clinics. a user can reach for the desired staff member (coach or nutritionist), find an empty slot in their schedules and request a reservation or booking.",
-        "Users can also find branches (gyms or clinics) based on the city and find info about them such as opening hours, available classes, photo gallery, addresses etc.",
+        "My old portfolio is a single page resume that gives a brief introduction of who i am and what i can do.",
       ],
-      alt: "Woman doing yoga",
+      alt:
+        "Black Labtop near to a mug and placed on white bed sheet between grey pillows.",
     },
     features: null,
     role: ["UI - UX Designer", "Front-End Developer"],
@@ -223,7 +244,26 @@ export const PROJECTS = {
     designTools: [DESIGN_TOOLS.xd, DESIGN_TOOLS.photoshop],
     pallet: ["#f6efef", "#c1aabe", "#504f67", "#333240"],
     typography: ["Roboto [Regular]", "Showcard Gothic"],
-    screenshots: null,
+    screenshots: [
+      {
+        title: "Page Header",
+        imgName: "header-sc",
+        alt:
+          "Navigation bar, standing girl illustration and a beif introduction of who i am.",
+      },
+      {
+        title: "Skills Section",
+        imgName: "skills",
+        alt:
+          "Progress bars showing the level of progress in each of my coding and design skills.",
+      },
+      {
+        title: "Portfolio Section",
+        imgName: "portfolio",
+        alt:
+          "Project cards each consists of the project image, name and a button to show details.",
+      },
+    ],
     video: null,
     learned: [
       "Apply some of the UI design principles i learned",

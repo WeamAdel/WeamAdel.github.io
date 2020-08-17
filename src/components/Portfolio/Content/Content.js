@@ -90,6 +90,28 @@ const PROJECTS = [
       },
     },
   },
+  {
+    name: "My Old Portfolio",
+    idea: "Resume",
+    imagesDir: "/portfolio",
+    releaseDate: "2019 May",
+    description:
+      "My old portfolio is a single page resume that gives a brief introduction of who i am and what i can do.",
+    category: "Personal",
+    type: "Static",
+    redirect: {
+      caseStudy: {
+        title: "Case Study",
+        link: "/portfolio",
+        iconName: "case.svg",
+      },
+      livePreview: {
+        title: "Live Preview",
+        link: null,
+        iconName: "link.svg",
+      },
+    },
+  },
 ];
 function Content() {
   let projectCardsJSX = PROJECTS.map((item, index) => (
