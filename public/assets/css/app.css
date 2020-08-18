@@ -1341,13 +1341,26 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  padding-right: 22px;
 }
 .home .right-column .main-content .coffee .coffee-wrapper {
   margin-right: 16px;
   display: flex;
 }
+.home .right-column .main-content .coffee .coffee-wrapper i {
+  transform: translateY(-40px);
+}
 .home .right-column .main-content .coffee .coffee-wrapper > *:not(:last-of-type) {
   margin-right: 4px;
+}
+.home .right-column .main-content .coffee .emoji {
+  right: 0;
+}
+.home .right-column .main-content .coffee .emoji img {
+  width: 18px;
 }
 .home .right-column .accounts {
   display: flex;

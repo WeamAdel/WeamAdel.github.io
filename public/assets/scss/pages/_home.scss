@@ -134,12 +134,26 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        width: fit-content;
+        margin: auto;
+        padding-right: 22px;
 
         .coffee-wrapper {
           margin-right: 16px;
           display: flex;
+          i {
+            transform: translateY(-40px);
+          }
           > *:not(:last-of-type) {
             margin-right: 4px;
+          }
+        }
+
+        .emoji {
+          right: 0;
+          img {
+            width: 18px;
           }
         }
       }
