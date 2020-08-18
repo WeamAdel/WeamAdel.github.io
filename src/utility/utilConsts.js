@@ -5,13 +5,13 @@ export const ACCOUNTS = {
     {
       title: "Facebook",
       iconUrl: accountsIconsPath + "facebook.svg",
-      link: "",
+      link: "https://www.facebook.com/WeaamAdel94",
       fontIcon: "facebook-f",
     },
     {
       title: "twitter",
       iconUrl: accountsIconsPath + "twitter.svg",
-      link: "",
+      link: "https://twitter.com/weamadel94",
       fontIcon: "twitter",
     },
   ],
@@ -19,19 +19,19 @@ export const ACCOUNTS = {
     {
       title: "Github",
       iconUrl: accountsIconsPath + "github.svg",
-      link: "",
+      link: "https://github.com/WeamAdel",
       fontIcon: "github",
     },
     {
       title: "Gitlab",
       iconUrl: accountsIconsPath + "gitlab.svg",
-      link: "",
+      link: "https://gitlab.com/weamadel1994",
       fontIcon: "gitlab",
     },
     {
       title: "Linked In",
       iconUrl: accountsIconsPath + "linkedin.svg",
-      link: "",
+      link: "https://www.linkedin.com/in/weam-adel-083593a0/",
       fontIcon: "linkedin",
     },
   ],
@@ -39,17 +39,17 @@ export const ACCOUNTS = {
     {
       title: "Instagram",
       iconUrl: accountsIconsPath + "instagram.svg",
-      link: "",
+      link: "https://www.instagram.com/weamadel94/",
       fontIcon: "instagram",
     },
     {
       title: "Behance",
-      link: "",
+      link: "https://www.behance.net/weamadel",
       fontIcon: "behance",
     },
     {
       title: "Dribble",
-      link: "",
+      link: "https://dribbble.com/weamadel94",
       fontIcon: "dribbble",
     },
   ],
@@ -131,7 +131,7 @@ export const PROJECTS = {
       "Consistency in naming and structure patterns",
       "Use 3rd party plugins to validate client side forms",
     ],
-    fullProject: [ACCOUNTS.design[1], ACCOUNTS.design[2]],
+    fullProject: null,
   },
   scheduler: {
     header: {
@@ -139,7 +139,7 @@ export const PROJECTS = {
       year: 2019,
       description: [
         "Task scheduler was part of my last internship evaluation test, it was the first full SPA project i worked on. The scheduler is both mobile and web app.",
-        "As its name descripe it's a simple scheduler where the user can organize his/her tasks and interact with other people",
+        "As its name descripes it's a simple scheduler where the user can organize his/her tasks and interact with other people",
       ],
       alt: "Sandwatch near to blank calendar and paper pins.",
     },
@@ -186,14 +186,14 @@ export const PROJECTS = {
     improvement: [
       "Better project structuring by using a separate redux store for each feature",
     ],
-    fullProject: [ACCOUNTS.design[1], ACCOUNTS.design[2]],
+    fullProject: null,
   },
   quantum: {
     header: {
       name: "Quantum Student Mobility",
       year: 2019,
       description: [
-        "Quantum is a student mobility service based in mansoura, they nedded a website to get students familiar with their service, countries they cover and the process to apply for a certain program",
+        "Quantum is a student mobility service based in Egypt, they nedded a website to get students familiar with their service, countries they cover and the process to apply for a certain program",
       ],
       alt: "Young black women students holding books",
     },
@@ -227,7 +227,13 @@ export const PROJECTS = {
       "Working with multilingual website",
     ],
     improvement: null,
-    fullProject: [ACCOUNTS.design[1], ACCOUNTS.design[2]],
+    fullProject: [
+      {
+        platform: ACCOUNTS.design[1],
+        link:
+          "https://www.behance.net/gallery/102648275/Quantum-Student-Mobility",
+      },
+    ],
   },
   pharmacy: {
     header: {
@@ -248,7 +254,7 @@ export const PROJECTS = {
     video: null,
     learned: ["More Convenience working with Adobe Xd"],
     improvement: null,
-    fullProject: [ACCOUNTS.design[1], ACCOUNTS.design[2]],
+    fullProject: null,
   },
   portfolio: {
     header: {
@@ -293,6 +299,11 @@ export const PROJECTS = {
       "Applying custom animations and more complex positionings",
     ],
     improvement: null,
-    fullProject: [ACCOUNTS.design[1], ACCOUNTS.design[2]],
+    fullProject: [
+      {
+        platform: ACCOUNTS.design[1],
+        link: "https://www.behance.net/gallery/79437657/Maria-Personal-Website",
+      },
+    ],
   },
 };

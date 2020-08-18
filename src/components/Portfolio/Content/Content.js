@@ -51,8 +51,7 @@ const PROJECTS = [
     idea: "Solution",
     imagesDir: "/quantum",
     releaseDate: "2019 Oct",
-    description:
-      "A static website for student mobility service in Mansoura, Egypt",
+    description: "A static website for student mobility service in Egypt",
     category: "Education & Travel",
     type: "Static",
     redirect: {
@@ -113,6 +112,7 @@ const PROJECTS = [
     },
   },
 ];
+
 function Content() {
   let projectCardsJSX = PROJECTS.map((item, index) => (
     <ProjectCard key={index} {...item} imagesNames={projectImagesNames} />

@@ -21,7 +21,7 @@ const STUDY_ASPECTS = {
   fullProject: {
     heading: "View Full Project On",
     iconType: null,
-    type: "icon",
+    type: "link",
   },
 };
 

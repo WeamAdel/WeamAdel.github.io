@@ -25,7 +25,6 @@ function Accounts() {
     <animated.ul
       style={{
         width: width.interpolate((w) => {
-          //console.log(w);
           return w + "%";
         }),
         opacity: opacity,

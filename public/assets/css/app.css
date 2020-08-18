@@ -999,10 +999,10 @@ button:active {
 .case-study header::before {
   right: 0;
 }
-.case-study main .info-section .main-content ul.icon li, .case-study main .info-section .main-content ul.pallet li {
+.case-study main .info-section .main-content ul.link li, .case-study main .info-section .main-content ul.icon li, .case-study main .info-section .main-content ul.pallet li {
   display: inline;
 }
-.case-study main .info-section .main-content ul.icon li:not(:last-of-type), .case-study main .info-section .main-content ul.pallet li:not(:last-of-type) {
+.case-study main .info-section .main-content ul.link li:not(:last-of-type), .case-study main .info-section .main-content ul.icon li:not(:last-of-type), .case-study main .info-section .main-content ul.pallet li:not(:last-of-type) {
   margin-right: 8px;
 }
 .case-study main .info-section {
@@ -1043,6 +1043,9 @@ button:active {
 }
 .case-study main .info-section .main-content ul.screenshot li:not(:last-of-type) {
   margin-bottom: 44px;
+}
+.case-study main .info-section .main-content ul.link a {
+  color: #0a0c1b;
 }
 .case-study main .info-section:not(:last-of-type) {
   border-bottom: 1px dashed #d5d5d6;

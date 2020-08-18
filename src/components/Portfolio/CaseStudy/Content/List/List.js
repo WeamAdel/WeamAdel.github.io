@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Pallet from "./Pallet/Pallet";
 import Icon from "./Icon/Icon";
 import Screenshot from "./Screenshot/Screenshot";
+import Link from "./Link/Link";
 
 function List(props) {
   let listClasses = ["m-0", "list-unstyled"];
@@ -10,6 +11,7 @@ function List(props) {
     pallet: { name: Pallet, attr: "fill" },
     icon: { name: Icon, attr: "icon" },
     screenshot: { name: Screenshot, attr: "image" },
+    link: { name: Link, attr: "link" },
   };
   let itemsJSX = props.items.map((item, index) => {
     let listComponentJSX = item;
