@@ -35,10 +35,7 @@ function Coffee() {
 
   return (
     <div className="coffee">
-      <div className="coffee-wrapper">
-        {/* {items} */}
-        {transitionsJSX}
-      </div>
+      <div className="coffee-wrapper">{transitionsJSX}</div>
 
       <i className="fa fa-smile-o" />
     </div>

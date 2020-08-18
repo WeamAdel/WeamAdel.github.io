@@ -1231,6 +1231,9 @@ button:active {
   overflow-x: hidden;
   position: relative;
 }
+.home .my-container {
+  overflow: hidden;
+}
 .home .welcome:first-of-type {
   left: 0;
   transform: translateX(calc(-100% + 80px));
@@ -1280,22 +1283,21 @@ button:active {
   background-image: url("/assets/images/home/brush.svg");
   background-repeat: no-repeat;
 }
-.home .right-column {
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-}
 .home .right-column .main-content {
+  overflow: hidden;
   background-color: #0a0c1b;
   color: white;
   padding: calc(32px + 64px) 44px 32px;
   border-radius: 0 0 25px 25px;
   position: relative;
+  transform: translateY(-100%);
+  opacity: 0;
 }
 .home .right-column .main-content .avatar {
   width: 120px;
   position: relative;
   margin: auto;
+  background-color: #0a0c1b;
 }
 .home .right-column .main-content .avatar img {
   border-radius: 50%;
