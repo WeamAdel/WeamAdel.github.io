@@ -10,10 +10,11 @@
       }
     }
   }
-  // .content {
-  //   display: grid;
-  //   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  // }
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-gap: 32px;
+  }
   .card-wrapper {
     max-width: 300px;
     margin: 0 auto;
@@ -35,10 +36,12 @@
     .project-card {
       background-color: #d4e2e4;
       display: grid;
-      grid-template: 32px 24px 20vh calc(60vh - 56px) / auto 60px;
+      grid-template: 32px 24px 1fr 4fr/1fr 60px;
+      grid-row-gap: 16px;
       overflow: hidden;
       font-family: $saol;
       position: relative;
+      min-height: 550px;
 
       filter: grayscale(0.5);
       .lines {
@@ -48,7 +51,7 @@
         left: 0;
         right: 0;
         z-index: 2;
-        grid-template: 80vh / 1fr 2fr 2fr 1fr;
+        grid-template: auto / 1fr 2fr 2fr 1fr;
         display: none;
         span {
           display: block;
@@ -82,6 +85,7 @@
           place-self: start right;
           transform: translateY(calc(-100% + 24px));
           padding-left: 64px;
+          width: 100%;
         }
         &.release-date {
           grid-row: 2/3;
@@ -140,13 +144,13 @@
           grid-row: 4/5;
           grid-column: 1/2;
           place-self: end left;
-          max-height: calc(60vh - 56px);
         }
         &.type {
           grid-row: 4/5;
           grid-column: 2/3;
           place-self: end right;
-          transform: rotate(-90deg) translate(50%, -24px);
+          transform: rotate(-90deg) translate(50%, -8px);
+          margin-bottom: 0;
           font-size: 12px;
           letter-spacing: 6px;
         }
@@ -185,9 +189,9 @@
 
 @media (min-width: 900px) {
   .portfolio {
-    // .content {
-    //   display: block;
-    // }
+    .content {
+      display: block;
+    }
     .card-wrapper {
       max-width: none;
       display: flex;
@@ -198,8 +202,10 @@
         height: fit-content;
       }
       .project-card {
-        grid-template: 20vh 60vh / 1fr 2fr 2fr 1fr;
+        grid-template: 1fr 4fr/1fr 2fr 2fr 1fr;
         display: grid;
+        min-height: 400px;
+
         .lines {
           display: grid;
         }
