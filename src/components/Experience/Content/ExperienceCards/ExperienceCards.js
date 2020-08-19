@@ -22,7 +22,7 @@ const EXPERIENCE = [
     year: 2020,
     months: [MONTHS.jan, MONTHS.june],
     description:
-      "Full Stack Web Developer at Blue Ocean Solutions (Technical Lead)",
+      "Full Stack Web Developer at Blue Ocean Solutions (Team Leader)",
     lead: "blue_ocean_intern",
   },
 ];

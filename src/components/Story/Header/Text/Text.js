@@ -8,7 +8,7 @@ function Text(props) {
           <h1 className="page-heading">My Story</h1>
           <p>
             The journey to identify what you love and where you fit best is not
-            obvious nor easy. Here I will show some of the breakpoints in my own
+            obvious nor easy. Here I will talk about the breakpoints in my own
             journey and the decisions I've made that led me to be a software
             engineer. Please feel free to jump to a timed summary to what I
             achieved throw that journey.
