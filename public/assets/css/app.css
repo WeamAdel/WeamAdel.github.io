@@ -1020,6 +1020,10 @@ button:active {
   background-color: #0a0c1b;
   display: inline-block;
 }
+.case-study main .info-section .main-content video {
+  width: 100%;
+  max-width: 800px;
+}
 .case-study main .info-section .main-content ul li {
   max-width: 30em;
 }

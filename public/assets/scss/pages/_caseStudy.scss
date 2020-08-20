@@ -121,6 +121,10 @@
         }
       }
       .main-content {
+        video {
+          width: 100%;
+          max-width: 800px;
+        }
         ul {
           li {
             max-width: 30em;

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Layout from "./Layout/Layout";
 import List from "./List/List";
+import Video from "./Video/Video";
 
 const STUDY_ASPECTS = {
   features: { heading: "Features Highlight", iconType: "check" },
@@ -31,12 +32,16 @@ function Content(props) {
     if (project[key] && STUDY_ASPECTS[key]) {
       return (
         <Layout heading={STUDY_ASPECTS[key].heading} key={index}>
-          <List
-            items={project[key]}
-            iconType={STUDY_ASPECTS[key].iconType}
-            type={STUDY_ASPECTS[key].type}
-            projectName={props.projectName}
-          />
+          {key === "video" ? (
+            <Video projectName={props.projectName} />
+          ) : (
+            <List
+              items={project[key]}
+              iconType={STUDY_ASPECTS[key].iconType}
+              type={STUDY_ASPECTS[key].type}
+              projectName={props.projectName}
+            />
+          )}
         </Layout>
       );
     }

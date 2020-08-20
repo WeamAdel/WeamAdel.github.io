@@ -119,7 +119,7 @@ export const PROJECTS = {
           "Clinic's detailed info such as image, about, gallery, social links and opening hours",
       },
     ],
-    video: null,
+    video: true,
     learned: [
       "Interpreting client's needs to a real project.",
       "More understanding and convenience working with react component life cycle.",
