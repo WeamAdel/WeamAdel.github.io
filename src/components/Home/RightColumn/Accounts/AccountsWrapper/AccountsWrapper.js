@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function AccountsWrapper(props) {
-  console.log(props.accounts);
   let accountsJSX = props.accounts.map((account) => (
     <li key={account.title} title={account.title}>
       <a href={account.link} target="blank" rel="noopener noreferrer">

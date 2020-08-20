@@ -23,6 +23,9 @@
     padding: 100px 0;
     background-color: $main;
     position: relative;
+    display: flex;
+    align-items: center;
+
     .row {
       margin-right: 0;
       > * {

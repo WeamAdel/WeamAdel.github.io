@@ -6,19 +6,6 @@
     max-width: calc(100vw - (100vw - 100%));
 
     .my-books {
-      .alert {
-        color: $main;
-        background-color: white;
-        border-color: white;
-        border-left: 8px solid $main;
-        position: fixed;
-        top: 64px;
-        z-index: 2;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        max-width: 300px;
-      }
       .left-column {
         //Normal top padding + navbar padding removed from the page
         padding: calc(24px + 64px) 0 60px;
@@ -241,6 +228,13 @@
           p {
             text-align: justify;
             max-width: 32rem;
+            a {
+              color: $flatGreen;
+              text-decoration: underline;
+              &:hover {
+                text-decoration: underline !important;
+              }
+            }
           }
         }
         .image {
@@ -288,25 +282,27 @@
 @media (min-width: 767px) {
   .books {
     main.content {
-      .left-column {
-        .categories-wrapper {
-          margin-right: 40px;
-          max-width: none;
+      .my-books {
+        .left-column {
+          .categories-wrapper {
+            margin-right: 40px;
+            max-width: none;
 
-          .sort-panel {
-            bottom: 0;
-            height: 100%;
-            right: -40px;
-            flex-direction: row;
+            .sort-panel {
+              bottom: 0 !important;
+              height: 100%;
+              right: -40px !important;
+              flex-direction: row !important;
 
-            ul {
-              transform: translateX(calc(-50% - 5px));
-              flex-direction: column;
+              ul {
+                transform: translateX(calc(-50% - 5px)) !important;
+                flex-direction: column;
 
-              .dot {
-                &:not(:last-of-type) {
-                  margin-right: 0;
-                  margin-bottom: 8px;
+                .dot {
+                  &:not(:last-of-type) {
+                    margin-right: 0;
+                    margin-bottom: 8px;
+                  }
                 }
               }
             }

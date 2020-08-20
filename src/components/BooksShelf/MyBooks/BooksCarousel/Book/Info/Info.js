@@ -24,6 +24,8 @@ function Info(props) {
   return <div className="info">{infoCardsJSX}</div>;
 }
 
-Info.propTypes = {};
+Info.propTypes = {
+  book: PropTypes.object.isRequired,
+};
 
 export default Info;

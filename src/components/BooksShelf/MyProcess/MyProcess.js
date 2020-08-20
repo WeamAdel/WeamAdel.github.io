@@ -42,11 +42,23 @@ const PROCESSES = [
         "What we actually need to do is to give a special care for the quality of time. Spending 2 hours with deep focus is much better than 4 hours most of which you want to sleep, quite eat or see your phone's notifications.",
         "To enter this deep focus point you need to go though a cycle of focusing and taking a break so that your mind rests and feel like it's starting all over again.",
         "This methodology is well known as Pomodoro technique, you can read more about it but in brief you focus for 25min with any distractions turned off and then take a break for 5min, but after 4-6 cycles (2-3h) you take a longer break for 30min or 1h.",
-        "Personally I use " +
-          <a href="">Forest</a> +
-          " app and " +
-          <a href="">chrome extension</a> +
+        [
+          "Personally I use ",
+          <a
+            href="https://apps.apple.com/app/apple-store/id866450515?mt=8"
+            key="app"
+          >
+            Forest
+          </a>,
+          " app and ",
+          <a
+            href="https://chrome.google.com/webstore/detail/forest-stay-focused-be-pr/kjacjjdnoddnpbbcjilcajfhhbdhkpgk"
+            key="ext"
+          >
+            chrome extension
+          </a>,
           " to help me track my progress and the nice thing about the app is that it prevents you form opening any other app so that you can really focus, though for pro aversion it allows you to add apps to the whitelist. This realy helped me as I use google translator, calculator or read a book on my device. I highly recommend it.",
+        ],
       ],
     },
   },

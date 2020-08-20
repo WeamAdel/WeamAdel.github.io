@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useTransition, animated, config } from "react-spring";
+import { useTransition, animated } from "react-spring";
 import Cup from "./Cup/Cup";
 
 function Coffee() {
@@ -25,7 +25,7 @@ function Coffee() {
 
   let emojiJSX = transitions.map(({ item, key, props }) => {
     return (
-      <animated.div className="emoji" style={props}>
+      <animated.div key={key} className="emoji" style={props}>
         <img src={`./assets/images/home/${item}.svg`} />
       </animated.div>
     );

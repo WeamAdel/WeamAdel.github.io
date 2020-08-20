@@ -5,7 +5,7 @@ import FilterPanel from "./FilterPanel/FilterPanel";
 
 function Categories(props) {
   let categoryJSX = Object.values(props.categories).map((cat, index) => {
-    return (
+    return cat.count === 0 ? null : (
       <Category
         key={index}
         {...cat}

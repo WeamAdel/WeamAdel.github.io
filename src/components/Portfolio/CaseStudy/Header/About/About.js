@@ -24,7 +24,7 @@ function About(props) {
 About.propTypes = {
   imgUrl: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.array.isRequired,
 };
 
 export default About;

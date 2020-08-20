@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import OwlCarousel from "react-owl-carousel2";
 import Book from "./Book/Book";
 
@@ -6,15 +7,11 @@ const options = {
   items: 1,
   nav: false,
   dots: false,
-  navText: [
-    '<i class="fa fa-arrow-left" />',
-    '<i class="fa fa-arrow-right" />',
-  ],
 };
 function BooksCarousel(props) {
-  let booksJSX = props.books.map((book, index) => (
-    <Book key={index} book={book} />
-  ));
+  let booksJSX = props.books.map((book, index) =>
+    book.disabled ? null : <Book key={index} book={book} />
+  );
 
   return (
     <div className="carousel-col col-md-6 d-md-last d-first">
@@ -26,5 +23,9 @@ function BooksCarousel(props) {
     </div>
   );
 }
+
+BooksCarousel.propTypes = {
+  books: PropTypes.array.isRequired,
+};
 
 export default BooksCarousel;

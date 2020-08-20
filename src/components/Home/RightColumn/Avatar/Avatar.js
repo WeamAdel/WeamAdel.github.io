@@ -4,7 +4,6 @@ function Avatar() {
   let hourNow = new Date().getUTCHours();
   let offsetFromUTC = 2;
   let time = hourNow + offsetFromUTC;
-  console.log(time);
   let status = time < 24 && time >= 6 ? "available" : "not available";
 
   return (

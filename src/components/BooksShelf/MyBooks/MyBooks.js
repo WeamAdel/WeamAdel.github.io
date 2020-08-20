@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import LeftColumn from "./LeftColumn/LeftColumn";
 import BooksCarousel from "./BooksCarousel/BooksCarousel";
-import Alert from "./Alert/Alert";
 
 const BOOK_CATEGORIES = {
   front: { id: "front", name: "Front-End", count: 0, color: "#2ABAA0" },
@@ -73,8 +72,8 @@ const BOOKS = [
     numOfPages: 453,
     readingDate: 2019,
     category: BOOK_CATEGORIES.back,
-    visible: false,
     imgName: "php-guide",
+    disabled: true,
   },
   {
     name: "Clean Code",
@@ -120,6 +119,7 @@ const BOOKS = [
 
 (function setCategoryBooksCount() {
   for (let book of BOOKS) {
+    if (book.disabled) continue;
     let cat = BOOK_CATEGORIES[book.category.id];
     cat.count = cat.count + 1;
   }
@@ -138,7 +138,7 @@ function MyBooks() {
     setFilteredBooks(books);
   }
 
-  console.log(filteredBooks);
+  const totalBooksCount = BOOKS.filter((book) => !book.disabled).length;
 
   return (
     <section className="my-books">
@@ -147,7 +147,7 @@ function MyBooks() {
         <LeftColumn
           books={filteredBooks}
           categories={BOOK_CATEGORIES}
-          totalBooksCount={BOOKS.length}
+          totalBooksCount={totalBooksCount}
           filterBooks={filterBooksByCategory}
           activeCategoryId={activeCategoryId}
         />

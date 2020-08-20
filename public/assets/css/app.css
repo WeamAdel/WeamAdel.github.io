@@ -676,19 +676,6 @@ button:active {
   padding: 0;
   max-width: calc(100vw - (100vw - 100%));
 }
-.books main.content .my-books .alert {
-  color: #0a0c1b;
-  background-color: white;
-  border-color: white;
-  border-left: 8px solid #0a0c1b;
-  position: fixed;
-  top: 64px;
-  z-index: 2;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  max-width: 300px;
-}
 .books main.content .my-books .left-column {
   padding: calc(24px + 64px) 0 60px;
 }
@@ -873,6 +860,13 @@ button:active {
   text-align: justify;
   max-width: 32rem;
 }
+.books main.content .my-process section.process .text p a {
+  color: #c4ffbd;
+  text-decoration: underline;
+}
+.books main.content .my-process section.process .text p a:hover {
+  text-decoration: underline !important;
+}
 .books main.content .my-process section.process .image img {
   max-width: 100%;
 }
@@ -896,21 +890,21 @@ button:active {
   }
 }
 @media (min-width: 767px) {
-  .books main.content .left-column .categories-wrapper {
+  .books main.content .my-books .left-column .categories-wrapper {
     margin-right: 40px;
     max-width: none;
   }
-  .books main.content .left-column .categories-wrapper .sort-panel {
-    bottom: 0;
+  .books main.content .my-books .left-column .categories-wrapper .sort-panel {
+    bottom: 0 !important;
     height: 100%;
-    right: -40px;
-    flex-direction: row;
+    right: -40px !important;
+    flex-direction: row !important;
   }
-  .books main.content .left-column .categories-wrapper .sort-panel ul {
-    transform: translateX(calc(-50% - 5px));
+  .books main.content .my-books .left-column .categories-wrapper .sort-panel ul {
+    transform: translateX(calc(-50% - 5px)) !important;
     flex-direction: column;
   }
-  .books main.content .left-column .categories-wrapper .sort-panel ul .dot:not(:last-of-type) {
+  .books main.content .my-books .left-column .categories-wrapper .sort-panel ul .dot:not(:last-of-type) {
     margin-right: 0;
     margin-bottom: 8px;
   }
@@ -942,6 +936,8 @@ button:active {
   padding: 100px 0;
   background-color: #0a0c1b;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .case-study header .row {
   margin-right: 0;

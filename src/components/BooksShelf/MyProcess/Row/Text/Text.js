@@ -5,6 +5,11 @@ function Text(props) {
   let paragraphsJSX = props.text.paragraphs.map((p, index) => (
     <p key={index}>{p}</p>
   ));
+
+  // function createParagraphWithLink(arr) {
+  //   let
+  // }
+
   return (
     <div className="text">
       <span className="number">{"0" + props.number}</span>
