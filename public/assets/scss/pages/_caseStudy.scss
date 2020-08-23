@@ -134,11 +134,11 @@
           }
           &.check {
             padding-left: 16px;
-            list-style-image: url("/assets/images/portfolio/case-studies/check.svg");
+            list-style-image: url("/assets/images/portfolio/icons/case-study/check.svg");
           }
           &.contrast {
             padding-left: 16px;
-            list-style-image: url("/assets/images/portfolio/case-studies/contrast.svg");
+            list-style-image: url("/assets/images/portfolio/icons/case-study/contrast.svg");
           }
           &.pallet {
             @extend %inline;
@@ -177,8 +177,9 @@
       }
     }
   }
+
   .navigator {
-    background-image: url("/assets/images/portfolio/case-studies/waves.svg");
+    background-image: url("/assets/images/portfolio/icons/case-study/waves.svg");
     .project-navigator {
       min-height: 160px;
       display: flex;

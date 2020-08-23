@@ -29,7 +29,7 @@ const BOOKS = [
   {
     name: "CSS Mastery",
     author: "Andy Budd",
-    numOfPages: 1000,
+    numOfPages: 409,
     readingDate: 2019,
     category: BOOK_CATEGORIES.front,
     imgName: "css-mastery",
@@ -37,7 +37,7 @@ const BOOKS = [
   {
     name: "Visual Design Solutions",
     author: "Connie Malamed",
-    numOfPages: 1000,
+    numOfPages: 372,
     readingDate: 2019,
     category: BOOK_CATEGORIES.design,
     imgName: "vds",

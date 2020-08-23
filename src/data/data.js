@@ -55,7 +55,7 @@ export const ACCOUNTS = {
   ],
 };
 
-const toolsIconsPath = "/assets/images/portfolio/case-studies/";
+const toolsIconsPath = "/assets/images/portfolio/icons/case-study/";
 const DESIGN_TOOLS = {
   xd: {
     title: "Adobe XD",

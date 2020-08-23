@@ -18,7 +18,7 @@ const TECHNOLOGIES = [
   {
     name: "Tailwind",
     about:
-      "it is a CSS framework, but instead of predesigned components that's hard to override its styles, Tailwind provides low-level utility classes.",
+      "It is a CSS framework, but instead of predesigned components that's hard to override its styles, Tailwind provides low-level utility classes.",
     link: "https://tailwindcss.com/",
     priority: PRIORITIES.high,
   },
@@ -39,7 +39,7 @@ const TECHNOLOGIES = [
   {
     name: "WebPack",
     about:
-      "It k is a tool that compile JavaScript modules, also known as module or assets bundler. it generates a single file (or a few files) that run your app.",
+      "It is a tool that compile JavaScript modules, also known as module or assets bundler. it generates a single file (or a few files) that run your app.",
     link: "https://webpack.js.org/",
     priority: PRIORITIES.high,
   },

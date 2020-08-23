@@ -1051,11 +1051,11 @@ button:active {
 }
 .case-study main .info-section .main-content ul.check {
   padding-left: 16px;
-  list-style-image: url("/assets/images/portfolio/case-studies/check.svg");
+  list-style-image: url("/assets/images/portfolio/icons/case-study/check.svg");
 }
 .case-study main .info-section .main-content ul.contrast {
   padding-left: 16px;
-  list-style-image: url("/assets/images/portfolio/case-studies/contrast.svg");
+  list-style-image: url("/assets/images/portfolio/icons/case-study/contrast.svg");
 }
 .case-study main .info-section .main-content ul.icon img {
   width: 50px;
@@ -1077,7 +1077,7 @@ button:active {
   border-bottom: 1px dashed #d5d5d6;
 }
 .case-study .navigator {
-  background-image: url("/assets/images/portfolio/case-studies/waves.svg");
+  background-image: url("/assets/images/portfolio/icons/case-study/waves.svg");
 }
 .case-study .navigator .project-navigator {
   min-height: 160px;
