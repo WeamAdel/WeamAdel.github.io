@@ -232,15 +232,24 @@ button:active {
   top: 0;
   left: 0;
   right: 0;
+  min-height: 100vh;
   background-color: #0a0c1b;
   padding: 32px 0;
   display: flex;
   align-items: center;
-  min-height: 100vh;
+}
+.main-nav .menu .my-container {
+  width: 100%;
 }
 .main-nav .menu .nav-links {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-gap: 16px;
+  width: 100%;
+  padding: 0;
+}
+.main-nav .menu .nav-links .nav-link {
+  justify-self: center;
 }
 .main-nav .menu .nav-links .nav-link .title {
   color: #f5f5f7;
@@ -251,10 +260,10 @@ button:active {
 }
 .main-nav .menu .nav-links .nav-link a {
   display: block;
+  text-align: center;
   width: 140px;
   height: 100px;
   padding: 16px;
-  text-align: center;
   border-radius: 16px;
 }
 .main-nav .menu .nav-links .nav-link a.active {
@@ -266,9 +275,6 @@ button:active {
 }
 .main-nav .menu .nav-links .nav-link a img {
   height: 100%;
-}
-.main-nav .menu .nav-links .nav-link:not(:last-of-type) {
-  margin-bottom: 32px;
 }
 
 @keyframes activeNavLink {
@@ -292,6 +298,17 @@ button:active {
   }
   100% {
     transform: scale(1) rotate(0);
+  }
+}
+@media (max-width: 767px), (max-height: 580px) {
+  .main-nav .menu .nav-links {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  .main-nav .menu .nav-links .nav-link a {
+    width: 74px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 10px;
   }
 }
 .quote {
@@ -668,7 +685,15 @@ button:active {
   width: 100px;
   margin-bottom: 8px;
 }
+.being-cooked main .project-card:last-of-type {
+  margin-bottom: 60px;
+}
 
+@media (min-width: 1200px) {
+  .being-cooked main .project-card:last-of-type {
+    margin-bottom: 0;
+  }
+}
 .books {
   padding-top: 0;
 }
@@ -1086,8 +1111,8 @@ button:active {
   }
 }
 .contact .header-image img {
-  max-height: 50vh;
-  width: auto;
+  width: 100%;
+  min-height: auto;
 }
 .contact main {
   margin-left: 0 !important;
@@ -1197,10 +1222,12 @@ button:active {
 }
 .experience .image {
   padding: calc(64px + 32px) 0;
+  text-align: center;
   order: -1;
 }
 .experience .image img {
   width: 100%;
+  max-width: 500px;
 }
 
 @media (min-width: 1000px) {

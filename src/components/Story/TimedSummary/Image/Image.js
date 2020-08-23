@@ -2,8 +2,8 @@ import React from "react";
 
 function Image() {
   return (
-    <div className="col-md-6 d-flex align-items-center">
-      <div className="image">
+    <div className="col-md-6 d-flex align-items-center mb-5 mb-md-0">
+      <div className="image text-center">
         <svg
           id="f925b0b9-bc71-491a-a51e-0715ff181b57"
           data-name="Layer 1"

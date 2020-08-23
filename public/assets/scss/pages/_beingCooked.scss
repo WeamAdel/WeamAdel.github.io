@@ -37,6 +37,20 @@
         @extend %paragraphs;
         margin-bottom: 8px;
       }
+
+      &:last-of-type {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .being-cooked {
+    main {
+      .project-card:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 }

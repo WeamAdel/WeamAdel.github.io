@@ -42,7 +42,7 @@ function Schedule() {
   ));
   return (
     <div className="col-md-6">
-      <div className="schedule">
+      <div className="schedule mx-auto">
         <ul className="list-unstyled mb-0">{itemsJSX}</ul>
       </div>
     </div>

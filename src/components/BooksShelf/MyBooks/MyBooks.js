@@ -4,7 +4,7 @@ import BooksCarousel from "./BooksCarousel/BooksCarousel";
 
 const BOOK_CATEGORIES = {
   front: { id: "front", name: "Front-End", count: 0, color: "#2ABAA0" },
-  back: { id: "back", name: "Back-End", count: 0, color: "salmon" },
+  // back: { id: "back", name: "Back-End", count: 0, color: "salmon" },
   design: { id: "design", name: "Design", count: 0, color: "#E9358B" },
   other: { id: "other", name: "Other", count: 0, color: "#DBEB28" },
 };

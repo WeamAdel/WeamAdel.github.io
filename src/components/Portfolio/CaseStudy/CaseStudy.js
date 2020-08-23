@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { PROJECTS } from "./../../../utility/utilConsts";
+import { PROJECTS } from "./../../../data/data";
 import Header from "./Header/Header";
 import Content from "./Content/Content";
 import Navigator from "./Content/Navigator/Navigator";

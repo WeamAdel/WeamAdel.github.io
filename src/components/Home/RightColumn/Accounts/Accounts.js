@@ -1,6 +1,6 @@
 import React from "react";
 import { useSpring, animated, config } from "react-spring";
-import { ACCOUNTS } from "../../../../utility/utilConsts";
+import { ACCOUNTS } from "../../../../data/data";
 import AccountsWrapper from "./AccountsWrapper/AccountsWrapper";
 
 function Accounts() {
