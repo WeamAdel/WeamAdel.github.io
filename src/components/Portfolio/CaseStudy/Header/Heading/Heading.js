@@ -5,10 +5,8 @@ function Heading(props) {
   return (
     <div className="col-md-6">
       <div className="heading-wrapper">
-        <div className="my-container">
-          <h1 className="page-heading">{props.projectName}</h1>
-          <time dateTime={props.year}>{props.year}</time>
-        </div>
+        <h1 className="page-heading">{props.projectName}</h1>
+        <time dateTime={props.year}>{props.year}</time>
       </div>
     </div>
   );

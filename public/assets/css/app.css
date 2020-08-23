@@ -234,9 +234,10 @@ button:active {
   right: 0;
   min-height: 100vh;
   background-color: #0a0c1b;
-  padding: 32px 0;
+  padding: 36px 0;
   display: flex;
   align-items: center;
+  overflow-y: auto;
 }
 .main-nav .menu .my-container {
   width: 100%;
@@ -300,7 +301,7 @@ button:active {
     transform: scale(1) rotate(0);
   }
 }
-@media (max-width: 767px), (max-height: 580px) {
+@media (max-width: 767px), (max-height: 480px) {
   .main-nav .menu .nav-links {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
@@ -974,7 +975,7 @@ button:active {
 .case-study header .row .heading-wrapper {
   position: relative;
   margin-bottom: 60px;
-  padding-left: 36px;
+  padding-left: 24px;
 }
 .case-study header .row .heading-wrapper .page-heading {
   color: #f5f5f7;
@@ -986,7 +987,7 @@ button:active {
 }
 .case-study header .row .heading-wrapper::before {
   top: 0;
-  left: 0;
+  left: -20px;
   height: 100%;
 }
 .case-study header .row .about .image {
@@ -1102,7 +1103,9 @@ button:active {
 @media (min-width: 767px) {
   .case-study header .row .heading-wrapper {
     margin-bottom: 0;
-    padding-left: 0;
+  }
+  .case-study header .row .heading-wrapper::before {
+    left: -60px;
   }
 }
 @media (orientation: landscape) {
@@ -1458,10 +1461,11 @@ button:active {
   color: #0a0c1b;
   max-width: 30rem;
 }
-.portfolio .content {
+.portfolio main.content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   grid-gap: 32px;
+  padding: 100px 20px;
 }
 .portfolio .card-wrapper {
   max-width: 300px;
@@ -1487,7 +1491,7 @@ button:active {
   overflow: hidden;
   font-family: "Saol";
   position: relative;
-  min-height: 550px;
+  height: 500px;
   filter: grayscale(0.5);
 }
 .portfolio .card-wrapper .project-card .lines {
@@ -1609,16 +1613,11 @@ button:active {
   .portfolio .card-wrapper .project-card .item.name {
     font-size: 32px;
   }
-  .portfolio .card-wrapper:nth-child(odd) {
-    padding-left: 60px;
-  }
-  .portfolio .card-wrapper:nth-child(even) {
-    padding-right: 60px;
-  }
 }
 @media (min-width: 900px) {
-  .portfolio .content {
+  .portfolio main.content {
     display: block;
+    padding: 100px 0;
   }
   .portfolio .card-wrapper {
     max-width: none;
@@ -1626,6 +1625,10 @@ button:active {
   }
   .portfolio .card-wrapper:nth-child(even) {
     flex-direction: row-reverse;
+    padding-right: 60px;
+  }
+  .portfolio .card-wrapper:nth-child(odd) {
+    padding-left: 60px;
   }
   .portfolio .card-wrapper .links-list {
     height: fit-content;
@@ -1633,7 +1636,9 @@ button:active {
   .portfolio .card-wrapper .project-card {
     grid-template: 1fr 4fr/1fr 2fr 2fr 1fr;
     display: grid;
+    height: auto;
     min-height: 400px;
+    max-height: 500px;
   }
   .portfolio .card-wrapper .project-card .lines {
     display: grid;

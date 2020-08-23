@@ -6,13 +6,15 @@ import Heading from "./Heading/Heading";
 function Header(props) {
   return (
     <header>
-      <div className="row">
-        <Heading projectName={props.name} year={props.year} />
-        <About
-          description={props.description}
-          imgUrl={props.imgUrl}
-          alt={props.alt}
-        />
+      <div className="my-container">
+        <div className="row">
+          <Heading projectName={props.name} year={props.year} />
+          <About
+            description={props.description}
+            imgUrl={props.imgUrl}
+            alt={props.alt}
+          />
+        </div>
       </div>
       <div className="triangle">
         <div />

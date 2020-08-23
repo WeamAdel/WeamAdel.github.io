@@ -10,10 +10,11 @@
       }
     }
   }
-  .content {
+  main.content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     grid-gap: 32px;
+    padding: 100px 20px;
   }
   .card-wrapper {
     max-width: 300px;
@@ -41,7 +42,7 @@
       overflow: hidden;
       font-family: $saol;
       position: relative;
-      min-height: 550px;
+      height: 500px;
 
       filter: grayscale(0.5);
       .lines {
@@ -177,34 +178,38 @@
           font-size: 32px;
         }
       }
-      &:nth-child(odd) {
-        padding-left: 60px;
-      }
-      &:nth-child(even) {
-        padding-right: 60px;
-      }
     }
   }
 }
 
 @media (min-width: 900px) {
   .portfolio {
-    .content {
+    main.content {
       display: block;
+      padding: 100px 0;
     }
     .card-wrapper {
       max-width: none;
       display: flex;
+
       &:nth-child(even) {
         flex-direction: row-reverse;
+        padding-right: 60px;
       }
+
+      &:nth-child(odd) {
+        padding-left: 60px;
+      }
+
       .links-list {
         height: fit-content;
       }
       .project-card {
         grid-template: 1fr 4fr/1fr 2fr 2fr 1fr;
         display: grid;
+        height: auto;
         min-height: 400px;
+        max-height: 500px;
 
         .lines {
           display: grid;

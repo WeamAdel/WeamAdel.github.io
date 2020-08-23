@@ -41,9 +41,11 @@
     right: 0;
     min-height: 100vh;
     background-color: $main;
-    padding: 32px 0;
+    padding: 36px 0;
     display: flex;
     align-items: center;
+    overflow-y: auto;
+
     .my-container {
       width: 100%;
     }
@@ -115,7 +117,7 @@
   }
 }
 
-@media (max-width: 767px), (max-height: 580px) {
+@media (max-width: 767px), (max-height: 480px) {
   .main-nav {
     .menu {
       .nav-links {

@@ -9,13 +9,11 @@ function About(props) {
     : "";
   return (
     <div className="col-md-6">
-      <div className="my-container">
-        <div className="about">
-          <div className="image">
-            <img src={props.imgUrl} alt={props.alt} />
-          </div>
-          <div className="description">{descriptionJSX}</div>
+      <div className="about">
+        <div className="image">
+          <img src={props.imgUrl} alt={props.alt} />
         </div>
+        <div className="description">{descriptionJSX}</div>
       </div>
     </div>
   );
