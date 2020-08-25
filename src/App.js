@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import Navbar from "./components/shared/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Experience from "./components/Experience/Experience";
@@ -16,23 +17,25 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/experience" exact component={Experience} />
-          <Route path="/story" exact component={Story} />
-          <Route path="/technologies" exact component={Technologies} />
-          <Route path="/contact" exact component={Contact} />
-          <Route path="/agenda" exact component={Agenda} />
-          <Route path="/portfolio" exact component={Portfolio} />
-          <Route
-            path="/portfolio/case-study/:projectName"
-            exact
-            component={CaseStudy}
-          />
-          <Route path="/being-cooked" exact component={BeingCooked} />
-          <Route path="/books-shelf" exact component={BooksShelf} />
-        </Switch>
+        <ErrorBoundary>
+          <Navbar />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/experience" exact component={Experience} />
+            <Route path="/story" exact component={Story} />
+            <Route path="/technologies" exact component={Technologies} />
+            <Route path="/contact" exact component={Contact} />
+            <Route path="/agenda" exact component={Agenda} />
+            <Route path="/portfolio" exact component={Portfolio} />
+            <Route
+              path="/portfolio/case-study/:projectName"
+              exact
+              component={CaseStudy}
+            />
+            <Route path="/being-cooked" exact component={BeingCooked} />
+            <Route path="/books-shelf" exact component={BooksShelf} />
+          </Switch>
+        </ErrorBoundary>
       </BrowserRouter>
     </div>
   );

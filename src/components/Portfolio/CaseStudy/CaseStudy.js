@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { PROJECTS } from "./../../../data/data";
+import { NotFoundError } from "./../../../utility/Errors/Errors";
 import Header from "./Header/Header";
 import Content from "./Content/Content";
 import Navigator from "./Content/Navigator/Navigator";
@@ -14,10 +15,10 @@ function CaseStudy(props) {
   let project = {};
 
   if (!projectName) throw new Error("No project names were provided");
-  if (!PROJECTS[projectName])
-    throw new Error(
-      "Provided project name does not match any of the existing projects"
-    );
+  // if (!PROJECTS[projectName])
+  //   throw new Error(
+  //     "Provided project name does not match any of the existing projects"
+  //   );
   if (projectName && PROJECTS[projectName]) project = PROJECTS[projectName];
 
   const projectNames = Object.keys(PROJECTS);
@@ -37,6 +38,9 @@ function CaseStudy(props) {
   }
 
   useEffect(() => {
+    if (!PROJECTS[projectName]) {
+      throw new NotFoundError();
+    }
     setIndexes(findCurrentPrevNextIndexes());
   }, [projectName]);
 
