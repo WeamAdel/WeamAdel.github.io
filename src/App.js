@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+import PageNotFound from "./components/ErrorBoundary/ErrorFallbackUIs/NotFound";
 import Navbar from "./components/shared/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Experience from "./components/Experience/Experience";
@@ -17,8 +18,8 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+        <Navbar />
         <ErrorBoundary>
-          <Navbar />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/experience" exact component={Experience} />
@@ -34,6 +35,7 @@ function App() {
             />
             <Route path="/being-cooked" exact component={BeingCooked} />
             <Route path="/books-shelf" exact component={BooksShelf} />
+            <Route path="/" component={PageNotFound} />
           </Switch>
         </ErrorBoundary>
       </BrowserRouter>

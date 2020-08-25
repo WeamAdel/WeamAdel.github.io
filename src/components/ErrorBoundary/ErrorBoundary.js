@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import NotFound from "./ErrorFallbackUIs/NotFound";
 import Unknown from "./ErrorFallbackUIs/Unknown";
 
@@ -19,27 +20,26 @@ class ErrorBoundary extends Component {
     }
   }
 
-  goBack = () => {
-    console.log(this.props);
-    this.props.history.goBack();
-  };
-
-  refresh = () => {
-    window.location.reload(false);
-  };
-
   getFallbackUI = () => {
     const availUIComponents = {
-      NotFound: <NotFound goBack={this.goBack} />,
-      default: <Unknown goBack={this.goBack} refresh={this.refresh} />,
+      NotFound: <NotFound />,
+      default: <Unknown />,
     };
     const fallbackUI = availUIComponents[this.state.errorType];
     return fallbackUI ? fallbackUI : availUIComponents.default;
   };
 
+  componentDidUpdate(prevProps) {
+    const locationChanged =
+      prevProps.location.pathname !== this.props.location.pathname;
+    if (locationChanged) this.setState({ errorType: null });
+  }
+
   render() {
-    return this.state.errorType ? this.getFallbackUI() : this.props.children;
+    return (
+      <>{this.state.errorType ? this.getFallbackUI() : this.props.children}</>
+    );
   }
 }
 
-export default ErrorBoundary;
+export default withRouter(ErrorBoundary);

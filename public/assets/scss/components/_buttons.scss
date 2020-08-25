@@ -19,3 +19,9 @@ button:active {
     border-color: $lightMain;
   }
 }
+
+.link-btn {
+  border: none;
+  text-decoration: underline;
+  background-color: transparent;
+}
