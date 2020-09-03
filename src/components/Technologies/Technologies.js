@@ -1,6 +1,8 @@
 import React from "react";
 import Content from "./Content/Content";
 import Header from "./Header/Header";
+import Footer from "./../shared/Footer/Footer";
+
 const imgsPath = "/assets/images/technologies/";
 
 const PROFFESIONCY_LEVELS = {
@@ -130,6 +132,7 @@ function Technologies() {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

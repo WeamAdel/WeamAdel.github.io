@@ -42,7 +42,18 @@
     padding: 60px 0;
     transform: translateY(-100%);
     opacity: 0;
-
+    background-image: url("/assets/images/story/summary-grid.svg");
+    background-size: cover;
+    canvas {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+    }
     .toggle-summary {
       background: none;
       border: none;
@@ -135,13 +146,17 @@
     }
     .story-segment {
       .story-card {
-        padding: 80px 32px 60px;
+        padding: 90px 32px 60px;
         background-color: $fadeWhite;
         box-shadow: 2px 1px 0.5rem rgba(0, 0, 0, 0.1);
         position: relative;
         max-width: 350px;
         margin: 0 auto;
         font-family: $merienda;
+        p {
+          line-height: 1.8;
+          margin-bottom: 0;
+        }
         .flip-page {
           display: block;
           position: relative;

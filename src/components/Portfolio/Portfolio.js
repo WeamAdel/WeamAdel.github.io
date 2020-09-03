@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header/Header";
 import Content from "./Content/Content";
+import Footer from "./../shared/Footer/Footer";
 
 function Portfolio(props) {
   console.log(props);
@@ -13,6 +14,7 @@ function Portfolio(props) {
         </div>
         <Content />
       </div>
+      <Footer />
     </div>
   );
 }

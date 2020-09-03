@@ -3,7 +3,8 @@ import { useSpring, animated } from "react-spring";
 import PropTypes from "prop-types";
 import Schedule from "./Schedule/Schedule";
 import Image from "./Image/Image";
-// import Confetti from "./Confetti/Confetti";
+import Confetti from "./Confetti/Confetti";
+
 // function setCanvasSize(canvas) {
 //   let windowWidth = window.innerWidth;
 //   let windowHeight = window.innerHeight;

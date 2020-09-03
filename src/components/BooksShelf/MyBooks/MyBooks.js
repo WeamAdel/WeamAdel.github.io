@@ -133,7 +133,9 @@ function MyBooks() {
     let books =
       catId === activeCategoryId
         ? BOOKS
-        : BOOKS.filter((book) => book.category.id === catId);
+        : BOOKS.filter((book) => {
+            return !book.disabled && book.category.id === catId;
+          });
     setActiveCategoryId(catId === activeCategoryId ? null : catId);
     setFilteredBooks(books);
   }

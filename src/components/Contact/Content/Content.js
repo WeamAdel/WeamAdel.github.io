@@ -1,6 +1,7 @@
 import React from "react";
 import InfoList from "./InfoList/InfoList";
 import Accounts from "./Accounts/Accounts";
+import DownloadResume from "./DownloadResume/DownloadResume";
 
 function Content() {
   return (
@@ -12,6 +13,7 @@ function Content() {
         </p>
         <InfoList />
         <Accounts />
+        <DownloadResume />
       </section>
     </main>
   );

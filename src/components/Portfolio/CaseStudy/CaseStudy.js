@@ -4,6 +4,7 @@ import { NotFoundError } from "./../../../utility/Errors/Errors";
 import Header from "./Header/Header";
 import Content from "./Content/Content";
 import Navigator from "./Content/Navigator/Navigator";
+import Footer from "./../../shared/Footer/Footer";
 
 function CaseStudy(props) {
   let [indexes, setIndexes] = useState({
@@ -62,6 +63,7 @@ function CaseStudy(props) {
           prev={projectNames[indexes.prev]}
         />
       </div>
+      <Footer />
     </div>
   );
 }

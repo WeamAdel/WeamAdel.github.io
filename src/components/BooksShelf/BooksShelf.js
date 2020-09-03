@@ -1,6 +1,7 @@
 import React from "react";
 import MyBooks from "./MyBooks/MyBooks";
 import MyProcess from "./MyProcess/MyProcess";
+import Footer from "./../shared/Footer/Footer";
 
 function BooksShelf() {
   return (
@@ -11,6 +12,7 @@ function BooksShelf() {
           <MyProcess />
         </main>
       </div>
+      <Footer />
     </div>
   );
 }

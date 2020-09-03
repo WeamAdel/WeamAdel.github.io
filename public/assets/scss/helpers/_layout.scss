@@ -38,6 +38,14 @@ header {
   }
 }
 
+footer.main-footer {
+  background-color: $main;
+  color: $lightMain;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 12px;
+}
+
 @media (min-width: 767px) {
   .page-wrapper.flex,
   .header-wrapper {

@@ -38,7 +38,7 @@ const PROCESSES = [
     text: {
       title: "Focus, Break, Repeat",
       paragraphs: [
-        "Tech field is tough, no matter how long you've been in the field there will always be large amount of knowledge you need to consume to cop up with the industry, but as humans we have limited time and energy to learn new things on our day.",
+        "Tech field is tough, no matter how long you've been in the field there will always be large amount of knowledge you need to consume to cope up with the industry, but as humans we have limited time and energy to learn new things on our day.",
         "What we actually need to do is to give a special care for the quality of time. Spending 2 hours with deep focus is much better than 4 hours most of which you want to sleep, eat or see your phone's notifications.",
         "To enter this deep focus point you need to go though a cycle of focusing and taking a break so that your mind rests and feel like it's starting all over again.",
         "This methodology is well known as Pomodoro Technique, you can read more about it but in brief you focus for 25min with any distractions turned off and then take a break for 5min, but after 4-6 cycles (2-3h) you take a longer break for 30min or 1h.",
