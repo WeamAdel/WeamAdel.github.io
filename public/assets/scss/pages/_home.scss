@@ -1,7 +1,6 @@
 %welcomeImage {
   position: absolute;
   height: 100%;
-  display: none;
 }
 
 .home {
@@ -13,6 +12,7 @@
   }
   .welcome {
     @extend %welcomeImage;
+    display: none;
     &:first-of-type {
       left: 0;
       transform: translateX(calc(-100% + 80px));
@@ -204,6 +204,9 @@
 
 @media (min-width: 960px) {
   .home {
+    .welcome {
+      display: block;
+    }
     .column::before {
       content: "";
       position: absolute;

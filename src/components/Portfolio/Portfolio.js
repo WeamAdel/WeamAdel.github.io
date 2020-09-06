@@ -4,8 +4,6 @@ import Content from "./Content/Content";
 import Footer from "./../shared/Footer/Footer";
 
 function Portfolio(props) {
-  console.log(props);
-
   return (
     <div className="page portfolio">
       <div className="page-wrapper">

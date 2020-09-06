@@ -26,6 +26,11 @@ const TECHNOLOGIES = [
         level: PROFFESIONCY_LEVELS.med,
       },
       {
+        title: "AJAX",
+        iconUrl: imgsPath + "ajax.svg",
+        level: PROFFESIONCY_LEVELS.med,
+      },
+      {
         title: "React",
         iconUrl: imgsPath + "react.svg",
         level: PROFFESIONCY_LEVELS.advanced,
@@ -113,6 +118,16 @@ const TECHNOLOGIES = [
       {
         title: "Illustrator",
         iconUrl: imgsPath + "ai.svg",
+        level: PROFFESIONCY_LEVELS.entry,
+      },
+    ],
+  },
+  {
+    category: "Version Control",
+    technologies: [
+      {
+        title: "Git",
+        iconUrl: imgsPath + "git.svg",
         level: PROFFESIONCY_LEVELS.entry,
       },
     ],

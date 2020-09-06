@@ -1307,7 +1307,6 @@ button:active {
 .home .welcome {
   position: absolute;
   height: 100%;
-  display: none;
 }
 
 .home {
@@ -1317,6 +1316,9 @@ button:active {
 }
 .home .my-container {
   overflow: hidden;
+}
+.home .welcome {
+  display: none;
 }
 .home .welcome:first-of-type {
   left: 0;
@@ -1484,6 +1486,9 @@ button:active {
 }
 
 @media (min-width: 960px) {
+  .home .welcome {
+    display: block;
+  }
   .home .column::before {
     content: "";
     position: absolute;

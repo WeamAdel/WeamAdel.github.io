@@ -304,6 +304,15 @@ export const PROJECTS = {
         platform: ACCOUNTS.design[1],
         link: "https://www.behance.net/gallery/79437657/Maria-Personal-Website",
       },
+
+      {
+        platform: {
+          title: "Live Demo",
+          link: "https://www.weamadel.xyz/old/",
+          fontIcon: "link",
+        },
+        link: "https://www.weamadel.xyz/old/",
+      },
     ],
   },
 };

@@ -37,7 +37,7 @@ function List(props) {
 List.propTypes = {
   items: PropTypes.array.isRequired,
   iconType: PropTypes.oneOf(["check", "contrast"]),
-  type: PropTypes.oneOf(["pallet", "icon", "screenshot"]),
+  type: PropTypes.oneOf(["pallet", "icon", "screenshot", "link"]),
   projectName: PropTypes.string.isRequired,
 };
 export default List;

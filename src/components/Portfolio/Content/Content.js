@@ -106,7 +106,7 @@ const PROJECTS = [
       },
       livePreview: {
         title: "Live Preview",
-        link: null,
+        link: "https://www.weamadel.xyz/old/",
         iconName: "link.svg",
       },
     },

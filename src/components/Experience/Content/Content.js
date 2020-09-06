@@ -3,7 +3,7 @@ import ExperienceCards from "./ExperienceCards/ExperienceCards";
 import SortButton from "./SortButton/SortButton";
 
 function Content() {
-  let [sortType, setSortType] = useState("asc");
+  let [sortType, setSortType] = useState("desc");
 
   function flipSorting() {
     setSortType(sortType === "asc" ? "desc" : "asc");
