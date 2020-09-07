@@ -17,7 +17,7 @@ import BooksShelf from "./components/BooksShelf/BooksShelf";
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="https://www.weamadel.xyz">
         <Navbar />
         <ErrorBoundary>
           <Switch>

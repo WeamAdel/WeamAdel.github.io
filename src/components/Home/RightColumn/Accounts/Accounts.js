@@ -10,8 +10,8 @@ function Accounts() {
   let darkThemeAccounts = [
     socialAccounts[0],
     socialAccounts[1],
-    formalAccounts[0],
     formalAccounts[1],
+    formalAccounts[2],
   ];
 
   let { width, opacity } = useSpring({

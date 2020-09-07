@@ -211,7 +211,7 @@
             z-index: -1;
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: $main;
-            transform: translate(20%, -20%);
+            transform: translate(6%, -20%);
           }
         }
       }
@@ -219,5 +219,11 @@
         margin-bottom: 60px;
       }
     }
+  }
+}
+
+@media (min-width: 500px) {
+  .story main.content .story-segment .story-number p::after {
+    transform: translate(20%, -20%);
   }
 }

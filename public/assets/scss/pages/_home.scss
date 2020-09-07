@@ -223,8 +223,29 @@
 
     .right-column {
       margin-right: 8px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .home {
+    .heading {
+      .main-heading {
+        font-size: 60px;
+        max-width: 500px;
+      }
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .home {
+    .right-column {
       .main-content {
-        max-width: 380px;
+        min-height: calc(100vh - 88px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
   }

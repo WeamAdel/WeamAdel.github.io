@@ -1210,6 +1210,7 @@ button:active {
   max-width: 400px;
   border-radius: 14px;
   box-shadow: 0 0 0.5rem #fe9f9d;
+  background-color: #0a0c1b;
 }
 .experience .content .exp-cards .exp-card .time {
   font-family: "Bernard MT";
@@ -1505,8 +1506,19 @@ button:active {
   .home .right-column {
     margin-right: 8px;
   }
+}
+@media (min-width: 1200px) {
+  .home .heading .main-heading {
+    font-size: 60px;
+    max-width: 500px;
+  }
+}
+@media (orientation: landscape) {
   .home .right-column .main-content {
-    max-width: 380px;
+    min-height: calc(100vh - 88px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .portfolio header .content {
@@ -1953,12 +1965,20 @@ button:active {
   z-index: -1;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0a0c1b;
-  transform: translate(20%, -20%);
+  transform: translate(6%, -20%);
 }
 .story main.content .story-segment:not(:last-of-type) {
   margin-bottom: 60px;
 }
 
+@media (min-width: 500px) {
+  .story main.content .story-segment .story-number p::after {
+    transform: translate(20%, -20%);
+  }
+}
+.technologies .page-heading {
+  word-break: break-all;
+}
 .technologies .content .tech-category .heading {
   margin-bottom: 24px;
   font-size: 24px;

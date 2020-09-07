@@ -1,6 +1,9 @@
 @import "~font-awesome/css/font-awesome.min.css";
 
 .technologies {
+  .page-heading {
+    word-break: break-all;
+  }
   .content {
     .tech-category {
       .heading {
