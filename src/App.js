@@ -13,28 +13,49 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import CaseStudy from "./components/Portfolio/CaseStudy/CaseStudy";
 import BeingCooked from "./components/BeingCooked/BeingCooked";
 import BooksShelf from "./components/BooksShelf/BooksShelf";
+const URL_PREFIX = "https://www.weamadel.xyz/";
 
 function App() {
   return (
     <div>
-      <BrowserRouter basename="https://www.weamadel.xyz">
+      <BrowserRouter>
         <Navbar />
         <ErrorBoundary>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/experience" exact component={Experience} />
-            <Route path="/story" exact component={Story} />
-            <Route path="/technologies" exact component={Technologies} />
-            <Route path="/contact" exact component={Contact} />
-            <Route path="/agenda" exact component={Agenda} />
-            <Route path="/portfolio" exact component={Portfolio} />
             <Route
-              path="/portfolio/case-study/:projectName"
+              path={URL_PREFIX + "/experience"}
+              exact
+              component={Experience}
+            />
+            <Route path={URL_PREFIX + "/story"} exact component={Story} />
+            <Route
+              path={URL_PREFIX + "/technologies"}
+              exact
+              component={Technologies}
+            />
+            <Route path={URL_PREFIX + "/contact"} exact component={Contact} />
+            <Route path={URL_PREFIX + "/agenda"} exact component={Agenda} />
+            <Route
+              path={URL_PREFIX + "/portfolio"}
+              exact
+              component={Portfolio}
+            />
+            <Route
+              path={URL_PREFIX + "/portfolio/case-study/:projectName"}
               exact
               component={CaseStudy}
             />
-            <Route path="/being-cooked" exact component={BeingCooked} />
-            <Route path="/books-shelf" exact component={BooksShelf} />
+            <Route
+              path={URL_PREFIX + "/being-cooked"}
+              exact
+              component={BeingCooked}
+            />
+            <Route
+              path={URL_PREFIX + "/books-shelf"}
+              exact
+              component={BooksShelf}
+            />
             <Route path="/" component={PageNotFound} />
           </Switch>
         </ErrorBoundary>
