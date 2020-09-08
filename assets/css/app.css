@@ -368,7 +368,7 @@ button:active {
   max-height: min(calc(100vh - 164px), 450px);
 }
 .agenda header .lorem-bg {
-  background-image: url("/assets/images/agenda/lorem-ipsum.svg");
+  background-image: url("/assets/images/agenda/Lorem-ipsum.svg");
   background-repeat: repeat-y;
   position: absolute;
   top: 0;
