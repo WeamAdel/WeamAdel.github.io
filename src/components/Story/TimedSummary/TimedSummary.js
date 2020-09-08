@@ -62,6 +62,12 @@ function TimedSummary(props) {
         transform: transform.interpolate((num) => `translateY(${num}%)`),
         opacity: opacity,
       }}
+      onClick={function (e) {
+        const targetClassName = e.target.className;
+        if (targetClassName === "timed-summary") {
+          props.toggleSummary();
+        }
+      }}
     >
       <div className="my-container">
         <button className="toggle-summary" onClick={props.toggleSummary}>

@@ -22,19 +22,19 @@ function App() {
         <ErrorBoundary>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path={"/experience"} exact component={Experience} />
-            <Route path={"/story"} exact component={Story} />
-            <Route path={"/technologies"} exact component={Technologies} />
-            <Route path={"/contact"} exact component={Contact} />
-            <Route path={"/agenda"} exact component={Agenda} />
-            <Route path={"/portfolio"} exact component={Portfolio} />
+            <Route path="/experience" exact component={Experience} />
+            <Route path="/story" exact component={Story} />
+            <Route path="/technologies" exact component={Technologies} />
+            <Route path="/contact" exact component={Contact} />
+            <Route path="/agenda" exact component={Agenda} />
+            <Route path="/portfolio" exact component={Portfolio} />
             <Route
-              path={"/portfolio/case-study/:projectName"}
+              path="/portfolio/case-study/:projectName"
               exact
               component={CaseStudy}
             />
-            <Route path={"/being-cooked"} exact component={BeingCooked} />
-            <Route path={"/books-shelf"} exact component={BooksShelf} />
+            <Route path="/being-cooked" exact component={BeingCooked} />
+            <Route path="/books-shelf" exact component={BooksShelf} />
             <Route path="/" component={PageNotFound} />
           </Switch>
         </ErrorBoundary>

@@ -4,10 +4,14 @@
     padding: 60px 0;
     display: flex;
 
+    .my-container {
+      width: 100%;
+    }
     .page-heading {
       transform: none;
     }
     .image {
+      text-align: center !important;
       img {
         width: 100%;
         max-width: 400px;
@@ -44,6 +48,9 @@
     opacity: 0;
     background-image: url("/assets/images/story/summary-grid.svg");
     background-size: cover;
+    display: flex;
+    align-items: center;
+
     canvas {
       position: absolute;
       top: 0;
@@ -58,10 +65,11 @@
       background: none;
       border: none;
       float: right;
+      z-index: 5;
       padding: 0;
       position: absolute;
-      top: 16px;
-      right: 16px;
+      top: 32px;
+      right: 20px;
       img {
         width: 32px;
       }
@@ -150,11 +158,11 @@
         background-color: $fadeWhite;
         box-shadow: 2px 1px 0.5rem rgba(0, 0, 0, 0.1);
         position: relative;
-        max-width: 350px;
+        max-width: 400px;
         margin: 0 auto;
         font-family: $merienda;
         p {
-          line-height: 1.8;
+          line-height: 2;
           margin-bottom: 0;
         }
         .flip-page {
@@ -184,7 +192,7 @@
           left: 0;
           z-index: -1;
           background-color: $fadeWhite;
-          transform: translate(32px, -32px);
+          transform: translate(16px, -32px);
           box-shadow: 2px 1px 0.5rem rgba(0, 0, 0, 0.1);
         }
       }
@@ -225,5 +233,15 @@
 @media (min-width: 500px) {
   .story main.content .story-segment .story-number p::after {
     transform: translate(20%, -20%);
+  }
+
+  .story main.content .story-segment .story-card::after {
+    transform: translate(32px, -32px);
+  }
+}
+
+@media (min-width: 767px) {
+  .story .timed-summary .toggle-summary {
+    right: 60px;
   }
 }
