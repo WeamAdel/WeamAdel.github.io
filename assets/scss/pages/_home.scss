@@ -1,0 +1,252 @@
+%welcomeImage {
+  position: absolute;
+  height: 100%;
+}
+
+.home {
+  min-height: calc(100vh - 64px);
+  overflow-x: hidden;
+  position: relative;
+  .my-container {
+    overflow: hidden;
+  }
+  .welcome {
+    @extend %welcomeImage;
+    display: none;
+    &:first-of-type {
+      left: 0;
+      transform: translateX(calc(-100% + 80px));
+    }
+    &:last-of-type {
+      right: 0;
+      transform: translateX(calc(100% - 80px));
+    }
+  }
+
+  .heading {
+    padding: calc(32px + 64px) 0 32px; //Adding padding of Navbar height
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .main-heading {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      font-size: 48px;
+      color: $main;
+      max-width: 350px;
+      display: flex;
+      align-items: center;
+
+      .underlined {
+        position: relative;
+        &::after {
+          content: "";
+          height: 10px;
+          width: 100%;
+          position: absolute;
+          left: 6px;
+          bottom: 8px;
+          background-color: $attract;
+        }
+      }
+
+      .design {
+        position: relative;
+        &::after {
+          content: "";
+          height: 28px;
+          width: 28px;
+          position: absolute;
+          right: -7px;
+          top: -7px;
+          background-image: url("/assets/images/home/brush.svg");
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  .right-column {
+    .main-content {
+      overflow: hidden;
+      background-color: $main;
+      color: white;
+      padding: calc(32px + 64px) 44px 32px; //Adding padding of Navbar height
+      border-radius: 0 0 25px 25px;
+      position: relative;
+      $avatarDimentions: 120px;
+      transform: translateY(-100%);
+      opacity: 0;
+
+      .avatar {
+        width: $avatarDimentions;
+        position: relative;
+        margin: auto;
+        background-color: $main;
+
+        img {
+          border-radius: 50%;
+          object-fit: cover;
+          height: $avatarDimentions;
+          width: $avatarDimentions;
+          object-position: left;
+          mix-blend-mode: luminosity;
+        }
+
+        .status {
+          height: 14px;
+          width: 14px;
+          display: block;
+          border-radius: 50%;
+          position: absolute;
+          right: 16px;
+          top: 7px;
+          z-index: 1;
+
+          &.available {
+            background-color: $flatGreen;
+          }
+          &.not-available {
+            background-color: rgb(193, 170, 190);
+          }
+        }
+      }
+
+      .quote {
+        background-image: none;
+        margin: 32px auto;
+        max-width: 230px;
+
+        p {
+          font-size: 16px;
+          &::before {
+            top: -12px;
+            left: -18px;
+            background-size: 80%;
+          }
+        }
+      }
+
+      .coffee {
+        color: $fadeAttract;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: fit-content;
+        margin: auto;
+        padding-right: 22px;
+
+        .coffee-wrapper {
+          margin-right: 16px;
+          display: flex;
+          i {
+            transform: translateY(-40px);
+          }
+          > *:not(:last-of-type) {
+            margin-right: 4px;
+          }
+        }
+
+        .emoji {
+          right: 0;
+          img {
+            width: 18px;
+          }
+        }
+      }
+    }
+
+    .accounts {
+      display: flex;
+      margin: 32px 0;
+      background-color: $main;
+      border-radius: 50px;
+      width: 0;
+      overflow: hidden;
+      opacity: 0;
+      border: 4px solid $main;
+
+      > .accounts-wrapper {
+        display: flex;
+        padding: 12px;
+        justify-content: center;
+        border-radius: 50px;
+
+        &.dark {
+          width: 55%;
+          background-color: $main;
+          a {
+            color: $lightMain;
+          }
+        }
+
+        &.light {
+          width: 45%;
+          background-color: $lightMain;
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+          position: relative;
+          right: -4px;
+          a {
+            color: $main;
+          }
+        }
+
+        li:not(:last-of-type) {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .home {
+    .welcome {
+      display: block;
+    }
+    .column::before {
+      content: "";
+      position: absolute;
+      top: 32px;
+      left: 0;
+      background-image: url("/assets/images/home/grid.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 330px;
+      width: 150px;
+      z-index: 2;
+      transform: translateX(-66%);
+    }
+
+    .right-column {
+      margin-right: 8px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .home {
+    .heading {
+      .main-heading {
+        font-size: 60px;
+        max-width: 500px;
+      }
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .home {
+    .right-column {
+      .main-content {
+        min-height: calc(100vh - 88px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+}

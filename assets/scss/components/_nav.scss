@@ -1,0 +1,136 @@
+.main-nav {
+  padding: 16px 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  * {
+    color: $lightMain;
+  }
+  .logo {
+    background-color: $main;
+    border-radius: 50%;
+    font-family: $bernard;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      color: $lightMain;
+    }
+  }
+  .toggler {
+    border: none;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    background-color: $main;
+    position: relative;
+    z-index: 11;
+  }
+
+  .menu {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+    background-color: $main;
+    padding: 36px 0;
+    display: flex;
+    align-items: center;
+    overflow-y: auto;
+
+    .my-container {
+      width: 100%;
+    }
+    .nav-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      grid-gap: 16px;
+      width: 100%;
+      padding: 0;
+
+      .nav-link {
+        justify-self: center;
+        .title {
+          color: $lightMain;
+          margin-bottom: 4px;
+          text-transform: uppercase;
+          font-size: 12px;
+          font-family: $robotoCondensed;
+        }
+
+        a {
+          display: block;
+          text-align: center;
+          width: 140px;
+          height: 100px;
+          padding: 16px;
+          border-radius: 16px;
+
+          &.active {
+            border: 1px solid white;
+            box-shadow: 0 0 0.5rem;
+            img {
+              animation: activeNavLink 5s infinite ease-in-out;
+            }
+          }
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes activeNavLink {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  15% {
+    transform: scale(1.05) rotate(0);
+  }
+  30% {
+    transform: scale(1.05) rotate(-5deg);
+  }
+  45% {
+  }
+  60% {
+    transform: scale(1.05) rotate(0);
+  }
+  75% {
+    transform: scale(1.05) rotate(5deg);
+  }
+  90% {
+    transform: scale(1.05) rotate(0);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@media (max-width: 767px), (max-height: 480px) {
+  .main-nav {
+    .menu {
+      .nav-links {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        .nav-link {
+          a {
+            width: 74px;
+            height: 40px;
+            padding: 8px;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}

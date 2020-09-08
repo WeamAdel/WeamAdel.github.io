@@ -1,0 +1,27 @@
+button:active {
+  transform: scale(0.9);
+}
+.secondary-btn {
+  padding: 4px 16px;
+  color: $main;
+  border: 1px solid $main;
+  background-color: $lightMain;
+  font-size: 14px;
+  font-family: $robotoCondensed;
+  transition: all 0.3s ease-in-out;
+  i {
+    margin-left: 8px;
+    font-size: 12px;
+  }
+  &:hover {
+    background-color: $main;
+    color: $lightMain;
+    border-color: $lightMain;
+  }
+}
+
+.link-btn {
+  border: none;
+  text-decoration: underline;
+  background-color: transparent;
+}

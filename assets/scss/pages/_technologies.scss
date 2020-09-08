@@ -1,0 +1,118 @@
+@import "~font-awesome/css/font-awesome.min.css";
+
+.technologies {
+  .page-heading {
+    word-break: break-all;
+  }
+  .content {
+    .tech-category {
+      .heading {
+        margin-bottom: 24px;
+        font-size: 24px;
+        font-family: $robotoCondensed;
+        text-transform: capitalize;
+      }
+      .techs-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+        grid-gap: 12px 8px;
+        justify-items: start;
+
+        .technology {
+          .icon-wrapper {
+            background-color: $main;
+            color: $lightMain;
+            width: 48px;
+            height: 48px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            position: relative;
+            .level {
+              width: 10px;
+              height: 10px;
+              position: absolute;
+              top: 0;
+              right: 0;
+              border-radius: 50%;
+              transform: translate(50%, -50%);
+              box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.07);
+            }
+          }
+          .title {
+            text-align: center;
+            color: $gray;
+            font-size: 12px;
+            margin: 8px 0 0;
+          }
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 44px;
+      }
+    }
+
+    .plugins {
+      background-color: $main;
+      border-radius: 0 5px 5px;
+      padding: 32px;
+      position: relative;
+
+      * {
+        color: $lightMain;
+      }
+
+      .external {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $lightMain;
+        background-color: $main;
+        border-radius: 5px 5px 0 0;
+        transform: translateY(-100%);
+        padding: 8px;
+        font-size: 14px;
+      }
+
+      .heading {
+        font-size: 24px;
+        font-family: $robotoCondensed;
+        margin-bottom: 16px;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 1.8;
+        li {
+          transition: opacity 0.2s ease-in;
+          &:not(:last-of-type) {
+            margin-right: 16px;
+          }
+
+          &:hover {
+            opacity: 0.8;
+          }
+          i {
+            margin-right: 4px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media (min-width: 767px) {
+//   .technologies {
+//     .page-wrapper {
+//       display: flex;
+//       .content {
+//         margin-left: 32px;
+//       }
+//     }
+//   }
+// }

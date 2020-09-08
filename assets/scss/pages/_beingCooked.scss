@@ -1,0 +1,56 @@
+.being-cooked {
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-gap: 16px;
+    .project-card {
+      opacity: 0;
+      %paragraphs {
+        background-color: $fadeWhite;
+        padding: 4px;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .wrapper {
+        position: relative;
+        width: 100px;
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+        .idea {
+          @extend %paragraphs;
+          margin-bottom: 0;
+          margin-bottom: 0;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: rotateZ(-90deg) translateX(-50%) translateY(106px);
+          transform-origin: 0 0;
+          width: 200px;
+        }
+      }
+      .type {
+        width: 100px;
+        @extend %paragraphs;
+        margin-bottom: 8px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .being-cooked {
+    main {
+      .project-card:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
